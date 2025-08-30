@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Optima:400,700&display=swap" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/index.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap why-odd-grocer">
+        <div class="inner">
+            <div class="visual">
+
+                <div class="visual-logo">
+                    <img src="./image/odd-grocer/visual-logo.svg" alt="">
+                </div>
+                <div class="visual-introduce">
+                    시간이 완성하는 맛의 피크타임,<br />
+                    오드그로서입니다.<br />
+                    <br />
+                    <strong>
+                        우리는 식탁에 놓일<br />
+                        가장 완벽한 순간을 선별합니다.
+                    </strong>
+                </div>
+
+                <div class="visual-sign-bx">
+                    <div class="visual-sign">
+                        <img src="./image/odd-grocer/visual-sign.svg" alt="">
+                    </div>
+                    <div class="visual-sign-egg">
+                        <img src="./image/odd-grocer/ic-egg.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="best-eat">
+                <div class="best-eat-inner">
+                    <div class="best-eat-text">
+                        <span>오</span>
+                        늘 준비된
+                    </div>
+                    <div class="best-eat-text">
+                        <span></span>
+                        최고의 맛을
+                    </div>
+                    <div class="best-eat-text">
+                        <span>드</span>
+                        립니다.
+                    </div>
+                    <div class="best-eat-text">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="introduce">
+                <div class="introduce-title-bx">
+                    <div class="introduce-title">
+                        <span>ODD</span>
+                        <span>GROCER</span>
+                    </div>
+                    <div class="introduce-sub">
+                        <span>특별한, 남들과는 다른</span>
+                        <span>식료품 판매원</span>
+                    </div>
+                </div>
+                <div class="introduce-description-bx">
+                    <div class="introduce-description introduce-description-off">
+                        <div class="introduce-description-text">
+                            오드그로서는
+                            <img src="./image/odd-grocer/introduce-ic-00.svg" alt="">
+                            <img src="./image/odd-grocer/introduce-ic-01.svg" alt="">
+                            <img src="./image/odd-grocer/introduce-ic-02.svg" alt="">
+                            <img src="./image/odd-grocer/introduce-ic-03.svg" alt="">
+                        </div>
+                        <div class="introduce-description-text">맛의 피크타임을 전합니다.</div>
+                        <div class="introduce-description-text">식재료 본연의 가치가 </div>
+                        <div class="introduce-description-text">가장 온전한 순간,</div>
+                        <div class="introduce-description-text">맛의 피크타임</div>
+                        <div class="introduce-description-text">그 특별함을 지키는</div>
+                        <div class="introduce-description-text">
+                            <img src="./image/odd-grocer/introduce-ic-04.svg" alt="">
+                            식료품 상점입니다.
+                        </div>
+                    </div>
+                    <div class="introduce-description introduce-description-on">
+                        <div class="introduce-description-text">
+                            오드그로서는
+                            <img src="./image/odd-grocer/introduce-ic-on-00.svg" alt="">
+                            <img src="./image/odd-grocer/introduce-ic-on-01.svg" alt="">
+                            <img src="./image/odd-grocer/introduce-ic-on-02.svg" alt="">
+                            <img src="./image/odd-grocer/introduce-ic-on-03.svg" alt="">
+                        </div>
+                        <div class="introduce-description-text">맛의 피크타임을 전합니다.</div>
+                        <div class="introduce-description-text">식재료 본연의 가치가 </div>
+                        <div class="introduce-description-text">가장 온전한 순간,</div>
+                        <div class="introduce-description-text">맛의 피크타임</div>
+                        <div class="introduce-description-text">그 특별함을 지키는</div>
+                        <div class="introduce-description-text">
+                            <img src="./image/odd-grocer/introduce-ic-04.svg" alt="">
+                            식료품 상점입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="taste">
+                <div class="taste-title">
+                    FRESH<br />
+                    FOR TASTE
+                </div>
+                <div class="taste-description">
+                    오드그로서의 <span>신선함 기준</span>으로<br />
+                    <span>가장 맛있는 순간</span>을 전합니다. 
+                </div>
+            </div>
+
+            <div class="process">
+                <div class="process-title-bx">
+                    <dl>
+                        <dt>Cut</dt>
+                        <dd>수확의 순간부터</dd>
+                    </dl>
+
+                    <img src="./image/odd-grocer/consume-ic-arrow.svg" alt="">
+                    <dl>
+                        <dt>Consume</dt>
+                        <dd>먹는 순간까지</dd> 
+                    </dl>
+                </div>
+
+                <div class="process-view">
+                    <div class="process-description">
+                        불필요한 중간 유통 과정 없이<br />
+                        <span>도축•수확 즉시, 바로 배송</span>합니다.
+                    </div>
+
+                    <dl class="process-view--list process-view--list-odd">
+                        <dt>오드그로스</dt>
+                        <dd>
+                            <div class="progress-gage-bx">
+                                <div class="progress-gage-list progress-gage">
+                                    <div class="progress-gage-icons">
+                                        <img src="./image/odd-grocer/progress-00-00.png" alt="">
+                                        <img src="./image/odd-grocer/progress-00-01.png" alt="">
+                                    </div>
+                                    <div class="progress-gage-line"></div>
+                                </div>
+
+                                <div class="progress-gage-list progress-gage-on">
+                                    <div class="progress-gage-icons">
+                                        <img src="./image/odd-grocer/progress-on-00-00.png" alt="">
+                                        <img src="./image/odd-grocer/progress-on-00-01.png" alt="">
+                                    </div>
+                                    <div class="progress-gage-line"></div>
+                                </div>
+
+                                <div class="progress-gage-list progress-gage-finish">
+                                    <div class="progress-gage-icons">
+                                        <img src="./image/odd-grocer/progress-on-00-00.png" alt="">
+                                        <img src="./image/odd-grocer/progress-on-00-01.png" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="process-effect">
+                                    <span class="process-effect-1"></span>
+                                    <span class="process-effect-2"></span>
+
+                                    <div class="process-effect-lines">
+                                        <div><img src="./image/odd-grocer/ic-effect.png" alt=""></div>
+                                        <div><img src="./image/odd-grocer/ic-effect.png" alt=""></div>
+                                        <div><img src="./image/odd-grocer/ic-effect.png" alt=""></div>
+                                        <div><img src="./image/odd-grocer/ic-effect.png" alt=""></div>
+                                        <div><img src="./image/odd-grocer/ic-effect.png" alt=""></div>
+                                        <div><img src="./image/odd-grocer/ic-effect.png" alt=""></div>
+                                        <div><img src="./image/odd-grocer/ic-effect.png" alt=""></div>
+                                        <div><img src="./image/odd-grocer/ic-effect.png" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>수확</li>
+                                <li>식탁</li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <hr />
+
+                    <dl class="process-view--list process-view--list-default">
+                        <dt>오드그로스</dt>
+                        <dd>
+                            <div class="progress-gage-bx">
+                                <div class="progress-gage-list progress-gage">
+                                    <div class="progress-gage-icons">
+                                        <img src="./image/odd-grocer/progress-10-00.png" alt="">
+                                        <img src="./image/odd-grocer/progress-10-01.png" alt="">
+                                        <img src="./image/odd-grocer/progress-10-02.png" alt="">
+                                        <img src="./image/odd-grocer/progress-10-03.png" alt="">
+                                    </div>
+                                    <div class="progress-gage-line"></div>
+                                </div>
+                                <div class="progress-gage-list progress-gage-on">
+                                    <div class="progress-gage-icons">
+                                        <img src="./image/odd-grocer/progress-on-10-00.png" alt="">
+                                        <img src="./image/odd-grocer/progress-on-10-01.png" alt="">
+                                        <img src="./image/odd-grocer/progress-on-10-02.png" alt="">
+                                        <img src="./image/odd-grocer/progress-on-10-03.png" alt="">
+                                    </div>
+                                    <div class="progress-gage-line"></div>
+                                </div>
+                                <div class="progress-gage-list progress-gage-finish">
+                                    <div class="progress-gage-icons">
+                                        <img src="./image/odd-grocer/progress-on-10-00.png" alt="">
+                                        <img src="./image/odd-grocer/progress-on-10-01.png" alt="">
+                                        <img src="./image/odd-grocer/progress-on-10-02.png" alt="">
+                                        <img src="./image/odd-grocer/progress-on-10-03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>수확</li>
+                                <li>유통</li>
+                                <li>보관</li>
+                                <li>식탁</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="peak-time">
+                <div class="common-odd-grocer__title peck-time-bg">
+                    <dl>
+                        <dt>Peak Time</dt>
+                        <dd>가장 맛있는 순간</dd>
+                    </dl>
+                </div>
+
+                <div class="peak-time-list__bx">
+                    <h3>
+                        가장 바르게 전달하기 위한 노력<br />
+                        <span>오드그로서</span>가 실천합니다.
+                    </h3>
+
+                    <div class="peak-time__menus">
+                        <ul>
+                            <li class="on"><button>계란</button></li>
+                            <li><button>닭고기</button></li>
+                            <li><button>돼지고기</button></li>
+                            <li><button>소고기</button></li>
+                            <li><button>오리고기</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="peak-time__contents">
+                        <ul>
+                            <li class="on">
+                                <img src="./image/odd-grocer/peak-time-content-00.png" alt="">
+                                <p>
+                                    1. 탱글한 흰자, <br />
+                                    퍼지지 않고 선명한 노른자. <br />
+                                    <br />
+                                    <span>산란 직후 24시간</span>의 계란은 <br />
+                                    본연의 신선함과 고소함이<br />
+                                    살아있습니다.
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./image/odd-grocer/peak-time-content-01.png" alt="">
+                                <p>
+                                    2. 탱글한 흰자, <br />
+                                    퍼지지 않고 선명한 노른자. <br />
+                                    <br />
+                                    <span>산란 직후 24시간</span>의 계란은 <br />
+                                    본연의 신선함과 고소함이<br />
+                                    살아있습니다.
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./image/odd-grocer/peak-time-content-02.png" alt="">
+                                <p>
+                                    3. 탱글한 흰자, <br />
+                                    퍼지지 않고 선명한 노른자. <br />
+                                    <br />
+                                    <span>산란 직후 24시간</span>의 계란은 <br />
+                                    본연의 신선함과 고소함이<br />
+                                    살아있습니다.
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./image/odd-grocer/peak-time-content-03.png" alt="">
+                                <p>
+                                    4. 탱글한 흰자, <br />
+                                    퍼지지 않고 선명한 노른자. <br />
+                                    <br />
+                                    <span>산란 직후 24시간</span>의 계란은 <br />
+                                    본연의 신선함과 고소함이<br />
+                                    살아있습니다.
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./image/odd-grocer/peak-time-content-04.png" alt="">
+                                <p>
+                                    5. 탱글한 흰자, <br />
+                                    퍼지지 않고 선명한 노른자. <br />
+                                    <br />
+                                    <span>산란 직후 24시간</span>의 계란은 <br />
+                                    본연의 신선함과 고소함이<br />
+                                    살아있습니다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="behavior">
+                <div class="common-odd-grocer__title behavior-bg">
+                    <dl>
+                        <dt>BEHAVIOR</dt>
+                        <dd>오드그로서의 약속</dd>
+                    </dl>
+                </div>
+
+                <div class="behavior-list">
+                    <ul>
+                        <li>
+                            <button>
+                                <div class="behavior-list-content">
+                                    <p>
+                                        투명한 <br />
+                                        정보공개
+                                    </p>
+                                    <img src="./image/odd-grocer/behavior-arrow.svg" alt="">
+                                </div>
+                                <img class="behavior-list-content__img" src="./image/odd-grocer/behavior-00.png" alt="">
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="behavior-list-content">
+                                    <p>
+                                        투명한 <br />
+                                        정보공개
+                                    </p>
+                                    <img src="./image/odd-grocer/behavior-arrow.svg" alt="">
+                                </div>
+                                <img class="behavior-list-content__img" src="./image/odd-grocer/behavior-01.png" alt="">
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="behavior-list-content">
+                                    <p>
+                                        투명한 <br />
+                                        정보공개
+                                    </p>
+                                    <img src="./image/odd-grocer/behavior-arrow.svg" alt="">
+                                </div>
+                                <img class="behavior-list-content__img" src="./image/odd-grocer/behavior-02.png" alt="">
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="behavior-list-content">
+                                    <p>
+                                        투명한 <br />
+                                        정보공개
+                                    </p>
+                                    <img src="./image/odd-grocer/behavior-arrow.svg" alt="">
+                                </div>
+                                <img class="behavior-list-content__img" src="./image/odd-grocer/behavior-03.png" alt="">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="be-odd-eat-real">
+                <dl>
+                    <dt>
+                        남다른  당신이 선택한 식재료가<br />
+                        당신의 하루를 결정합니다.<br />
+                        <br />
+                        식재료의 본질을 지키는 것,<br />
+                        오드그로서의 변함없는 약속입니다.
+                    </dt>
+                    <dd>
+                        Be ODD<br />
+                        Eat REAL
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="popup">
+            <div class="popup-content-bx">
+                <div class="popup-inner">
+                    <div class="popup-close">
+                        <button>
+                            <img src="./image/odd-grocer/ic-close.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="popup-content-list">
+                        <div class="popup-content">
+                            <img src="./image//odd-grocer/popup-content-00.png" alt="">
+                            <dl>
+                                <dt>피크타임 보증제</dt>
+                                <dd>
+                                    오드그로서는 도축·산란일자 공개를 통해, 
+                                    생산부터 식탁까지 전 과정을 책임지는 C2C(Cut to Consume) 철학으로 ‘가장 맛있는 순간’을 약속합니다.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="popup-content">
+                            <img src="./image//odd-grocer/popup-content-01.png" alt="">
+                            <dl>
+                                <dt>낭비없는 소비</dt>
+                                <dd>
+                                    오드그로서는 필요한 만큼만 구매하는 ‘소단량 상품'을 제안합니다. 매번 최고의 신선함을 온전히 즐기고, 불필요한 낭비를 줄이는 
+                                    오드그로서의 지속가능한 약속입니다.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="popup-content">
+                            <img src="./image//odd-grocer/popup-content-02.png" alt="">
+                            <dl>
+                                <dt>오드그로서 콜드체인</dt>
+                                <dd>
+                                    중간 유통 단계를 없앤 직배송 시스템으로
+                                    수확의 첫 순간부터 고객의 문 앞까지, 가장
+                                    맛있는 온도를 지켜냅니다. 특수 제작된 아
+                                    이스박스와 친환경 냉매제를 통해 배송되는
+                                    모든 과정에서 최적 온도를 관리합니다.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="popup-content">
+                            <img src="./image//odd-grocer/popup-content-03.png" alt="">
+                            <dl>
+                                <dt>레시피타운</dt>
+                                <dd>
+                                    레시피타운은 오드그로서의 ‘피크타임’ 식
+                                    재료가 지닌 진정한 가치를 아는 사람들이
+                                    모여, 자신만의 특별한 레시피와 이야기를
+                                    공유하는 커뮤니티입니다.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="popup-close-btn">
+                            <button>닫기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-dimmed"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
