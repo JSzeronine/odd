@@ -42,14 +42,14 @@
 
                 gsap.to( effectLine, {
                     duration: 1,
-                    scale: 1,
+                    scale: 1.2,
                     ease: Cubic.easeOut,
                 });
 
                 gsap.to( effectLine, {
                     transformOrigin: "center top",
                     duration: 1, scale: 0,
-                    delay: 0.7,
+                    delay: 0.5,
                     ease: Cubic.easeOut,
                 });
             }
