@@ -17,6 +17,9 @@
             const oddProcessFinishList = process.find(".process-view--list-odd").find(".progress-gage-finish").find("img");
             const defaultProcessFinishList = process.find(".process-view--list-default").find(".progress-gage-finish").find("img");
 
+            const oddProcessTxtList = process.find(".process-view--list-odd").find( ".process-view--list-odd-txt li" );
+            const defaultProcessTxtList = process.find(".process-view--list-default").find( ".process-view--list-odd-txt li" );
+
             function showEffect1(){
                 const effect1 = process.find( ".process-effect-1" );
                 gsap.to( effect1, {
@@ -89,6 +92,14 @@
 
                         gsap.to(o, { duration: 0.2, scale: 1.1, ease: Power0.easeInOut, yoyo: true, repeat: 1 });
                         gsap.to(d, { duration: 0.2, scale: 1.1, ease: Power0.easeInOut, yoyo: true, repeat: 1 });
+
+                        const oTxt = $(oddProcessTxtList[idx]);
+                        const dTxt = $(defaultProcessTxtList[idx]);
+
+                        console.log( oTxt[0], oddProcessTxtList );
+
+                        oTxt.addClass("on");
+                        dTxt.addClass("on");
                     }
                 });
 

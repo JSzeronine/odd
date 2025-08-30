@@ -172,6 +172,7 @@ body {
   font-weight: 400;
   text-align: center;
   margin-bottom: 20px;
+  color: #002800;
 }
 .wrap.why-odd-grocer .taste .taste-description {
   font-size: 18px;
@@ -411,9 +412,12 @@ body {
 }
 .wrap.why-odd-grocer .process .process-view dl dd ul li {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 24px;
   color: #FF7D00;
+}
+.wrap.why-odd-grocer .process .process-view dl dd ul li.on {
+  font-weight: 700;
 }
 .wrap.why-odd-grocer .process .process-view dl.process-view--list-odd dd img {
   width: 142px;
@@ -451,6 +455,7 @@ body {
   text-align: center;
   padding: 50px 0;
   box-sizing: border-box;
+  color: #002800;
 }
 .wrap.why-odd-grocer .peak-time .peak-time-list__bx h3 span {
   font-weight: 700;
@@ -512,6 +517,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  color: #002800;
 }
 .wrap.why-odd-grocer .peak-time .peak-time-list__bx .peak-time__contents ul li p span {
   font-weight: 700;
@@ -629,7 +635,7 @@ body {
 }
 .wrap .common-odd-grocer__title dl dd {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 24px;
   color: #ffffff;
 }
