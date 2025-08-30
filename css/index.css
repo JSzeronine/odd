@@ -74,6 +74,9 @@ body {
   justify-content: flex-start;
   text-align: right;
 }
+.wrap.why-odd-grocer .best-eat .best-eat-inner .best-eat-text span {
+  color: #F97D01;
+}
 .wrap.why-odd-grocer .introduce {
   background-image: url(../image/odd-grocer/introduce-bg.png);
   background-size: cover;
