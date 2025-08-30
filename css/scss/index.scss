@@ -40,7 +40,7 @@ body {
         }
         .visual {
             position: relative;
-            height: calc(100vh);
+            height: calc(100vh - 48px);
             background-image: url(../image/odd-grocer/visual-bg.png);
             background-size: cover;
             background-position: center;

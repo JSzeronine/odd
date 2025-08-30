@@ -37,7 +37,7 @@ body {
 }
 .wrap.why-odd-grocer .visual {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 48px);
   background-image: url(../image/odd-grocer/visual-bg.png);
   background-size: cover;
   background-position: center;
