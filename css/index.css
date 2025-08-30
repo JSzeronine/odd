@@ -7,6 +7,34 @@ body {
   background-color: #002800;
   width: 100%;
 }
+.wrap.why-odd-grocer .top-menus {
+  display: flex;
+  align-items: center;
+  background-color: #F5F5F5;
+}
+.wrap.why-odd-grocer .top-menus a {
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  border-bottom: none;
+  text-decoration: none;
+}
+.wrap.why-odd-grocer .top-menus a.on {
+  color: #F25100;
+  font-weight: 700;
+}
+.wrap.why-odd-grocer .top-menus span {
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background-color: #CCCCCC;
+}
 .wrap.why-odd-grocer .visual {
   position: relative;
   height: 100vh;
