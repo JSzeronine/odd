@@ -147,7 +147,7 @@ body {
 }
 .wrap.why-odd-grocer .introduce .introduce-description-bx .introduce-description.introduce-description-off .introduce-description-text {
   color: #000000;
-  opacity: 0.9;
+  opacity: 0;
 }
 .wrap.why-odd-grocer .introduce .introduce-description-bx .introduce-description.introduce-description-on {
   position: absolute;
@@ -156,7 +156,7 @@ body {
 }
 .wrap.why-odd-grocer .introduce .introduce-description-bx .introduce-description.introduce-description-on .introduce-description-text {
   color: #ffffff;
-  opacity: 0;
+  opacity: 1;
 }
 .wrap.why-odd-grocer .taste {
   background-color: #ffffff;
