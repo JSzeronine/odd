@@ -61,7 +61,7 @@
                 });
 
                 gsap.fromTo( bestEatEffect1, 
-                    { x: -15, opacity: 0 }, 
+                    { x: 10, opacity: 0 }, 
                     { x: 0, opacity: 1, duration: 0.5, ease: Cubic.easeOut, delay: 1.5 });
             }
 
