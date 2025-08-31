@@ -9,9 +9,21 @@ body {
 
     &.why-odd-grocer {
         .top-menus{
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
             align-items: center;
             background-color: #F5F5F5;
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+
+            &.on{
+                transform: translateY(-48px);
+            }
+
             a{
                 display: inline-block;
                 width: 100%;
@@ -39,8 +51,9 @@ body {
             }
         }
         .visual {
+            margin-top: 48px;
             position: relative;
-            height: calc(100vh - 48px);
+            height: calc( 100vh - 48px );
             background-image: url(../image/odd-grocer/visual-bg.png);
             background-size: cover;
             background-position: center;

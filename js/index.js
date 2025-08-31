@@ -3,9 +3,26 @@
     const index = function () {
 
         const Init = () => {
+            createTopMenus();
             createPeakTime();
             createBehavior();
             createProgress();
+        }
+
+        function createTopMenus(){
+            let oldY = 0;
+            window.addEventListener( "scroll", () => {
+                const sT = window.scrollY;
+                if( sT > oldY ){
+                    if( sT > 48 ){
+                        $(".top-menus").addClass( "on" );
+                    }
+                } else {
+                    $(".top-menus").removeClass( "on" );
+                }
+
+                oldY = sT;
+            });
         }
 
         function createProgress() {
