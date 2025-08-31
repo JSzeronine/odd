@@ -18,6 +18,8 @@ body {
   background-color: #F5F5F5;
   transform: translateY(0);
   transition: transform 0.3s ease-in-out;
+  background-color: #F5F5F5;
+  display: none;
 }
 .wrap.why-odd-grocer .top-menus.on {
   transform: translateY(-48px);
@@ -46,15 +48,15 @@ body {
   background-color: #CCCCCC;
 }
 .wrap.why-odd-grocer .visual {
-  margin-top: 48px;
+  background-color: #F5F5F5;
   position: relative;
-  height: calc(100vh - 48px);
+  height: 100vh;
   background-image: url(../image/odd-grocer/visual-bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  padding: 50px 0;
+  padding: 50px 0 50px;
 }
 .wrap.why-odd-grocer .visual .visual-logo {
   width: 100%;
@@ -103,6 +105,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  position: relative;
 }
 .wrap.why-odd-grocer .best-eat .best-eat-inner .best-eat-text {
   font-size: 60px;
@@ -112,9 +115,41 @@ body {
   display: flex;
   justify-content: flex-start;
   text-align: right;
+  opacity: 0;
 }
-.wrap.why-odd-grocer .best-eat .best-eat-inner .best-eat-text span {
+.wrap.why-odd-grocer .best-eat .best-eat-inner .best-eat-effect-bx {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wrap.why-odd-grocer .best-eat .best-eat-inner .best-eat-effect-bx .best-eat-effect-00 {
+  opacity: 0;
+}
+.wrap.why-odd-grocer .best-eat .best-eat-inner .best-eat-effect-bx .best-eat-effect-00 span {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 74px;
   color: #F97D01;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wrap.why-odd-grocer .best-eat .best-eat-inner .best-eat-effect-bx .best-eat-effect-00 span:nth-child(1) {
+  transform: translateY(0px);
+}
+.wrap.why-odd-grocer .best-eat .best-eat-inner .best-eat-effect-bx .best-eat-effect-00 span:nth-child(2) {
+  transform: translate(51px, 148px);
+}
+.wrap.why-odd-grocer .best-eat .best-eat-inner .best-eat-effect-bx .best-eat-effect-01 {
+  opacity: 0;
+  position: absolute;
+  width: 160px;
+  left: 102px;
+  top: 74px;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 74px;
+  color: #ffffff;
 }
 .wrap.why-odd-grocer .introduce {
   background-image: url(../image/odd-grocer/introduce-bg.png);
@@ -190,11 +225,11 @@ body {
 }
 .wrap.why-odd-grocer .introduce .introduce-description-bx .introduce-description.introduce-description-off .introduce-description-text {
   color: #000000;
-  opacity: 0;
+  opacity: 1;
 }
 .wrap.why-odd-grocer .introduce .introduce-description-bx .introduce-description.introduce-description-on {
   position: absolute;
-  left: 0;
+  left: 7px;
   top: 0;
 }
 .wrap.why-odd-grocer .introduce .introduce-description-bx .introduce-description.introduce-description-on .introduce-description-text {
@@ -756,6 +791,8 @@ body {
   font-weight: 400;
   line-height: 24px;
   color: #002800;
+  word-break: keep-all;
+  white-space: pre-line;
 }
 .popup .popup-content-bx .popup-inner .popup-content-list .popup-close-btn {
   text-align: center;
