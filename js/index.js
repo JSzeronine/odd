@@ -105,8 +105,19 @@
                         scrollTrigger: {
                             trigger: introduce,
                             start: "top 75%",
-                            end: "bottom 75%",
+                            end: "bottom 100%",
                             scrub: true,
+                            onLeave: function(self) {
+                                if (tl.scrollTrigger) {
+                                    tl.scrollTrigger.kill();
+                                }
+
+                                tl.kill();
+
+                                gsap.set(introduceTitleSpans, { opacity: 1 });
+                                gsap.set(introduceSubSpans, { opacity: 1 });
+                                gsap.set(introduceDescriptionTexts, { opacity: 1 });
+                            }
                         }
                     });
 
