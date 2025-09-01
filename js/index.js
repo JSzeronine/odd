@@ -9,18 +9,205 @@
             createPeakTime();
             createBehavior();
             createProgress();
+
+            scrollActionVisual();
+            scrollActionTaste();
+            scrollActionProcess();
+            scrollActionCommonTitle();
+            scrollBehavior();
+            scrollActionReal();
         }
 
-        function createTopMenus(){
+        function scrollActionVisual() {
+            const visual = $(".visual");
+            const visualLogo = visual.find(".visual-logo");
+            const visualIntroduce = visual.find(".visual-introduce");
+            const visualSign = visual.find(".visual-sign");
+            const visualSignEgg = visual.find(".visual-sign-egg");
+
+            gsap.fromTo(
+                visualLogo,
+                { opacity: 0, y: 10 },
+                { opacity: 1, y: 0, duration: 0.5, ease: Cubic.easeInOut }
+            )
+            gsap.fromTo(
+                visualIntroduce,
+                { opacity: 0, y: 10 },
+                { opacity: 1, y: 0, duration: 0.5, ease: Cubic.easeInOut, delay: 0.1 },
+            )
+            gsap.fromTo(
+                visualSign,
+                { opacity: 0, scale:1.1},
+                { opacity: 1, scale:1, duration: 0.4, ease: Expo.easeIn, delay: 0.7 },
+            );
+            gsap.fromTo(
+                visualSignEgg,
+                { opacity: 0, y:10 },
+                { opacity: 1, y:0, duration: 0.5, ease: Cubic.easeInOut, delay: 0.1 },
+            );
+        }
+
+        function scrollActionTaste() {
+            const taste = $(".taste");
+            const tasteTitle = taste.find(".taste-title");
+            const tasteDescription = taste.find(".taste-description");
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: taste[0],
+                    start: "top 70%",
+                    once: true,
+                }
+            });
+
+            tl.fromTo(
+                tasteTitle,
+                { x: -30, opacity: 0 },
+                { x: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut }
+            )
+                .fromTo(
+                    tasteDescription,
+                    { x: 30, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut },
+                    "<"
+                );
+        }
+
+        function scrollActionProcess() {
+            const process = $(".process");
+            const processCut = process.find(".process-cut");
+            const processConsume = process.find(".process-consume");
+            const processArrow = process.find(".process-arrow");
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: process[0],
+                    start: "top 70%",
+                    once: true,
+                }
+            });
+
+            tl.fromTo(
+                processCut,
+                { y: -10, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut }
+            )
+
+            tl.fromTo(
+                processArrow,
+                { y: -10, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut },
+                "-=0.3"
+            );
+
+            tl.fromTo(
+                processConsume,
+                { y: 10, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut },
+                "-=0.3"
+            );
+        }
+
+        function scrollActionCommonTitle() {
+            const commonTitle = $(".common-odd-grocer__title");
+
+            commonTitle.each(function (i, el) {
+                const $el = $(el);
+                const commonTitleTitle = $el.find("dt");
+                const commonTitleDescription = $el.find("dd");
+
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 70%",
+                        once: true,
+                    }
+                });
+
+                tl.fromTo(
+                    commonTitleTitle,
+                    { x: -30, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut }
+                );
+
+                tl.fromTo(
+                    commonTitleDescription,
+                    { x: 30, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut },
+                    "<"
+                );
+            });
+        }
+
+
+        function scrollBehavior() {
+            const behaviorBx = $(".behavior-list");
+            const behaviorList = behaviorBx.find("ul li");
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: behaviorBx,
+                    start: "top 80%",
+                    once: true,
+                    onEnter: function () {
+                        behaviorList.each(function (i, el) {
+                            gsap.fromTo(
+                                el,
+                                { y: 20, opacity: 0 },
+                                { y: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut, delay: 0.1 * i }
+                            );
+                        });
+                    }
+                }
+            });
+        }
+
+        function scrollActionReal() {
+            const real = $(".be-odd-eat-real");
+            const realTitle = real.find("dt");
+            const realDescription = real.find("dd");
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: real,
+                    start: "top 80%",
+                    once: true,
+                    onEnter: function () {
+                        gsap.fromTo(
+                            realTitle,
+                            { y: 10, opacity: 0 },
+                            { y: 0, opacity: 1, duration: 0.7, ease: Cubic.easeInOut }
+                        );
+                    }
+                }
+            });
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: real,
+                    start: "top 30%",
+                    once: true,
+                    onEnter: function () {
+                        gsap.fromTo(
+                            realDescription,
+                            { opacity: 0 },
+                            { opacity: 1, duration: 1, ease: Cubic.easeInOut }
+                        );
+                    }
+                }
+            });
+        }
+
+        function createTopMenus() {
             let oldY = 0;
-            window.addEventListener( "scroll", () => {
+            window.addEventListener("scroll", () => {
                 const sT = window.scrollY;
-                if( sT > oldY ){
-                    if( sT > 48 ){
-                        $(".top-menus").addClass( "on" );
+                if (sT > oldY) {
+                    if (sT > 48) {
+                        $(".top-menus").addClass("on");
                     }
                 } else {
-                    $(".top-menus").removeClass( "on" );
+                    $(".top-menus").removeClass("on");
                 }
 
                 oldY = sT;
@@ -38,30 +225,30 @@
             return visibleHeight >= elementHeight / 2 && rect.bottom > 0 && rect.top < windowHeight;
         }
 
-        function createBestEat(){
+        function createBestEat() {
             const bestEat = $(".best-eat");
-            const bestEatEffectText = bestEat.find( ".best-eat-text" );
-            const bestEatEffect0 = bestEat.find( ".best-eat-effect-00" );
-            const bestEatEffect1 = bestEat.find( ".best-eat-effect-01" );
+            const bestEatEffectText = bestEat.find(".best-eat-text");
+            const bestEatEffect0 = bestEat.find(".best-eat-effect-00");
+            const bestEatEffect1 = bestEat.find(".best-eat-effect-01");
 
-            function show(){
-                bestEatEffectText.each(function(index){
-                    gsap.fromTo( $( this ), 
-                        { y: 10, opacity: 0},
+            function show() {
+                bestEatEffectText.each(function (index) {
+                    gsap.fromTo($(this),
+                        { y: 10, opacity: 0 },
                         { y: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut, delay: 0.25 * index });
                 });
             }
 
-            function show2(){
-                gsap.to( bestEatEffect0, { duration: 0.5, opacity: 1, ease: Cubic.easeInOut });
-                gsap.to( bestEatEffectText, { duration: 0.5, opacity: 0, ease: Cubic.easeInOut });
+            function show2() {
+                gsap.to(bestEatEffect0, { duration: 0.5, opacity: 1, ease: Cubic.easeInOut });
+                gsap.to(bestEatEffectText, { duration: 0.5, opacity: 0, ease: Cubic.easeInOut });
 
-                bestEatEffect0.find( "span" ).each( function(){
-                    gsap.to( $( this ), { duration: 1, y: 74, ease: Cubic.easeInOut, delay: 0.5 });
+                bestEatEffect0.find("span").each(function () {
+                    gsap.to($(this), { duration: 1, y: 74, ease: Cubic.easeInOut, delay: 0.5 });
                 });
 
-                gsap.fromTo( bestEatEffect1, 
-                    { x: 10, opacity: 0 }, 
+                gsap.fromTo(bestEatEffect1,
+                    { x: 10, opacity: 0 },
                     { x: 0, opacity: 1, duration: 0.5, ease: Cubic.easeOut, delay: 1.5 });
             }
 
@@ -82,7 +269,7 @@
             scrollListener();
         }
 
-        function createIntroduce(){
+        function createIntroduce() {
             const introduce = $(".introduce");
 
             if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
@@ -107,7 +294,7 @@
                             start: "top 75%",
                             end: "bottom 100%",
                             scrub: true,
-                            onLeave: function(self) {
+                            onLeave: function (self) {
                                 if (tl.scrollTrigger) {
                                     tl.scrollTrigger.kill();
                                 }
@@ -121,15 +308,15 @@
                         }
                     });
 
-                    introduceTitleSpans.each(function(i, el) {
+                    introduceTitleSpans.each(function (i, el) {
                         tl.to(el, {
                             opacity: 1,
                             duration: 0.01,
                             ease: "none"
                         }, "+=0");
                     });
-                    
-                    introduceSubSpans.each(function(i, el) {
+
+                    introduceSubSpans.each(function (i, el) {
                         tl.to(el, {
                             opacity: 1,
                             duration: 0.01,
@@ -137,7 +324,7 @@
                         }, "<");
                     });
 
-                    introduceDescriptionTexts.each(function(i, el) {
+                    introduceDescriptionTexts.each(function (i, el) {
                         tl.to(el, {
                             opacity: 1,
                             duration: 0.01,
@@ -157,39 +344,39 @@
             const oddProcessFinishList = process.find(".process-view--list-odd").find(".progress-gage-finish").find("img");
             const defaultProcessFinishList = process.find(".process-view--list-default").find(".progress-gage-finish").find("img");
 
-            const oddProcessTxtList = process.find(".process-view--list-odd").find( ".process-view--list-odd-txt li" );
-            const defaultProcessTxtList = process.find(".process-view--list-default").find( ".process-view--list-odd-txt li" );
+            const oddProcessTxtList = process.find(".process-view--list-odd").find(".process-view--list-odd-txt li");
+            const defaultProcessTxtList = process.find(".process-view--list-default").find(".process-view--list-odd-txt li");
 
-            function showEffect1(){
-                const effect1 = process.find( ".process-effect-1" );
-                gsap.to( effect1, {
+            function showEffect1() {
+                const effect1 = process.find(".process-effect-1");
+                gsap.to(effect1, {
                     duration: 1,
                     scale: 1,
                     ease: Cubic.easeInOut,
                 });
 
                 setTimeout(() => {
-                    effect1.addClass( "on" );
-                }, 500 );
+                    effect1.addClass("on");
+                }, 500);
             }
 
-            function showEffectShadow(){
-                const effectLineBx = process.find( ".process-effect-lines" );
-                const effectLine = effectLineBx.find( "img" );
+            function showEffectShadow() {
+                const effectLineBx = process.find(".process-effect-lines");
+                const effectLine = effectLineBx.find("img");
 
-                gsap.to( effectLineBx, {
+                gsap.to(effectLineBx, {
                     duration: 0.5,
                     scale: 1,
                     ease: Cubic.easeOut,
                 });
 
-                gsap.to( effectLine, {
+                gsap.to(effectLine, {
                     duration: 0.5,
                     scale: 1.2,
                     ease: Cubic.easeOut,
                 });
 
-                gsap.to( effectLine, {
+                gsap.to(effectLine, {
                     transformOrigin: "center top",
                     duration: 1, scale: 0,
                     delay: 0.5,
@@ -197,27 +384,27 @@
                 });
             }
 
-            function showEffect2(){
-                const effect2 = process.find( ".process-effect-2" );
-                gsap.to( effect2, {
+            function showEffect2() {
+                const effect2 = process.find(".process-effect-2");
+                gsap.to(effect2, {
                     duration: 1,
                     scale: 1,
                     ease: Cubic.easeInOut,
                 });
 
                 setTimeout(() => {
-                    effect2.addClass( "on" );
-                }, 500 );
+                    effect2.addClass("on");
+                }, 500);
             }
 
-            function showEffect(){
+            function showEffect() {
                 showEffect1();
                 setTimeout(() => {
                     showEffectShadow();
-                }, 650 );
+                }, 650);
                 setTimeout(() => {
                     showEffect2();
-                }, 800 );
+                }, 800);
             }
 
             function showProcess(idx, mTime = 1) {
@@ -236,14 +423,14 @@
                         const oTxt = $(oddProcessTxtList[idx]);
                         const dTxt = $(defaultProcessTxtList[idx]);
 
-                        console.log( oTxt[0], oddProcessTxtList );
+                        console.log(oTxt[0], oddProcessTxtList);
 
                         oTxt.addClass("on");
                         dTxt.addClass("on");
                     }
                 });
 
-                if( idx === 1 ){
+                if (idx === 1) {
                     setTimeout(() => {
                         showEffect();
                     }, 500);
