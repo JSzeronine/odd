@@ -16,6 +16,27 @@
             scrollActionCommonTitle();
             scrollBehavior();
             scrollActionReal();
+            scrollActionPeakTime();
+        }
+
+        function scrollActionPeakTime() {
+            const peakTime = $(".peak-time");
+            const peakTimeTitleBx = peakTime.find(".peak-time-list__bx");
+            const peakTimeTitle = peakTimeTitleBx.find( "h3" );
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: peakTimeTitleBx[0],
+                    start: "top 80%",
+                    once: true,
+                }
+            });
+
+            tl.fromTo(
+                peakTimeTitle,
+                { y: 10, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut }
+            );
         }
 
         function scrollActionVisual() {
@@ -42,8 +63,8 @@
             );
             gsap.fromTo(
                 visualSignEgg,
-                { opacity: 0, y:0 },
-                { opacity: 1, y:0, duration: 0.6, ease: Cubic.easeInOut, delay: 0.3 },
+                { opacity: 0, y: 0 },
+                { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut, delay: 0.3 },
             );
         }
 
@@ -105,6 +126,23 @@
                 { y: 10, opacity: 0 },
                 { y: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut },
                 "-=0.3"
+            );
+
+            const processView = process.find(".process-view");
+            const processDescription = process.find(".process-description");
+
+            const tlDesc = gsap.timeline({
+                scrollTrigger: {
+                    trigger: processView[0],
+                    start: "top 80%",
+                    once: true,
+                }
+            });
+
+            tlDesc.fromTo(
+                processDescription,
+                { y: 10, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut }
             );
         }
 
