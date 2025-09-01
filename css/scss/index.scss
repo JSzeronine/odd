@@ -677,7 +677,6 @@ body {
                             position: relative;
                             top: 1px;
                             width: 100%;
-                            opacity: 0;
                             &.on{
                                 border-bottom: 2px solid #F25100;
                                 button{
@@ -702,7 +701,6 @@ body {
 
                 .peak-time__contents{
                     padding: 0 16px;
-                    opacity: 0;
                     ul{
                         position: relative;
                         li{
