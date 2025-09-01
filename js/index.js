@@ -22,7 +22,7 @@
         function scrollActionPeakTime() {
             const peakTime = $(".peak-time");
             const peakTimeTitleBx = peakTime.find(".peak-time-list__bx");
-            const peakTimeTitle = peakTimeTitleBx.find( "h3" );
+            const peakTimeTitle = peakTimeTitleBx.find("h3");
 
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -37,6 +37,33 @@
                 { y: 10, opacity: 0 },
                 { y: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut }
             );
+
+            const peakTimeMenus = peakTimeTitleBx.find(".peak-time__menus ul li");
+            const peakTimeContentBx = peakTimeTitleBx.find(".peak-time__contents");
+
+            const tlMenus = gsap.timeline({
+                scrollTrigger: {
+                    trigger: peakTimeMenus[0],
+                    start: "top 80%",
+                    once: true,
+                    onEnter: function () {
+                        peakTimeMenus.each(function (i, el) {
+                            gsap.fromTo(
+                                el,
+                                { x: 50, opacity: 0 },
+                                { x: 0, opacity: 1, duration: 0.4, ease: Cubic.easeInOut, delay: 0.1 * i }
+                            );
+
+                            gsap.fromTo(
+                                peakTimeContentBx,
+                                { y: 10, opacity: 0 },
+                                { y: 0, opacity: 1, duration: 0.4, ease: Cubic.easeInOut }
+                            );
+
+                        });
+                    }
+                }
+            });
         }
 
         function scrollActionVisual() {

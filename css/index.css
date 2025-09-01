@@ -555,6 +555,7 @@ body {
   padding: 50px 0;
   box-sizing: border-box;
   color: #002800;
+  opacity: 0;
 }
 .wrap.why-odd-grocer .peak-time .peak-time-list__bx h3 span {
   font-weight: 700;
@@ -572,6 +573,7 @@ body {
   position: relative;
   top: 1px;
   width: 100%;
+  opacity: 0;
 }
 .wrap.why-odd-grocer .peak-time .peak-time-list__bx .peak-time__menus ul li.on {
   border-bottom: 2px solid #F25100;
@@ -593,6 +595,7 @@ body {
 }
 .wrap.why-odd-grocer .peak-time .peak-time-list__bx .peak-time__contents {
   padding: 0 16px;
+  opacity: 0;
 }
 .wrap.why-odd-grocer .peak-time .peak-time-list__bx .peak-time__contents ul {
   position: relative;
