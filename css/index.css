@@ -6,6 +6,7 @@ body {
 .wrap {
   background-color: #002800;
   width: 100%;
+  overflow: hidden;
 }
 .wrap.why-odd-grocer .top-menus {
   position: fixed;
