@@ -70,6 +70,7 @@ body {
                 display: flex;
                 justify-content: center;
                 margin-bottom: 32px;
+                opacity: 0;
             }
 
             .visual-introduce {
@@ -77,6 +78,7 @@ body {
                 font-size: 16px;
                 line-height: 24px;
                 color: #002800;
+                opacity: 0;
 
                 strong {
                     font-weight: 700;
@@ -92,12 +94,14 @@ body {
                 padding: 0 38px;
 
                 .visual-sign {
+                    opacity: 0;
                     display: flex;
                     justify-content: flex-end;
                     margin-bottom: 56px;
                 }
 
                 .visual-sign-egg {
+                    opacity: 0;
                     display: flex;
                     justify-content: center;
                 }

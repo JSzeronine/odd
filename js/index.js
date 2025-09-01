@@ -28,22 +28,22 @@
             gsap.fromTo(
                 visualLogo,
                 { opacity: 0, y: 10 },
-                { opacity: 1, y: 0, duration: 0.5, ease: Cubic.easeInOut }
+                { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut }
             )
             gsap.fromTo(
                 visualIntroduce,
                 { opacity: 0, y: 10 },
-                { opacity: 1, y: 0, duration: 0.5, ease: Cubic.easeInOut, delay: 0.1 },
+                { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut, delay: 0.3 },
             )
             gsap.fromTo(
                 visualSign,
-                { opacity: 0, scale:1.1},
-                { opacity: 1, scale:1, duration: 0.4, ease: Expo.easeIn, delay: 0.7 },
+                { opacity: 0, x: 15 },
+                { opacity: 1, x: 0, duration: 0.4, ease: Cubic.easeInOut, delay: 1 },
             );
             gsap.fromTo(
                 visualSignEgg,
-                { opacity: 0, y:10 },
-                { opacity: 1, y:0, duration: 0.5, ease: Cubic.easeInOut, delay: 0.1 },
+                { opacity: 0, y:0 },
+                { opacity: 1, y:0, duration: 0.6, ease: Cubic.easeInOut, delay: 0.3 },
             );
         }
 

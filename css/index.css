@@ -64,12 +64,14 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 32px;
+  opacity: 0;
 }
 .wrap.why-odd-grocer .visual .visual-introduce {
   text-align: center;
   font-size: 16px;
   line-height: 24px;
   color: #002800;
+  opacity: 0;
 }
 .wrap.why-odd-grocer .visual .visual-introduce strong {
   font-weight: 700;
@@ -83,11 +85,13 @@ body {
   padding: 0 38px;
 }
 .wrap.why-odd-grocer .visual .visual-sign-bx .visual-sign {
+  opacity: 0;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 56px;
 }
 .wrap.why-odd-grocer .visual .visual-sign-bx .visual-sign-egg {
+  opacity: 0;
   display: flex;
   justify-content: center;
 }
