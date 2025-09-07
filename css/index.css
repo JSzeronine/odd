@@ -384,6 +384,7 @@ body {
   gap: 37px;
   position: relative;
   z-index: 2;
+  font-size: 0;
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .progress-gage-list .progress-gage-icons img {
   display: inline-block;
