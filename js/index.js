@@ -485,13 +485,13 @@
             }
 
             function showEffect() {
-                showEffect1();
-                setTimeout(() => {
-                    showEffectShadow();
-                }, 650);
-                setTimeout(() => {
-                    showEffect2();
-                }, 800);
+                // showEffect1();
+                // setTimeout(() => {
+                //     showEffectShadow();
+                // }, 650);
+                // setTimeout(() => {
+                //     showEffect2();
+                // }, 800);
             }
 
             function showProcess(idx, mTime = 1) {
