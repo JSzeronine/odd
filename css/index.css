@@ -465,7 +465,6 @@ body {
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines {
   width: 77px;
   height: 77px;
-  transform: scale(0);
   transform-origin: center;
   position: absolute;
   left: 4px;
@@ -480,7 +479,6 @@ body {
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div img {
   width: 2px;
   height: 12px;
-  transform: scale(0);
   transform-origin: center bottom;
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div img.on {
@@ -498,7 +496,7 @@ body {
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(3) {
   top: 21px;
-  left: 64px;
+  left: 65px;
   transform: rotate(67deg);
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(4) {
