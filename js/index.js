@@ -448,7 +448,6 @@
                 gsap.set( effectLineBx, { scale: 0.5 });
                 gsap.set( effectLine, { scale: 0 });
 
-
                 gsap.to(effectLineBx, {
                     duration: 0.5,
                     scale: 1,
