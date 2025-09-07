@@ -505,18 +505,18 @@ body {
   transform: rotate(112deg);
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(5) {
-  top: 64px;
+  top: 63px;
   left: 46px;
   transform: rotate(157deg);
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(6) {
-  top: 64px;
+  top: 63px;
   left: 22px;
   transform: rotate(-157deg);
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(7) {
-  top: 48px;
-  left: 0px;
+  top: 46px;
+  left: 3px;
   transform: rotate(-112deg);
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(8) {
