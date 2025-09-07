@@ -240,7 +240,7 @@
                         gsap.fromTo(
                             realTitle,
                             { scale: 1.05, opacity: 0, filter: "blur(8px)" },
-                            { scale: 1, opacity: 1, filter: "blur(0px)", duration: 1.5, ease: Cubic.easeInOut }
+                            { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.75, ease: Cubic.easeInOut }
                         );
                     }
                 }
