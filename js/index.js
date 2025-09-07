@@ -445,12 +445,12 @@
                 const effectLineBx = process.find(".process-effect-lines");
                 const effectLine = effectLineBx.find("img");
 
-                gsap.set( effectLineBx, { scale: 0.5 });
+                gsap.set( effectLineBx, { scale: 0 });
                 gsap.set( effectLine, { scale: 0 });
 
                 gsap.to(effectLineBx, {
                     duration: 0.5,
-                    scale: 1,
+                    scale: 0.9,
                     ease: Cubic.easeOut,
                 });
 
@@ -485,13 +485,13 @@
             }
 
             function showEffect() {
-                // showEffect1();
-                // setTimeout(() => {
-                //     showEffectShadow();
-                // }, 650);
-                // setTimeout(() => {
-                //     showEffect2();
-                // }, 800);
+                showEffect1();
+                setTimeout(() => {
+                    showEffectShadow();
+                }, 650);
+                setTimeout(() => {
+                    showEffect2();
+                }, 800);
             }
 
             function showProcess(idx, mTime = 1) {
