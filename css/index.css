@@ -467,8 +467,8 @@ body {
   height: 77px;
   transform-origin: center;
   position: absolute;
-  left: 5px;
-  top: 0;
+  left: 4px;
+  top: 1px;
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div {
   position: absolute;
