@@ -463,56 +463,19 @@ body {
   box-shadow: inset 0 0 0 0px rgba(249, 125, 1, 0.6);
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines {
-  width: 76px;
-  height: 76px;
+  width: 77px;
+  height: 77px;
   transform: scale(0.5);
   transform-origin: center;
   position: absolute;
   left: 4px;
-  top: -1px;
+  top: 0;
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div {
   position: absolute;
-}
-.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(1) {
-  top: 0px;
-  left: 21px;
-  transform: rotate(-22.5deg);
-}
-.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(2) {
-  top: 0px;
-  left: 48px;
-  transform: rotate(22deg);
-}
-.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(3) {
-  top: 18px;
-  left: 64px;
-  transform: rotate(55deg);
-}
-.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(4) {
-  top: 48px;
-  left: 64px;
-  transform: rotate(130deg);
-}
-.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(5) {
-  top: 64px;
-  left: 45px;
-  transform: rotate(160deg);
-}
-.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(6) {
-  top: 64px;
-  left: 22px;
-  transform: rotate(200deg);
-}
-.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(7) {
-  top: 49px;
-  left: 5px;
-  transform: rotate(-130deg);
-}
-.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(8) {
-  top: 17px;
-  left: 3px;
-  transform: rotate(-55deg);
+  width: 2px;
+  height: 12px;
+  font-size: 0;
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div img {
   width: 2px;
@@ -522,6 +485,46 @@ body {
 }
 .wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div img.on {
   transform-origin: center top;
+}
+.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(1) {
+  top: 0px;
+  left: 22px;
+  transform: rotate(-22deg);
+}
+.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(2) {
+  top: 0px;
+  left: 49px;
+  transform: rotate(22deg);
+}
+.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(3) {
+  top: 21px;
+  left: 64px;
+  transform: rotate(67deg);
+}
+.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(4) {
+  top: 48px;
+  left: 64px;
+  transform: rotate(112deg);
+}
+.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(5) {
+  top: 64px;
+  left: 48px;
+  transform: rotate(157deg);
+}
+.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(6) {
+  top: 64px;
+  left: 22px;
+  transform: rotate(-157deg);
+}
+.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(7) {
+  top: 48px;
+  left: 0px;
+  transform: rotate(-112deg);
+}
+.wrap.why-odd-grocer .process .process-view dl dd .progress-gage-bx .process-effect .process-effect-lines > div:nth-child(8) {
+  top: 21px;
+  left: 0px;
+  transform: rotate(-67deg);
 }
 .wrap.why-odd-grocer .process .process-view dl dd ul {
   padding: 0 12px;
@@ -703,14 +706,28 @@ body {
   bottom: 12px;
 }
 .wrap.why-odd-grocer .be-odd-eat-real {
-  background-image: url(../image/odd-grocer/be-odd-eat-real-bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.wrap.why-odd-grocer .be-odd-eat-real .be-odd-eat-real-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100vh;
 }
+.wrap.why-odd-grocer .be-odd-eat-real .be-odd-eat-real-bg img {
+  width: 100%;
+  height: calc(100vh + 40px);
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  top: -80px;
+}
 .wrap.why-odd-grocer .be-odd-eat-real dl {
+  z-index: 10;
   position: relative;
   height: 100vh;
   text-align: center;

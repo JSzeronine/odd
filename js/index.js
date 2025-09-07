@@ -215,6 +215,21 @@
             const real = $(".be-odd-eat-real");
             const realTitle = real.find("dt");
             const realDescription = real.find("dd");
+            const realBg = real.find(".be-odd-eat-real-bg").find( "img" );
+
+            const realBgTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: real[0],
+                    start: "top bottom",
+                    end: "bottom bottom",
+                    scrub: true,
+                }
+            });
+
+            realBgTl.to(realBg, {
+                y: 80,
+                ease: "none"
+            });
 
             gsap.timeline({
                 scrollTrigger: {
