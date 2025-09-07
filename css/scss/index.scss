@@ -9,7 +9,7 @@ body {
     overflow: hidden;
 
     &.why-odd-grocer {
-        .top-menus{
+        .top-menus {
             position: fixed;
             z-index: 100;
             top: 0;
@@ -23,11 +23,11 @@ body {
             background-color: #F5F5F5;
             display: none;
 
-            &.on{
+            &.on {
                 transform: translateY(-48px);
             }
 
-            a{
+            a {
                 display: inline-block;
                 width: 100%;
                 font-size: 16px;
@@ -40,30 +40,47 @@ body {
                 border-bottom: none;
                 text-decoration: none;
 
-                &.on{
+                &.on {
                     color: #F25100;
                     font-weight: 700;
                 }
             }
 
-            span{
+            span {
                 display: inline-block;
                 width: 1px;
                 height: 14px;
                 background-color: #CCCCCC;
             }
         }
+
         .visual {
-            background-color: #F5F5F5;
-            position: relative;
-            height: calc( 100vh );
-            background-image: url(../image/odd-grocer/visual-bg.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            box-sizing: border-box;
-            // padding: 98px 0 50px;
-            padding: 50px 0 50px;
+            .visual-bx {
+                width: 100%;
+                position: relative;
+                z-index: 5;
+                height: 100vh;
+                box-sizing: border-box;
+                padding: 50px 0 50px;
+            }
+
+            .visual-bg {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: calc(100vh + 40px);
+                    object-fit: cover;
+                    object-position: center;
+                    position: relative;
+                    top: -40px;
+                }
+            }
 
             .visual-logo {
                 width: 100%;
@@ -137,13 +154,15 @@ body {
                     opacity: 0;
                 }
 
-                .best-eat-effect-bx{
+                .best-eat-effect-bx {
                     position: absolute;
                     left: 0;
                     top: 0;
-                    .best-eat-effect-00{
+
+                    .best-eat-effect-00 {
                         opacity: 0;
-                        span{
+
+                        span {
                             font-size: 60px;
                             font-weight: 500;
                             line-height: 74px;
@@ -152,17 +171,17 @@ body {
                             left: 0;
                             top: 0;
 
-                            &:nth-child(1){
+                            &:nth-child(1) {
                                 transform: translateY(0px);
                             }
-    
-                            &:nth-child(2){
+
+                            &:nth-child(2) {
                                 transform: translate(51px, 148px);
                             }
                         }
                     }
 
-                    .best-eat-effect-01{
+                    .best-eat-effect-01 {
                         opacity: 0;
                         position: absolute;
                         width: 160px;
@@ -187,23 +206,27 @@ body {
             padding: 80px 30px 0;
             position: relative;
 
-            .introduce-video-bx{
+            .introduce-video-bx {
                 position: absolute;
                 left: 0;
                 top: 0;
                 width: 100%;
                 height: 100%;
                 background-color: #281F12;
-                video{
+                overflow: hidden;
+
+                video {
                     width: 100%;
-                    height: 100%;
+                    height: calc( 100% + 160px );
                     object-fit: cover;
                     object-position: center;
                     opacity: 0.4;
+                    position: relative;
+                    top: -160px;
                 }
             }
 
-            .introduce-bx{
+            .introduce-bx {
                 position: relative;
                 z-index: 10;
             }
@@ -408,25 +431,26 @@ body {
                     }
 
                     dd {
-                        .progress-gage-bx{
+                        .progress-gage-bx {
                             position: relative;
                             display: inline-block;
 
                             .progress-gage-list {
                                 position: relative;
 
-                                .progress-gage-icons{
+                                .progress-gage-icons {
                                     display: flex;
                                     gap: 37px;
                                     position: relative;
                                     z-index: 2;
-                                    img{
+
+                                    img {
                                         display: inline-block;
                                         width: 50px;
                                     }
                                 }
 
-                                .progress-gage-line{
+                                .progress-gage-line {
                                     width: 50px;
                                     height: 9px;
                                     background-color: #8A8581;
@@ -435,48 +459,51 @@ body {
                                     top: 21px;
                                 }
 
-                                &.progress-gage{
+                                &.progress-gage {
                                     opacity: 1;
                                     position: absolute;
                                     left: 0;
                                     top: 0;
-                                    .progress-gage-line{
+
+                                    .progress-gage-line {
                                         background-color: #FF7D00;
                                         opacity: 0.3;
                                     }
                                 }
-    
-                                &.progress-gage-on{
+
+                                &.progress-gage-on {
                                     display: inline-block;
                                     position: relative;
                                     z-index: 5;
                                     overflow: hidden;
                                     width: 0%;
-                                    .progress-gage-line{
+
+                                    .progress-gage-line {
                                         background-color: #F97D01;
                                     }
                                 }
 
-                                &.progress-gage-finish{
+                                &.progress-gage-finish {
                                     opacity: 1;
                                     position: absolute;
                                     left: 0;
                                     top: 0;
                                     z-index: 10;
-                                    img{
+
+                                    img {
                                         opacity: 0;
                                     }
                                 }
                             }
 
-                            .process-effect{
+                            .process-effect {
                                 position: absolute;
                                 width: 76px;
                                 height: 76px;
                                 left: 74px;
                                 top: -13px;
 
-                                .process-effect-1{
+                                .process-effect-1 {
                                     position: absolute;
                                     display: inline-block;
                                     width: 76px;
@@ -484,15 +511,15 @@ body {
                                     border-radius: 100%;
                                     transform-origin: center;
                                     transform: scale(0);
-                                    box-shadow: inset 0 0 0 40px rgba( #F97D01, 0.6 );
+                                    box-shadow: inset 0 0 0 40px rgba(#F97D01, 0.6);
                                     transition: box-shadow 0.5s ease-in-out;
 
-                                    &.on{
-                                        box-shadow: inset 0 0 0 0px rgba( #F97D01, 0.6 );
+                                    &.on {
+                                        box-shadow: inset 0 0 0 0px rgba(#F97D01, 0.6);
                                     }
                                 }
 
-                                .process-effect-2{
+                                .process-effect-2 {
                                     position: absolute;
                                     display: inline-block;
                                     width: 76px;
@@ -500,15 +527,15 @@ body {
                                     border-radius: 100%;
                                     transform-origin: center;
                                     transform: scale(0);
-                                    box-shadow: inset 0 0 0 40px rgba( #F97D01, 0.6 );
+                                    box-shadow: inset 0 0 0 40px rgba(#F97D01, 0.6);
                                     transition: box-shadow 0.5s ease-in-out;
 
-                                    &.on{
-                                        box-shadow: inset 0 0 0 0px rgba( #F97D01, 0.6 );
+                                    &.on {
+                                        box-shadow: inset 0 0 0 0px rgba(#F97D01, 0.6);
                                     }
                                 }
 
-                                .process-effect-lines{
+                                .process-effect-lines {
                                     width: 76px;
                                     height: 76px;
                                     transform: scale(0.5);
@@ -517,57 +544,65 @@ body {
                                     position: absolute;
                                     left: 4px;
                                     top: -1px;
-                                    > div{
+
+                                    >div {
                                         position: absolute;
 
-                                        &:nth-child(1){
+                                        &:nth-child(1) {
                                             top: 0px;
                                             left: 21px;
                                             transform: rotate(-22.5deg);
                                         }
 
-                                        &:nth-child(2){
+                                        &:nth-child(2) {
                                             top: 0px;
                                             left: 48px;
                                             transform: rotate(22deg);
                                         }
-                                        &:nth-child(3){
+
+                                        &:nth-child(3) {
                                             top: 18px;
                                             left: 64px;
                                             transform: rotate(55deg);
                                         }
-                                        &:nth-child(4){
+
+                                        &:nth-child(4) {
                                             top: 48px;
                                             left: 64px;
                                             transform: rotate(130deg);
                                         }
-                                        &:nth-child(5){
+
+                                        &:nth-child(5) {
                                             top: 64px;
                                             left: 45px;
                                             transform: rotate(160deg);
                                         }
-                                        &:nth-child(6){
+
+                                        &:nth-child(6) {
                                             top: 64px;
                                             left: 22px;
                                             transform: rotate(200deg);
                                         }
-                                        &:nth-child(7){
+
+                                        &:nth-child(7) {
                                             top: 49px;
                                             left: 5px;
                                             transform: rotate(-130deg);
                                         }
-                                        &:nth-child(8){
+
+                                        &:nth-child(8) {
                                             top: 17px;
                                             left: 3px;
                                             transform: rotate(-55deg);
                                         }
 
-                                        img{
+                                        img {
                                             width: 2px;
                                             height: 12px;
                                             transform: scale(0);
                                             transform-origin: center bottom;
-                                            &.on{
+
+                                            &.on {
                                                 transform-origin: center top;
                                             }
                                         }
@@ -589,7 +624,7 @@ body {
                                 line-height: 24px;
                                 color: #FF7D00;
 
-                                &.on{
+                                &.on {
                                     font-weight: 700;
                                 }
                             }
@@ -612,24 +647,26 @@ body {
                         }
 
                         dd {
-                            .progress-gage-bx{
-                                .progress-gage{
-                                    .progress-gage-line{
+                            .progress-gage-bx {
+                                .progress-gage {
+                                    .progress-gage-line {
                                         width: 245px;
                                         background-color: #8A8581;
                                     }
                                 }
 
-                                .progress-gage-on{
+                                .progress-gage-on {
+
                                     // width: 137px;
                                     // width: 224px;
                                     // width: 312px;
-                                    .progress-gage-line{
+                                    .progress-gage-line {
                                         width: 245px;
                                         background-color: #8A8581;
                                     }
                                 }
                             }
+
                             img {
                                 width: 311px;
                             }
@@ -645,14 +682,16 @@ body {
             }
         }
 
-        .peak-time{
+        .peak-time {
             padding: 0 16px;
             margin-bottom: 60px;
-            .peak-time-list__bx{
+
+            .peak-time-list__bx {
                 background-color: #FAFAF0;
                 box-sizing: border-box;
                 padding-bottom: 60px;
-                h3{
+
+                h3 {
                     font-size: 18px;
                     font-weight: 400;
                     line-height: 24px;
@@ -661,30 +700,36 @@ body {
                     box-sizing: border-box;
                     color: #002800;
                     opacity: 0;
-                    span{
+
+                    span {
                         font-weight: 700;
                     }
                 }
 
-                .peak-time__menus{
+                .peak-time__menus {
                     margin-bottom: 16px;
-                    ul{
+
+                    ul {
                         display: flex;
                         justify-content: space-between;
                         border-bottom: 1px solid #DEDEDE;
                         padding: 0 12px;
-                        li{
+
+                        li {
                             position: relative;
                             top: 1px;
                             width: 100%;
-                            &.on{
+
+                            &.on {
                                 border-bottom: 2px solid #F25100;
-                                button{
+
+                                button {
                                     color: #333333;
                                     font-weight: 800;
                                 }
                             }
-                            button{
+
+                            button {
                                 width: 100%;
                                 height: 48px;
                                 text-align: center;
@@ -693,38 +738,44 @@ body {
                                 font-size: 16px;
                                 font-weight: 400;
                                 color: #808080;
-                                padding: 0;;
+                                padding: 0;
+                                ;
                             }
                         }
                     }
                 }
 
-                .peak-time__contents{
+                .peak-time__contents {
                     padding: 0 16px;
-                    ul{
+
+                    ul {
                         position: relative;
-                        li{
+
+                        li {
                             opacity: 0;
-                            &:first-child{
+
+                            &:first-child {
                                 position: relative;
                                 opacity: 1;
                             }
+
                             position: absolute;
                             left: 0;
                             top: 0;
-                            img{
+
+                            img {
                                 width: 100%;
                                 margin-bottom: 40px;
                             }
 
-                            p{
+                            p {
                                 text-align: center;
                                 font-size: 16px;
                                 font-weight: 400;
                                 line-height: 24px;
                                 color: #002800;
 
-                                span{
+                                span {
                                     font-weight: 700;
                                 }
                             }
@@ -734,34 +785,40 @@ body {
             }
         }
 
-        .behavior{
+        .behavior {
             padding: 0 16px;
             margin-bottom: 60px;
-            .behavior-list{
+
+            .behavior-list {
                 background-color: #FAFAF0;
                 padding: 22px 16px 60px;
-                ul{
+
+                ul {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 15px;
-                    li{
+
+                    li {
                         opacity: 0;
                         width: 100%;
-                        button{
+
+                        button {
                             border-radius: 10px;
                             display: flex;
                             justify-content: flex-start;
                             width: 100%;
                             height: 200px;
-                            background-color: rgba( #826446, 0.5 );
+                            background-color: rgba(#826446, 0.5);
                             border: none;
 
                             padding: 14px;
                             position: relative;
                             box-sizing: border-box;
-                            .behavior-list-content{
+
+                            .behavior-list-content {
                                 text-align: left;
-                                p{
+
+                                p {
                                     font-size: 18px;
                                     font-weight: 700;
                                     color: #ffffff;
@@ -769,33 +826,36 @@ body {
                                 }
                             }
 
-                            .behavior-list-content__img{
+                            .behavior-list-content__img {
                                 position: absolute;
                                 right: 0;
                                 bottom: 0;
                             }
                         }
 
-                        &:nth-child(1){
-                            .behavior-list-content__img{
+                        &:nth-child(1) {
+                            .behavior-list-content__img {
                                 width: 106px;
                                 bottom: 16px;
                             }
                         }
-                        &:nth-child(2){
-                            .behavior-list-content__img{
+
+                        &:nth-child(2) {
+                            .behavior-list-content__img {
                                 width: 122px;
                                 bottom: 16px;
                             }
                         }
-                        &:nth-child(3){
-                            .behavior-list-content__img{
+
+                        &:nth-child(3) {
+                            .behavior-list-content__img {
                                 width: 96px;
                                 bottom: 14px;
                             }
                         }
-                        &:nth-child(4){
-                            .behavior-list-content__img{
+
+                        &:nth-child(4) {
+                            .behavior-list-content__img {
                                 width: 92px;
                                 bottom: 12px;
                             }
@@ -805,7 +865,7 @@ body {
             }
         }
 
-        .be-odd-eat-real{
+        .be-odd-eat-real {
             background-image: url(../image/odd-grocer/be-odd-eat-real-bg.png);
             background-size: cover;
             background-position: center;
@@ -813,20 +873,22 @@ body {
             width: 100%;
             height: 100vh;
 
-            dl{
+            dl {
                 position: relative;
                 height: 100vh;
                 text-align: center;
-                dt{
+
+                dt {
                     position: relative;
                     top: 10%;
-                    font-size: 18px;
+                    font-size: 20px;
                     font-weight: 400;
                     line-height: 24px;
                     color: #ffffff;
                     opacity: 0;
                 }
-                dd{
+
+                dd {
                     width: 100%;
                     position: absolute;
                     left: 0;
@@ -841,30 +903,32 @@ body {
         }
     }
 
-    .common-odd-grocer__title{
+    .common-odd-grocer__title {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         padding: 127px 14px;
         box-sizing: border-box;
 
-        &.peck-time-bg{
+        &.peck-time-bg {
             background-image: url(../image/odd-grocer/peak-time-bg.png);
         }
 
-        &.behavior-bg{
+        &.behavior-bg {
             background-image: url(../image/odd-grocer/behavior-bg.png);
         }
 
-        dl{
+        dl {
             text-align: center;
-            dt{
+
+            dt {
                 font-family: 'Optima';
                 font-size: 66px;
                 font-weight: 400;
                 color: #ffffff;
             }
-            dd{
+
+            dd {
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 24px;
@@ -874,7 +938,7 @@ body {
     }
 }
 
-.popup{
+.popup {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -886,69 +950,75 @@ body {
     scrollbar-width: none;
     display: none;
 
-    &.on{
+    &.on {
         display: block;
     }
 
     &::-webkit-scrollbar {
         display: none;
-      }
-
-    .popup-dimmed{
-        background-color: rgba( 0, 0, 0, 0.75 );
     }
 
-    .popup-content-bx{
+    .popup-dimmed {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    .popup-content-bx {
         position: relative;
         width: 100%;
-        height: calc( 100vh + 1px );
+        height: calc(100vh + 1px);
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .popup-inner{
+        .popup-inner {
             position: relative;
             z-index: 10;
             display: inline-block;
             width: 100%;
             padding: 0 26px;
             box-sizing: border-box;
-    
-            .popup-close{
+
+            .popup-close {
                 text-align: right;
                 margin-right: 10px;
-                button{
+
+                button {
                     border: none;
                     background-color: transparent;
                     padding: 0;
                 }
             }
-    
-            .popup-content-list{
+
+            .popup-content-list {
                 background-color: #ffffff;
                 border-radius: 20px;
                 overflow: hidden;
                 padding-bottom: 20px;
-                .popup-content{
+
+                .popup-content {
                     display: none;
-                    &.on{
+
+                    &.on {
                         display: block;
                     }
-                    img{
+
+                    img {
                         width: 100%;
                     }
-    
-                    dl{
+
+                    dl {
                         padding: 20px 20px 16px;
                         box-sizing: border-box;
-                        dt{
+
+                        dt {
                             font-size: 18px;
                             font-weight: 700;
                             line-height: 24px;
                             color: #002800;
                             margin-bottom: 16px;
                         }
-                        dd{
+
+                        dd {
                             font-size: 16px;
                             font-weight: 400;
                             line-height: 24px;
@@ -956,10 +1026,11 @@ body {
                         }
                     }
                 }
-    
-                .popup-close-btn{
+
+                .popup-close-btn {
                     text-align: center;
-                    button{
+
+                    button {
                         border: 1px solid #E6E6E6;
                         border-radius: 8px;
                         padding: 7px 15px;
@@ -972,9 +1043,9 @@ body {
             }
         }
     }
-    
 
-    .popup-dimmed{
+
+    .popup-dimmed {
         position: absolute;
         left: 0;
         top: 0;

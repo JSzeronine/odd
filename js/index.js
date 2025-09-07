@@ -5,13 +5,13 @@
         const Init = () => {
             createTopMenus();
             createBestEat();
-            createIntroduce();
             createPeakTime();
             createBehavior();
             createProgress();
 
             scrollActionVisual();
             scrollActionTaste();
+            scrollIntroduce();
             scrollActionProcess();
             scrollActionCommonTitle();
             scrollBehavior();
@@ -37,33 +37,6 @@
                 { y: 10, opacity: 0 },
                 { y: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut }
             );
-
-            // const peakTimeMenus = peakTimeTitleBx.find(".peak-time__menus ul li");
-            // const peakTimeContentBx = peakTimeTitleBx.find(".peak-time__contents");
-
-            // const tlMenus = gsap.timeline({
-            //     scrollTrigger: {
-            //         trigger: peakTimeMenus[0],
-            //         start: "top 80%",
-            //         once: true,
-            //         onEnter: function () {
-            //             peakTimeMenus.each(function (i, el) {
-            //                 gsap.fromTo(
-            //                     el,
-            //                     { x: 50, opacity: 0 },
-            //                     { x: 0, opacity: 1, duration: 0.4, ease: Cubic.easeInOut, delay: 0.1 * i }
-            //                 );
-
-            //                 gsap.fromTo(
-            //                     peakTimeContentBx,
-            //                     { y: 10, opacity: 0 },
-            //                     { y: 0, opacity: 1, duration: 0.4, ease: Cubic.easeInOut }
-            //                 );
-
-            //             });
-            //         }
-            //     }
-            // });
         }
 
         function scrollActionVisual() {
@@ -72,6 +45,7 @@
             const visualIntroduce = visual.find(".visual-introduce");
             const visualSign = visual.find(".visual-sign");
             const visualSignEgg = visual.find(".visual-sign-egg");
+            const visualBg = visual.find(".visual-bg").find( "img")
 
             gsap.fromTo(
                 visualLogo,
@@ -93,6 +67,17 @@
                 { opacity: 0, y: 0 },
                 { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut, delay: 0.3 },
             );
+
+            gsap.to(visualBg, {
+                y: 100,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: visual[0],
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                }
+            });
         }
 
         function scrollActionTaste() {
@@ -111,14 +96,13 @@
             tl.fromTo(
                 tasteTitle,
                 { x: -30, opacity: 0 },
-                { x: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut }
-            )
-                .fromTo(
-                    tasteDescription,
-                    { x: 30, opacity: 0 },
-                    { x: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut },
-                    "<"
-                );
+                { x: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut })
+            .fromTo(
+                tasteDescription,
+                { x: 30, opacity: 0 },
+                { x: 0, opacity: 1, duration: 0.5, ease: Cubic.easeInOut },
+                "<"
+            );
         }
 
         function scrollActionProcess() {
@@ -240,8 +224,8 @@
                     onEnter: function () {
                         gsap.fromTo(
                             realTitle,
-                            { y: 10, opacity: 0 },
-                            { y: 0, opacity: 1, duration: 0.7, ease: Cubic.easeInOut }
+                            { scale: 1.05, opacity: 0, filter: "blur(8px)" },
+                            { scale: 1, opacity: 1, filter: "blur(0px)", duration: 1.5, ease: Cubic.easeInOut }
                         );
                     }
                 }
@@ -255,8 +239,8 @@
                     onEnter: function () {
                         gsap.fromTo(
                             realDescription,
-                            { opacity: 0 },
-                            { opacity: 1, duration: 1, ease: Cubic.easeInOut }
+                            { opacity: 0, y: 10 },
+                            { opacity: 1, y:0, duration: 0.5, ease: Cubic.easeInOut }
                         );
                     }
                 }
@@ -334,7 +318,7 @@
             scrollListener();
         }
 
-        function createIntroduce() {
+        function scrollIntroduce() {
             const introduce = $(".introduce");
 
             if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
@@ -356,7 +340,7 @@
                     let tl = gsap.timeline({
                         scrollTrigger: {
                             trigger: introduce,
-                            start: "top 75%",
+                            start: "top 80%",
                             end: "bottom 100%",
                             scrub: true,
                             onLeave: function (self) {
@@ -397,6 +381,19 @@
                         }, "+=0");
                     });
                 }
+
+                const introduceVideo = introduce.find(".introduce-video-bx").find("video");
+                gsap.to(introduceVideo, {
+                    y: 160,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: introduce[0],
+                        start: "top bottom",
+                        end: "bottom top",
+                        scrub: true,
+                    }
+                });
+    
             }
         }
 
@@ -414,6 +411,10 @@
 
             function showEffect1() {
                 const effect1 = process.find(".process-effect-1");
+
+                effect1.removeClass("on");
+                gsap.set(effect1, { scale: 0 });
+
                 gsap.to(effect1, {
                     duration: 1,
                     scale: 1,
@@ -428,6 +429,10 @@
             function showEffectShadow() {
                 const effectLineBx = process.find(".process-effect-lines");
                 const effectLine = effectLineBx.find("img");
+
+                gsap.set( effectLineBx, { scale: 0.5 });
+                gsap.set( effectLine, { scale: 0 });
+
 
                 gsap.to(effectLineBx, {
                     duration: 0.5,
@@ -451,6 +456,9 @@
 
             function showEffect2() {
                 const effect2 = process.find(".process-effect-2");
+                effect2.removeClass("on");
+                gsap.set(effect2, { scale: 0 });
+
                 gsap.to(effect2, {
                     duration: 1,
                     scale: 1,
@@ -482,8 +490,14 @@
                         o.css("opacity", 1);
                         d.css("opacity", 1);
 
-                        gsap.to(o, { duration: 0.2, scale: 1.1, ease: Power0.easeInOut, yoyo: true, repeat: 1 });
-                        gsap.to(d, { duration: 0.2, scale: 1.1, ease: Power0.easeInOut, yoyo: true, repeat: 1 });
+
+                        if( idx === 1 ){
+                            gsap.to(o, { duration: 0.2, scale: 1.1, ease: Power0.easeInOut, yoyo: true, repeat: 1 });
+                        }
+
+                        if( idx === 3 ){
+                            gsap.to(d, { duration: 0.2, scale: 1.1, ease: Power0.easeInOut, yoyo: true, repeat: 1 });
+                        }
 
                         const oTxt = $(oddProcessTxtList[idx]);
                         const dTxt = $(defaultProcessTxtList[idx]);
@@ -497,6 +511,9 @@
 
                 if (idx === 1) {
                     setTimeout(() => {
+                        setInterval(() => {
+                            showEffect();
+                        }, 3000 );
                         showEffect();
                     }, 500);
                 }
@@ -509,15 +526,15 @@
 
                     setTimeout(() => {
                         showProcess(1, 1);
-                    }, 1500);
+                    }, 1000);
 
                     setTimeout(() => {
                         showProcess(2, 1);
-                    }, 3000);
+                    }, 2000);
 
                     setTimeout(() => {
                         showProcess(3, 1);
-                    }, 4500);
+                    }, 3000);
 
                     progressTriggered = true;
                     window.removeEventListener("scroll", scrollListener);
