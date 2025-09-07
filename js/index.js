@@ -450,7 +450,7 @@
 
                 gsap.to(effectLineBx, {
                     duration: 0.5,
-                    scale: 0.9,
+                    scale: 1.05,
                     ease: Cubic.easeOut,
                 });
 
