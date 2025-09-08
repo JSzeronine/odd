@@ -199,6 +199,90 @@ body {
             }
         }
 
+        .harim{
+            .harim-inner{
+                position: relative;
+
+                .harim-header{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100vh;
+                    z-index: 10;
+
+                    .harim-title{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        span{
+                            font-family: 'Optima';
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #ffffff;
+                            display: inline-block;
+                            padding-top: 57px;
+                            padding-left: 30px;
+                        }
+
+                        img{
+                            position: absolute;
+                            top: 38px;
+                            right: 30px;
+                        }
+                    }
+
+                    .harim-odd-logo{
+                        position: absolute;
+                        left: 30px;
+                        bottom: 40px;
+                    }
+                }
+
+                .harim-list-bx{
+                    position: relative;
+                    li{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100vh;
+                        opacity: 0;
+
+                        &:first-child{
+                            position: relative;
+                            opacity: 1
+                        }
+
+                        .harim-text{
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            font-size: 34px;
+                            line-height: 140%;
+                            font-weight: 400;
+                            color: #ffffff;
+                            top: 167px;
+                            left: 30px;
+                            span{
+                                font-weight: 700;
+                            }
+                        }
+
+                        .harim-img{
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .introduce {
             background-image: url(../image/odd-grocer/introduce-bg.png);
             background-size: cover;
@@ -902,10 +986,10 @@ body {
 
                 dt {
                     position: relative;
-                    top: 10%;
-                    font-size: 20px;
+                    top: 20%;
+                    font-size: 24px;
                     font-weight: 400;
-                    line-height: 24px;
+                    line-height: 140%;
                     color: #ffffff;
                     opacity: 0;
                 }

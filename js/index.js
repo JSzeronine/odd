@@ -4,7 +4,8 @@
 
         const Init = () => {
             createTopMenus();
-            createBestEat();
+            // createBestEat();
+            createHarim();
             createPeakTime();
             createBehavior();
             createProgress();
@@ -240,7 +241,7 @@
                         gsap.fromTo(
                             realTitle,
                             { scale: 1.05, opacity: 0, filter: "blur(8px)" },
-                            { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.75, ease: Cubic.easeInOut }
+                            { scale: 1, opacity: 1, filter: "blur(0px)", duration: 1.5, ease: Cubic.easeInOut }
                         );
                     }
                 }
@@ -255,7 +256,7 @@
                         gsap.fromTo(
                             realDescription,
                             { opacity: 0, y: 10 },
-                            { opacity: 1, y:0, duration: 0.5, ease: Cubic.easeInOut }
+                            { opacity: 1, y:0, duration: 1, ease: Cubic.easeInOut }
                         );
                     }
                 }
@@ -287,6 +288,35 @@
             const visibleBottom = Math.min(rect.bottom, windowHeight);
             const visibleHeight = visibleBottom - visibleTop;
             return visibleHeight >= elementHeight / 2 && rect.bottom > 0 && rect.top < windowHeight;
+        }
+
+        function createHarim(){
+            const harim = $(".harim");
+            const harimList = harim.find(".harim-list-bx li");
+            const harimListText = harim.find(".harim-text");
+
+            let currentIndex = 0;
+            const total = harimList.length;
+
+            setInterval(() => {
+                const prevIndex = currentIndex;
+                currentIndex = (currentIndex + 1) % total;
+
+                gsap.to(harimList.eq(prevIndex), { opacity: 0, duration: 0.3, ease: Cubic.easeOut });
+                gsap.to(harimList.eq(currentIndex), { opacity: 1, duration: 0.3, ease: Cubic.easeOut });
+
+                gsap.fromTo(
+                    harimListText.eq(prevIndex),
+                    { x: 0, opacity: 1 },
+                    { x: 15, opacity: 0, duration: 0.3, ease: Cubic.easeOut }
+                );
+
+                gsap.fromTo(
+                    harimListText.eq(currentIndex),
+                    { x: -15, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 0.3, ease: Cubic.easeOut }
+                );
+            }, 2000);
         }
 
         function createBestEat() {

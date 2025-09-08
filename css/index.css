@@ -174,6 +174,76 @@ body {
   line-height: 74px;
   color: #ffffff;
 }
+.wrap.why-odd-grocer .harim .harim-inner {
+  position: relative;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-header .harim-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-header .harim-title span {
+  font-family: "Optima";
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  display: inline-block;
+  padding-top: 57px;
+  padding-left: 30px;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-header .harim-title img {
+  position: absolute;
+  top: 38px;
+  right: 30px;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-header .harim-odd-logo {
+  position: absolute;
+  left: 30px;
+  bottom: 40px;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-list-bx {
+  position: relative;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-list-bx li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-list-bx li:first-child {
+  position: relative;
+  opacity: 1;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-list-bx li .harim-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 34px;
+  line-height: 140%;
+  font-weight: 400;
+  color: #ffffff;
+  top: 167px;
+  left: 30px;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-list-bx li .harim-text span {
+  font-weight: 700;
+}
+.wrap.why-odd-grocer .harim .harim-inner .harim-list-bx li .harim-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .wrap.why-odd-grocer .introduce {
   background-image: url(../image/odd-grocer/introduce-bg.png);
   background-size: cover;
@@ -735,10 +805,10 @@ body {
 }
 .wrap.why-odd-grocer .be-odd-eat-real dl dt {
   position: relative;
-  top: 10%;
-  font-size: 20px;
+  top: 20%;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 140%;
   color: #ffffff;
   opacity: 0;
 }
