@@ -304,18 +304,6 @@
 
                 gsap.to(harimList.eq(prevIndex), { opacity: 0, duration: 0.3, ease: Cubic.easeOut });
                 gsap.to(harimList.eq(currentIndex), { opacity: 1, duration: 0.3, ease: Cubic.easeOut });
-
-                gsap.fromTo(
-                    harimListText.eq(prevIndex),
-                    { x: 0, opacity: 1 },
-                    { x: 15, opacity: 0, duration: 0.3, ease: Cubic.easeOut }
-                );
-
-                gsap.fromTo(
-                    harimListText.eq(currentIndex),
-                    { x: -15, opacity: 0 },
-                    { x: 0, opacity: 1, duration: 0.3, ease: Cubic.easeOut }
-                );
             }, 2000);
         }
 
