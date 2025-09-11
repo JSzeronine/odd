@@ -356,56 +356,60 @@
             .tutorial-contents{
                 .tutorial-content{
                     position: relative;
-                    height: calc(100vh + 550px);
+                    // height: calc(100vh + 550px);
+                    height: 300vh;
                     .tutorial-bg{
                         position: sticky;
                         left: 0;
                         top: 0;
                         width: 100%;
-                        height: 100vh;
+                        height: 200vh;
                         img{
+                            position: sticky;
+                            left: 0;
+                            top: 0;
                             width: 100%;
-                            height: 100%;
+                            height: 100vh;
                             object-fit: cover;
                             object-position: center bottom;
                         }
-                    }
 
-                    .tutorial-step-bx{
-                        position: absolute;
-                        left: 0;
-                        top: 50%;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        transform: translateY(-25%);
-
-                        dl{
-                            text-align: center;
-                            dt{
-                                margin-bottom: 16px;
+                        .tutorial-step-bx{
+                            padding-top: 109px;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+    
+                            dl{
                                 text-align: center;
-                                span{
-                                    padding: 6px 14px;
-                                    border: 1px solid #ffffff;
-                                    border-radius: 100px;
-                                    overflow: hidden;
-                                    font-weight: 500;
-                                    font-size: 14px;
-                                    line-height: 100%;
-                                    color: #ffffff;
+                                dt{
+                                    margin-bottom: 16px;
+                                    text-align: center;
+                                    span{
+                                        padding: 6px 14px;
+                                        border: 1px solid #ffffff;
+                                        border-radius: 100px;
+                                        overflow: hidden;
+                                        font-weight: 500;
+                                        font-size: 14px;
+                                        line-height: 100%;
+                                        color: #ffffff;
+                                    }
                                 }
-                            }
-
-                            dd{
-                                font-weight: 500;
-                                font-size: 26px;
-                                line-height: 130%;
-                                color: #002800;
-                                span{
-                                    font-weight: 700;
+    
+                                dd{
+                                    font-weight: 500;
+                                    font-size: 26px;
+                                    line-height: 130%;
+                                    color: #002800;
+                                    span{
+                                        font-weight: 700;
+                                    }
                                 }
                             }
                         }
@@ -414,6 +418,10 @@
                     .tutorial-description{
                         position: relative;
                         z-index: 10;
+                        height: 100vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
 
                         .tutorial-desc-swiper{
                             .swiper-wrapper{

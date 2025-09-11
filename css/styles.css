@@ -1266,40 +1266,43 @@ body {
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content {
   position: relative;
-  height: calc(100vh + 550px);
+  height: 300vh;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg {
   position: sticky;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 200vh;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg img {
+  position: sticky;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
   object-position: center bottom;
 }
-.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-step-bx {
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx {
+  padding-top: 109px;
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 0;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(-25%);
 }
-.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-step-bx dl {
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl {
   text-align: center;
 }
-.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-step-bx dl dt {
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl dt {
   margin-bottom: 16px;
   text-align: center;
 }
-.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-step-bx dl dt span {
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl dt span {
   padding: 6px 14px;
   border: 1px solid #ffffff;
   border-radius: 100px;
@@ -1309,18 +1312,22 @@ body {
   line-height: 100%;
   color: #ffffff;
 }
-.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-step-bx dl dd {
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl dd {
   font-weight: 500;
   font-size: 26px;
   line-height: 130%;
   color: #002800;
 }
-.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-step-bx dl dd span {
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl dd span {
   font-weight: 700;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-description {
   position: relative;
   z-index: 10;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-description .tutorial-desc-swiper .swiper-wrapper .swiper-slide {
   width: 82.9333333333%;
