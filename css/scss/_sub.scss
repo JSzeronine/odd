@@ -1,0 +1,521 @@
+
+
+
+
+
+
+
+.hands-on-tour{
+    .inner{
+        .visual{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            .visual-logo-bx{
+                position: absolute;
+                z-index: 20;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding: 66px 0;
+                box-sizing: border-box;
+                span{
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 66px;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #CCCCC4;
+                    opacity: 0;
+                }
+
+                img{
+                    opacity: 0;
+                }
+            }
+
+            .visual-key{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 11;
+                position: relative;
+    
+                .visual-key-content{
+                    position: relative;
+                    z-index: 10;
+                    .visual-key-bx{
+                        width: 375px;
+                        height: 546px;
+                        position: relative;
+    
+                        .visual-key-img{
+                            z-index: 2;
+                            position: absolute;
+                            left: 50%;
+                            top: 205px;
+                            transform: translateX(-50%);
+                            opacity: 0;
+                        }
+        
+                        .visual-key-bg-img{
+                            position: relative;
+                            z-index: 2;
+                            font-size: 0;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                            }
+                        }
+    
+                        .visual-key-bg-color{
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #002800;
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                .visual-key-bg{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #002800;
+                }
+            }
+
+            .visual-introduce{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                .visual-introduce__content{
+                    width: 100%;
+                    position: realtive;
+                    z-index: 10;
+                    text-align: center;
+                    img{
+                        width: 22px;
+                        margin-bottom: 14px;
+                    }
+                    dl{
+                        margin-bottom: 40px;
+                        dt{
+                            font-size: 28px;
+                            font-weight: 700;
+                            line-height: 140%;
+                            color: #ffffff;
+                            margin-bottom: 25px;
+                        }
+
+                        dd{
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 140%;
+                            color: #ffffff;
+
+                            .strong-text{
+                                color: #ffffff;
+                                font-size: 24px;
+                                line-height: 140%;
+                                strong{
+                                    font-size: 24px;
+                                    line-height: 140%;
+                                    color: #F97D01;
+                                }
+                                span{
+                                    color: #ffffff;
+                                    font-size: 24px;
+                                    line-height: 140%;
+                                    font-weight: 700;
+                                }
+                            }
+
+                            span{
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 140%;
+                            }
+                        }
+                    }
+                    .visual-introduce__journey{
+                        font-family: Optima;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 120%;
+                        color: #ffffff;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img{
+                            margin-top: 10px;
+                        }
+                    }
+                }
+                
+                .visual-introduce__video{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #281F1299;
+                    video{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+
+        .secret{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            .secret-title{
+                position: relative;
+                z-index: 10;
+                padding-top: 50px;
+                dl{
+                    text-align: center;
+                    dt{
+                        font-family: 'Optima';
+                        font-weight: 400;
+                        font-size: 44px;
+                        line-height: 100%;
+                        margin-bottom: 12px;
+                        color: #002800;
+                        
+                    }
+                    dd{
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: #002800;
+                    }
+                }
+            }
+
+            .secret-img{
+                position: absolute;
+                left: 50%;
+                bottom: 22px;
+                transform: translateX(-50%);
+                z-index: 10;
+                img{
+                    width: 227px;
+                }
+                span{
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    font-family: Optima;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 120%;
+                    color: #FFFFFF;
+                }
+            }
+
+            .secret-bg{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center bottom;
+                }
+            }
+        }
+
+        .tutorial-list{
+            .tutorial-progress{
+                z-index: 50;
+                position: sticky;
+                left: 0;
+                top: 0px;
+                width: 100%;
+                height: 0;
+
+                .circle-list-bx{
+                    padding: 26px 40px 0;
+                    box-sizing: border-box;
+                    font-size: 0;
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        position: relative;
+                        z-index: 10;
+                        li{
+                            position: relative;
+                            .circle-list-item{
+                                position: relative;
+                                font-size: 0;
+                                width: 16px;
+                                height: 16px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                &.on{
+                                    .circle-bg{
+                                        width: 16px;
+                                        height: 16px;
+                                    }
+
+                                    img{
+                                        opacity: 1;
+                                    }
+                                }
+
+                                img{
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    opacity: 0;
+                                }
+
+                                .circle-bg{
+                                    display: inline-block;
+                                    width: 8px;
+                                    height: 8px;
+                                    background-color: #ffffff;
+                                    border-radius: 50%;
+                                }
+                            }
+
+                            .circle-list-item__text{
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 140%;
+                                color: #ffffff;
+                                position: absolute;
+                                left: 50%;
+                                bottom: -24px;
+                                word-break: keep-all;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+
+                    .circle-line-bx{
+                        position: relative;
+                        left: 4px;
+                        width: calc( 100% - 8px );
+                        top: -9px;
+
+                        .circle-line{
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 25%;
+                            height: 2px;
+                            background-color: #ffffff;
+                        }
+
+                        .circle-line-bg{
+                            width: 100%;
+                            height: 2px;
+                            background-color: rgba( #ffffff, 0.2 );
+                        }
+                    }
+                }
+            }
+
+            .tutorial-contents{
+                .tutorial-content{
+                    position: relative;
+                    height: calc(100vh + 550px);
+                    .tutorial-bg{
+                        position: sticky;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100vh;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center bottom;
+                        }
+                    }
+
+                    .tutorial-step-bx{
+                        position: absolute;
+                        left: 0;
+                        top: 109px;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        dl{
+                            text-align: center;
+                            dt{
+                                margin-bottom: 16px;
+                                text-align: center;
+                                span{
+                                    padding: 6px 14px;
+                                    border: 1px solid #ffffff;
+                                    border-radius: 100px;
+                                    overflow: hidden;
+                                    font-weight: 500;
+                                    font-size: 14px;
+                                    line-height: 100%;
+                                    color: #ffffff;
+                                }
+                            }
+
+                            dd{
+                                font-weight: 500;
+                                font-size: 26px;
+                                line-height: 130%;
+                                color: #002800;
+                                span{
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+
+                    .tutorial-description{
+                        position: relative;
+                        z-index: 10;
+
+                        .tutorial-desc-swiper{
+                            .swiper-wrapper{
+                                .swiper-slide{
+                                    width: 82.9333333333%;
+                                    .tutorial-desc-bx{
+                                        box-sizing: border-box;
+                                        .tutorial-desc-item{
+                                            background-color: #ffffff;
+                                            border-radius: 20px;
+                                            overflow: hidden;
+                                            box-shadow: 20px 30px 25.1px -15px #0000000D;
+                                            position: relative;
+
+                                            .tutorial-desc-img{
+                                                width: 100%;
+                                                height: 180px;
+                                                img{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    object-fit: cover;
+                                                    object-position: center;
+                                                }
+                                            }
+    
+                                            .tutorial-desc-item__text{
+                                                padding: 20px 20px 40px 20px;
+                                                box-sizing: border-box;
+                                                dl{
+                                                    text-align: center;
+                                                    dt{
+                                                        font-weight: 700;
+                                                        font-size: 20px;
+                                                        line-height: 140%;
+                                                        margin-bottom: 15px;
+
+                                                        > div{
+                                                            margin-top: 4px;
+                                                            span{
+                                                                font-weight: 700;
+                                                                font-size: 14px;
+                                                                line-height: 130%;
+                                                                color: #EB5A00;
+                                                                padding: 4px 16px;
+                                                                border: 1px solid #EB5A00;
+                                                                border-radius: 1000px;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    dd{
+                                                        height: 105px;
+                                                        overflow-y: auto;
+                                                        span{
+                                                            display: block;
+                                                            font-weight: 400;
+                                                            font-size: 15px;
+                                                            line-height: 140%;
+                                                            padding-bottom: 10px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .tutorial-desc-item__text--shadow{
+                                                width: 100%;
+                                                height: 50px;
+                                                position: absolute;
+                                                bottom: 0;
+                                                left: 0;
+                                                background: linear-gradient(180deg, rgba(255, 255, 255, 0) -43%, #ffffff 36%);
+                                            }
+                                        }
+                                    }
+                                    
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.swiper{
+    padding-bottom: 50px !important;
+}
+.swiper-pagination{
+    top: 435px !important;
+}
+
+.swiper-pagination-bullet{
+    width: 30px !important;
+    height: 2px !important;
+    background-color: #ECE5C1 !important;
+    opacity: 0.5;
+    border-radius: 0 !important;
+}
+
+.swiper-pagination-bullet-active{
+    opacity: 1;
+}

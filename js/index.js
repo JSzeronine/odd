@@ -3,6 +3,7 @@
     const index = function () {
 
         const Init = () => {
+            console.log( "Index.js" );
             createTopMenus();
             // createBestEat();
             createHarim();
@@ -663,7 +664,11 @@
     }
 
     $(document).ready(function () {
-        App.index = index();
-        App.index.Init();
+
+        if( $( ".why-odd-grocer")[0]){
+            App.index = index();
+            App.index.Init();
+        }
+
     });
 })();
