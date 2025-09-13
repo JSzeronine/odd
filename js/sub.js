@@ -74,7 +74,7 @@
                 });
 
                 descTl.to(stepBx, { opacity: 0, y: -30, ease: Linear.easeInOut });
-                descTl.to(tutorialBg, { filter: "blur(1px)", opacity: 0.8, ease: Linear.easeInOut });
+                // descTl.to(tutorialBg, { filter: "blur(1px)", opacity: 0.8, ease: Linear.easeInOut });
 
                 if( i === tutorialContent.length - 1){
                     return;
