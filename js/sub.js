@@ -5,9 +5,33 @@
 
     const sub = function(){
 
-
         function Init(){
             createVisual();
+            createTutorial();
+        }
+
+        function createTutorial(){
+            const tutorial = $(".tutorial-list");
+            const tutorialContents = tutorial.find(".tutorial-contents");
+            const tutorialContent = tutorialContents.find(".tutorial-content");
+
+            tutorialContent.each(function(i){
+                const tutorialItem = $(this);
+                if( i === tutorialContent.length - 1){
+                    return;
+                }
+                
+                let tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: tutorialItem,
+                        start: "bottom bottom",
+                        end: "bottom top",
+                        scrub: true,
+                    }
+                });
+
+                tl.to( tutorialItem, { y: 400, ease: Linear.easeInOut });
+            });
         }
 
         function createVisual(){
