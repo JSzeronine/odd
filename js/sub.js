@@ -8,6 +8,48 @@
         function Init(){
             createVisual();
             createTutorial();
+            createQuiz();
+        }
+
+        function createQuiz(){
+            const quiz = $( ".quiz" );
+            const quizBtn = quiz.find(".quiz-item-list input");
+
+            const popup = $(".popup");
+            const popupBx = popup.find(".popup-content-list");
+            const popupContents = popup.find(".popup-content-list .popup-content");
+            const popupCloseBtn = popup.find(".popup-close");
+
+            const dimmed = popup.find(".popup-dimmed");
+
+            const closePopup = () => {
+                popup.removeClass("on");
+                console.log("Click Handler");
+            }
+
+            popupCloseBtn.on("click", closePopup);
+            dimmed.on("click", closePopup);
+            $(".popup-close-btn").on("click", closePopup);
+
+            quizBtn.on( "change", (e) => {
+                const parent = $( e.currentTarget ).parents(".quiz-item");
+                const idx = $(parent).index();
+                popup.addClass("on");
+
+                gsap.killTweensOf(popupContents);
+                popupContents.removeClass("on");
+
+                const popupContent = $(popupContents[idx]);
+                popupContent.addClass("on");
+                gsap.fromTo(popupBx,
+                    { y: 10, opacity: 0 },
+                    { y: 0, opacity: 1, duration: 0.35, ease: Cubic.easeInOut });
+
+                gsap.fromTo(popupCloseBtn,
+                    { y: -10, opacity: 0 },
+                    { y: 0, opacity: 1, duration: 0.35, ease: Cubic.easeInOut });
+
+            });
         }
 
         function createTutorial(){
@@ -17,6 +59,23 @@
 
             tutorialContent.each(function(i){
                 const tutorialItem = $(this);
+
+                const tutorialDescription = tutorialItem.find( ".swiper-bx" );
+                const stepBx = tutorialItem.find( ".tutorial-step-bx" );
+                const tutorialBg = tutorialItem.find( ".tutorial-bg" ).find( "img" );
+
+                let descTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: tutorialDescription,
+                        start: "top center",
+                        end: "top 20%",
+                        scrub: true,
+                    }
+                });
+
+                descTl.to(stepBx, { opacity: 0, y: -30, ease: Linear.easeInOut });
+                descTl.to(tutorialBg, { filter: "blur(1px)", opacity: 0.8, ease: Linear.easeInOut });
+
                 if( i === tutorialContent.length - 1){
                     return;
                 }
@@ -31,6 +90,33 @@
                 });
 
                 tl.to( tutorialItem, { y: 400, ease: Linear.easeInOut });
+            });
+
+
+            const tutorialSwiper = $( ".tutorial-desc-swiper" );
+            tutorialSwiper.each((idx, el) => {
+                const item = $( el );
+                new Swiper( item[0], {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    spaceBetween: 15,
+                    pagination: {
+                        el: '.tutorial-desc-swiper .swiper-pagination',
+                        clickable: true,
+                    },
+                    on: {
+                        slideChange: (e) => {
+                            const index = e.activeIndex;
+                            const swiperDiv = $( e.el );
+
+                            const activeSwiper = swiperDiv.find( ".swiper-slide" );
+                            activeSwiper.removeClass( "on" );
+                            $( activeSwiper[index]).addClass( "on" );
+
+                            console.log( $( activeSwiper[index] )[0]);
+                        }
+                    }
+                });
             });
         }
 
