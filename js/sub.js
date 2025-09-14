@@ -8,7 +8,45 @@
         function Init(){
             createVisual();
             createTutorial();
+            createTutorialStep1();
             createQuiz();
+        }
+
+        function createTutorialStep1(){
+            const tutorialStep1 = $( ".tutorial-00" );
+            const tutorialBg = tutorialStep1.find( ".tutorial-bg" );
+            const tutorialStep1Animation = tutorialStep1.find( ".tutorial-animation--items--00" );
+            const tutorialStep1Bg = tutorialStep1.find( "img" );
+
+            const object00 = tutorialStep1Animation.find( ".tutorial-animation--object-00" );
+            const object01 = tutorialStep1Animation.find( ".tutorial-animation--object-01" );
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: tutorialBg[0],
+                    start: "50% bottom",
+                    end: "bottom bottom",
+                    scrub: true,
+                }
+            });
+
+            const imgs = [
+                tutorialStep1Bg[0],
+                tutorialStep1Bg[1],
+                tutorialStep1Bg[2],
+                object00[0],
+                object01[0],
+            ]
+            
+            let arrY = [ 30, 80, 50, 50, 50 ];
+            imgs.forEach(function(el, i) {
+                tl.fromTo(
+                    el,
+                    { y: arrY[i] },
+                    { y: 0, ease: "none" },
+                    "<",
+                );
+            });
         }
 
         function createQuiz(){
@@ -32,7 +70,11 @@
             $(".popup-close-btn").on("click", closePopup);
 
             quizBtn.on( "change", (e) => {
+                const parents = $( ".quiz-item" );
                 const parent = $( e.currentTarget ).parents(".quiz-item");
+                parents.addClass( "dimmed" );
+                parent.removeClass( "dimmed" );
+
                 const idx = $(parent).index();
                 popup.addClass("on");
 
@@ -62,7 +104,6 @@
 
                 const tutorialDescription = tutorialItem.find( ".swiper-bx" );
                 const stepBx = tutorialItem.find( ".tutorial-step-bx" );
-                const tutorialBg = tutorialItem.find( ".tutorial-bg" ).find( "img" );
 
                 let descTl = gsap.timeline({
                     scrollTrigger: {
@@ -74,7 +115,6 @@
                 });
 
                 descTl.to(stepBx, { opacity: 0, y: -30, ease: Linear.easeInOut });
-                // descTl.to(tutorialBg, { filter: "blur(1px)", opacity: 0.8, ease: Linear.easeInOut });
 
                 if( i === tutorialContent.length - 1){
                     return;

@@ -1273,14 +1273,51 @@ body {
   background-color: rgb(0, 0, 0);
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-animation-bx {
+  display: inline-block;
   position: sticky;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
-  object-fit: cover;
-  object-position: center bottom;
-  backdrop-filter: blur(40px);
+  overflow: hidden;
+}
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-animation-bx .tutorial-animation--items {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-animation-bx .tutorial-animation--items img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-animation-bx .tutorial-animation--items .tutorial-animation--object-bx {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-animation-bx .tutorial-animation--items .tutorial-animation--object-bx .tutorial-animation--object-00 {
+  width: 182px;
+  left: 21.0666666667%;
+  bottom: 31px;
+}
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-animation-bx .tutorial-animation--items .tutorial-animation--object-bx .tutorial-animation--object-01 {
+  width: 71px;
+  left: 56%;
+  bottom: 64px;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx {
   padding-top: 109px;
@@ -1334,6 +1371,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-description .tutorial-desc-swiper {
+  padding-top: 30px;
+}
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-description .tutorial-desc-swiper .swiper-wrapper .swiper-slide {
   width: 82.9333333333%;
 }
@@ -1344,7 +1384,7 @@ body {
   box-sizing: border-box;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-description .tutorial-desc-swiper .swiper-wrapper .swiper-slide .tutorial-desc-bx .tutorial-desc-item {
-  background-color: #ffffff;
+  background-color: #FAFAF0;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 20px 30px 25.1px -15px rgba(0, 0, 0, 0.0509803922);
@@ -1391,6 +1431,8 @@ body {
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-description .tutorial-desc-swiper .swiper-wrapper .swiper-slide .tutorial-desc-bx .tutorial-desc-item .tutorial-desc-item__text dl dd {
   height: 105px;
   overflow-y: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-description .tutorial-desc-swiper .swiper-wrapper .swiper-slide .tutorial-desc-bx .tutorial-desc-item .tutorial-desc-item__text dl dd span {
   display: block;
@@ -1405,7 +1447,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) -43%, #ffffff 36%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) -43%, #FAFAF0 36%);
 }
 .hands-on-tour .inner .tutorial-list .quiz {
   background-color: #FAFAF0;
@@ -1450,22 +1492,30 @@ body {
 .hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item {
   position: relative;
 }
+.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item.dimmed label .quiz-item-dimmed {
+  opacity: 1;
+}
 .hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item input {
   display: none;
 }
 .hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item input:checked + label .quiz-text-bx .quiz-text-bx__content {
-  background-color: rgba(249, 125, 1, 0.8509803922);
+  border: 1px solid #F97D01;
 }
 .hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item input:checked + label .quiz-text-bx .quiz-text-bx__content .quiz-icon-bx img:first-child {
-  opacity: 1;
-}
-.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item input:checked + label .quiz-text-bx .quiz-text-bx__content .quiz-icon-bx img:last-child {
   opacity: 0;
 }
-.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item input:checked + label .quiz-text-bx .quiz-text-bx__content span {
-  color: #ffffff;
+.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item input:checked + label .quiz-text-bx .quiz-text-bx__content .quiz-icon-bx img:last-child {
+  opacity: 1;
 }
-.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item label img {
+.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item input:checked + label .quiz-text-bx .quiz-text-bx__content span {
+  color: #EB5A00;
+}
+.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item label {
+  font-size: 0;
+  position: relative;
+  display: block;
+}
+.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item label > img {
   width: 100%;
 }
 .hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item label .quiz-text-bx {
@@ -1475,29 +1525,31 @@ body {
   left: 0;
   padding: 0 20px;
   box-sizing: border-box;
+  z-index: 10;
 }
 .hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item label .quiz-text-bx .quiz-text-bx__content {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 8px 0px 8px 20px;
-  border: 1px solid #F97D01;
   border-radius: 10px;
   overflow: hidden;
   background-color: rgba(250, 250, 240, 0.8509803922);
   backdrop-filter: blur(10px);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1019607843);
   transition: background-color 0.15s ease-out;
+  gap: 8px;
+  border: 1px solid #FAFAF0;
 }
 .hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item label .quiz-text-bx .quiz-text-bx__content .quiz-icon-bx {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   position: relative;
 }
 .hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item label .quiz-text-bx .quiz-text-bx__content .quiz-icon-bx img {
   transition: opacity 0.15s ease-out;
 }
-.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item label .quiz-text-bx .quiz-text-bx__content .quiz-icon-bx img:first-child {
+.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item label .quiz-text-bx .quiz-text-bx__content .quiz-icon-bx img:last-child {
   position: absolute;
   left: 0;
   top: 0;
@@ -1507,8 +1559,18 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 130%;
-  color: #EB5A00;
+  color: #002800;
   transition: color 0.15s ease-out;
+}
+.hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-item-list .quiz-item label .quiz-item-dimmed {
+  position: absolute;
+  background-color: rgba(40, 31, 18, 0.5);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  opacity: 0;
 }
 .hands-on-tour .inner .tutorial-list .quiz .quiz-bx .quiz-btn-bx {
   padding: 0 16px;
@@ -1560,7 +1622,7 @@ body {
 }
 
 .swiper {
-  padding-bottom: 50px !important;
+  padding-bottom: 30px !important;
 }
 
 .swiper-pagination-bullet {

@@ -1,13 +1,6 @@
-
-
-
-
-
-
-
-.hands-on-tour{
-    .inner{
-        .visual{
+.hands-on-tour {
+    .inner {
+        .visual {
             width: 100%;
             height: 100vh;
             display: flex;
@@ -16,7 +9,7 @@
             position: relative;
             overflow: hidden;
 
-            .visual-logo-bx{
+            .visual-logo-bx {
                 position: absolute;
                 z-index: 20;
                 left: 0;
@@ -26,7 +19,8 @@
                 text-align: center;
                 padding: 66px 0;
                 box-sizing: border-box;
-                span{
+
+                span {
                     position: absolute;
                     left: 50%;
                     transform: translateX(-50%);
@@ -37,12 +31,12 @@
                     opacity: 0;
                 }
 
-                img{
+                img {
                     opacity: 0;
                 }
             }
 
-            .visual-key{
+            .visual-key {
                 width: 100%;
                 height: 100vh;
                 display: flex;
@@ -50,16 +44,17 @@
                 align-items: center;
                 z-index: 11;
                 position: relative;
-    
-                .visual-key-content{
+
+                .visual-key-content {
                     position: relative;
                     z-index: 10;
-                    .visual-key-bx{
+
+                    .visual-key-bx {
                         width: 375px;
                         height: 546px;
                         position: relative;
-    
-                        .visual-key-img{
+
+                        .visual-key-img {
                             z-index: 2;
                             position: absolute;
                             left: 50%;
@@ -67,20 +62,21 @@
                             transform: translateX(-50%);
                             opacity: 0;
                         }
-        
-                        .visual-key-bg-img{
+
+                        .visual-key-bg-img {
                             position: relative;
                             z-index: 2;
                             font-size: 0;
-                            img{
+
+                            img {
                                 width: 100%;
                                 height: 100%;
                                 object-fit: cover;
                                 object-position: center;
                             }
                         }
-    
-                        .visual-key-bg-color{
+
+                        .visual-key-bg-color {
                             position: absolute;
                             left: 0;
                             top: 0;
@@ -92,7 +88,7 @@
                     }
                 }
 
-                .visual-key-bg{
+                .visual-key-bg {
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -102,7 +98,7 @@
                 }
             }
 
-            .visual-introduce{
+            .visual-introduce {
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -111,18 +107,21 @@
                 display: flex;
                 align-items: center;
 
-                .visual-introduce__content{
+                .visual-introduce__content {
                     width: 100%;
                     position: realtive;
                     z-index: 10;
                     text-align: center;
-                    img{
+
+                    img {
                         width: 22px;
                         margin-bottom: 14px;
                     }
-                    dl{
+
+                    dl {
                         margin-bottom: 40px;
-                        dt{
+
+                        dt {
                             font-size: 28px;
                             font-weight: 700;
                             line-height: 140%;
@@ -130,22 +129,24 @@
                             margin-bottom: 25px;
                         }
 
-                        dd{
+                        dd {
                             font-weight: 400;
                             font-size: 18px;
                             line-height: 140%;
                             color: #ffffff;
 
-                            .strong-text{
+                            .strong-text {
                                 color: #ffffff;
                                 font-size: 24px;
                                 line-height: 140%;
-                                strong{
+
+                                strong {
                                     font-size: 24px;
                                     line-height: 140%;
                                     color: #F97D01;
                                 }
-                                span{
+
+                                span {
                                     color: #ffffff;
                                     font-size: 24px;
                                     line-height: 140%;
@@ -153,14 +154,15 @@
                                 }
                             }
 
-                            span{
+                            span {
                                 font-weight: 700;
                                 font-size: 16px;
                                 line-height: 140%;
                             }
                         }
                     }
-                    .visual-introduce__journey{
+
+                    .visual-introduce__journey {
                         font-family: Optima;
                         font-weight: 400;
                         font-size: 20px;
@@ -169,20 +171,22 @@
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        img{
+
+                        img {
                             margin-top: 10px;
                         }
                     }
                 }
-                
-                .visual-introduce__video{
+
+                .visual-introduce__video {
                     position: absolute;
                     left: 0;
                     top: 0;
                     width: 100%;
                     height: 100%;
                     background-color: #281F1299;
-                    video{
+
+                    video {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
@@ -193,26 +197,30 @@
             }
         }
 
-        .secret{
+        .secret {
             position: relative;
             width: 100%;
             height: 100vh;
-            .secret-title{
+
+            .secret-title {
                 position: relative;
                 z-index: 10;
                 padding-top: 50px;
-                dl{
+
+                dl {
                     text-align: center;
-                    dt{
+
+                    dt {
                         font-family: 'Optima';
                         font-weight: 400;
                         font-size: 44px;
                         line-height: 100%;
                         margin-bottom: 12px;
                         color: #002800;
-                        
+
                     }
-                    dd{
+
+                    dd {
                         font-weight: 400;
                         font-size: 16px;
                         line-height: 150%;
@@ -221,16 +229,18 @@
                 }
             }
 
-            .secret-img{
+            .secret-img {
                 position: absolute;
                 left: 50%;
                 bottom: 22px;
                 transform: translateX(-50%);
                 z-index: 10;
-                img{
+
+                img {
                     width: 227px;
                 }
-                span{
+
+                span {
                     display: block;
                     width: 100%;
                     text-align: center;
@@ -242,13 +252,14 @@
                 }
             }
 
-            .secret-bg{
+            .secret-bg {
                 position: absolute;
                 left: 0;
                 top: 0;
                 width: 100%;
                 height: 100%;
-                img{
+
+                img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
@@ -257,8 +268,8 @@
             }
         }
 
-        .tutorial-list{
-            .tutorial-progress{
+        .tutorial-list {
+            .tutorial-progress {
                 z-index: 50;
                 position: sticky;
                 left: 0;
@@ -266,19 +277,22 @@
                 width: 100%;
                 height: 0;
 
-                .circle-list-bx{
+                .circle-list-bx {
                     padding: 26px 40px 0;
                     box-sizing: border-box;
                     font-size: 0;
-                    ul{
+
+                    ul {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         position: relative;
                         z-index: 10;
-                        li{
+
+                        li {
                             position: relative;
-                            .circle-list-item{
+
+                            .circle-list-item {
                                 position: relative;
                                 font-size: 0;
                                 width: 16px;
@@ -287,18 +301,18 @@
                                 justify-content: center;
                                 align-items: center;
 
-                                &.on{
-                                    .circle-bg{
+                                &.on {
+                                    .circle-bg {
                                         width: 16px;
                                         height: 16px;
                                     }
 
-                                    img{
+                                    img {
                                         opacity: 1;
                                     }
                                 }
 
-                                img{
+                                img {
                                     position: absolute;
                                     left: 50%;
                                     top: 50%;
@@ -306,7 +320,7 @@
                                     opacity: 0;
                                 }
 
-                                .circle-bg{
+                                .circle-bg {
                                     display: inline-block;
                                     width: 8px;
                                     height: 8px;
@@ -315,7 +329,7 @@
                                 }
                             }
 
-                            .circle-list-item__text{
+                            .circle-list-item__text {
                                 font-weight: 500;
                                 font-size: 12px;
                                 line-height: 140%;
@@ -329,13 +343,13 @@
                         }
                     }
 
-                    .circle-line-bx{
+                    .circle-line-bx {
                         position: relative;
                         left: 4px;
-                        width: calc( 100% - 8px );
+                        width: calc(100% - 8px);
                         top: -9px;
 
-                        .circle-line{
+                        .circle-line {
                             position: absolute;
                             left: 0;
                             top: 0;
@@ -344,37 +358,80 @@
                             background-color: #ffffff;
                         }
 
-                        .circle-line-bg{
+                        .circle-line-bg {
                             width: 100%;
                             height: 2px;
-                            background-color: rgba( #ffffff, 0.2 );
+                            background-color: rgba(#ffffff, 0.2);
                         }
                     }
                 }
             }
 
-            .tutorial-contents{
-                .tutorial-content{
-                    .tutorial-bg{
+            .tutorial-contents {
+                .tutorial-content {
+                    .tutorial-bg {
                         position: sticky;
                         left: 0;
                         top: 0;
                         width: 100%;
                         height: 200vh;
-                        background-color: rgba( 0, 0, 0, 1 );
-                        
-                        img{
+                        background-color: rgba(0, 0, 0, 1);
+
+                        img {
+                            width: 100%;
+                            height: 100vh;
+                            object-fit: cover;
+                            object-position: center bottom;
+                        }
+
+                        .tutorial-animation-bx {
+                            display: inline-block;
                             position: sticky;
                             left: 0;
                             top: 0;
                             width: 100%;
                             height: 100vh;
-                            object-fit: cover;
-                            object-position: center bottom;
-                            backdrop-filter: blur(40px);
+                            overflow: hidden;
+
+                            .tutorial-animation--items {
+                                position: absolute;
+                                width: 100%;
+                                left: 0;
+                                bottom: 0;
+                                z-index: 10;
+
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                }
+
+                                .tutorial-animation--object-bx {
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 10;
+
+                                    .tutorial-animation--object-00 {
+                                        width: 182px;
+                                        left: 21.06666666667%;
+                                        bottom: 31px;
+                                    }
+
+                                    .tutorial-animation--object-01 {
+                                        width: 71px;
+                                        left: 56%;
+                                        bottom: 64px;
+                                    }
+                                }
+                            }
                         }
 
-                        .tutorial-step-bx{
+                        .tutorial-step-bx {
                             padding-top: 109px;
                             position: absolute;
                             left: 0;
@@ -384,13 +441,15 @@
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-    
-                            dl{
+
+                            dl {
                                 text-align: center;
-                                dt{
+
+                                dt {
                                     margin-bottom: 16px;
                                     text-align: center;
-                                    span{
+
+                                    span {
                                         padding: 6px 14px;
                                         border: 1px solid #ffffff;
                                         border-radius: 100px;
@@ -401,13 +460,14 @@
                                         color: #ffffff;
                                     }
                                 }
-    
-                                dd{
+
+                                dd {
                                     font-weight: 500;
                                     font-size: 26px;
                                     line-height: 130%;
                                     color: #002800;
-                                    span{
+
+                                    span {
                                         font-weight: 700;
                                     }
                                 }
@@ -415,13 +475,13 @@
                         }
                     }
 
-                    .tutorial-description{
+                    .tutorial-description {
                         position: relative;
                         z-index: 10;
                         height: 200vh;
                         display: flex;
 
-                        .swiper-bx{
+                        .swiper-bx {
                             position: sticky;
                             left: 0;
                             top: 0;
@@ -431,37 +491,41 @@
                             align-items: center;
                         }
 
-                        .tutorial-desc-swiper{
-                            .swiper-wrapper{
-                                .swiper-slide{
+                        .tutorial-desc-swiper {
+                            padding-top: 30px;
+
+                            .swiper-wrapper {
+                                .swiper-slide {
                                     width: 82.9333333333%;
 
-                                    &.on{
-                                        .tutorial-desc-bx{
-                                            .tutorial-desc-item{
-                                                .tutorial-desc-img{
-                                                    img{
+                                    &.on {
+                                        .tutorial-desc-bx {
+                                            .tutorial-desc-item {
+                                                .tutorial-desc-img {
+                                                    img {
                                                         transform: scale(1);
-                                                     }
-                                                }    
-                                            }    
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
 
-                                    .tutorial-desc-bx{
+                                    .tutorial-desc-bx {
                                         box-sizing: border-box;
-                                        .tutorial-desc-item{
-                                            background-color: #ffffff;
+
+                                        .tutorial-desc-item {
+                                            background-color: #FAFAF0;
                                             border-radius: 20px;
                                             overflow: hidden;
                                             box-shadow: 20px 30px 25.1px -15px #0000000D;
                                             position: relative;
 
-                                            .tutorial-desc-img{
+                                            .tutorial-desc-img {
                                                 width: 100%;
                                                 height: 180px;
                                                 overflow: hidden;
-                                                img{
+
+                                                img {
                                                     width: 100%;
                                                     height: 100%;
                                                     object-fit: cover;
@@ -470,21 +534,24 @@
                                                     transition: transform 0.25s ease-out;
                                                 }
                                             }
-    
-                                            .tutorial-desc-item__text{
+
+                                            .tutorial-desc-item__text {
                                                 padding: 20px 20px 40px 20px;
                                                 box-sizing: border-box;
-                                                dl{
+
+                                                dl {
                                                     text-align: center;
-                                                    dt{
+
+                                                    dt {
                                                         font-weight: 700;
                                                         font-size: 20px;
                                                         line-height: 140%;
                                                         margin-bottom: 15px;
 
-                                                        > div{
+                                                        >div {
                                                             margin-top: 4px;
-                                                            span{
+
+                                                            span {
                                                                 font-weight: 700;
                                                                 font-size: 14px;
                                                                 line-height: 130%;
@@ -496,10 +563,13 @@
                                                         }
                                                     }
 
-                                                    dd{
+                                                    dd {
                                                         height: 105px;
                                                         overflow-y: auto;
-                                                        span{
+                                                        padding-right: 10px;
+                                                        box-sizing: border-box;
+
+                                                        span {
                                                             display: block;
                                                             font-weight: 400;
                                                             font-size: 15px;
@@ -510,17 +580,17 @@
                                                 }
                                             }
 
-                                            .tutorial-desc-item__text--shadow{
+                                            .tutorial-desc-item__text--shadow {
                                                 width: 100%;
                                                 height: 50px;
                                                 position: absolute;
                                                 bottom: 0;
                                                 left: 0;
-                                                background: linear-gradient(180deg, rgba(255, 255, 255, 0) -43%, #ffffff 36%);
+                                                background: linear-gradient(180deg, rgba(255, 255, 255, 0) -43%, #FAFAF0 36%);
                                             }
                                         }
                                     }
-                                    
+
                                 }
                             }
 
@@ -529,18 +599,20 @@
                 }
             }
 
-            .quiz{
+            .quiz {
                 background-color: #FAFAF0;
                 height: 100vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                .quiz-bx{
-                    .quiz-title{
+
+                .quiz-bx {
+                    .quiz-title {
                         margin-bottom: 30px;
                         text-align: center;
-                        p{
+
+                        p {
                             font-family: 'Optima';
                             font-weight: 400;
                             font-size: 30px;
@@ -548,18 +620,21 @@
                             color: #002800;
                             margin-bottom: 16px;
                         }
-                        dl{
-                            dt{
+
+                        dl {
+                            dt {
                                 font-weight: 700;
                                 font-size: 26px;
                                 line-height: 120%;
                                 color: #002800;
                                 margin-bottom: 16px;
-                                span{
+
+                                span {
                                     color: #F97D01;
                                 }
                             }
-                            dd{
+
+                            dd {
                                 font-weight: 400;
                                 font-size: 16px;
                                 line-height: 140%;
@@ -568,68 +643,90 @@
                         }
                     }
 
-                    .quiz-item-list{
+                    .quiz-item-list {
                         display: flex;
                         gap: 1px;
-                        .quiz-item{
+
+                        .quiz-item {
                             position: relative;
-                            input{
+
+                            &.dimmed {
+                                label {
+                                    .quiz-item-dimmed {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+
+                            input {
                                 display: none;
-                                &:checked + label{
-                                    .quiz-text-bx{
-                                        .quiz-text-bx__content{
-                                            background-color: #F97D01D9;
-                                            .quiz-icon-bx{
-                                                img{
-                                                    &:first-child{
-                                                        opacity: 1;
-                                                    }
-                                                    &:last-child{
+
+                                &:checked+label {
+                                    .quiz-text-bx {
+                                        .quiz-text-bx__content {
+                                            border: 1px solid #F97D01;
+
+                                            .quiz-icon-bx {
+                                                img {
+                                                    &:first-child {
                                                         opacity: 0;
+                                                    }
+
+                                                    &:last-child {
+                                                        opacity: 1;
                                                     }
                                                 }
                                             }
 
-                                            span{
-                                                color: #ffffff;
+                                            span {
+                                                color: #EB5A00;
                                             }
-                                        }    
-                                    }    
+                                        }
+                                    }
                                 }
                             }
 
-                            label{
-                                img{
+                            label {
+                                font-size: 0;
+                                position: relative;
+                                display: block;
+
+                                >img {
                                     width: 100%;
                                 }
 
-                                .quiz-text-bx{
+                                .quiz-text-bx {
                                     position: absolute;
                                     width: 100%;
                                     bottom: 16px;
                                     left: 0;
                                     padding: 0 20px;
                                     box-sizing: border-box;
-                                    .quiz-text-bx__content{
+                                    z-index: 10;
+
+                                    .quiz-text-bx__content {
                                         display: flex;
                                         justify-content: flex-start;
                                         align-items: center;
                                         padding: 8px 0px 8px 20px;
-                                        border: 1px solid #F97D01;
                                         border-radius: 10px;
                                         overflow: hidden;
                                         background-color: #FAFAF0D9;
                                         backdrop-filter: blur(10px);
                                         box-shadow: 0px 4px 4px 0px #0000001A;
                                         transition: background-color 0.15s ease-out;
+                                        gap: 8px;
+                                        border: 1px solid #FAFAF0;
 
-                                        .quiz-icon-bx{
-                                            width: 24px;
-                                            height: 24px;
+                                        .quiz-icon-bx {
+                                            width: 16px;
+                                            height: 16px;
                                             position: relative;
-                                            img{
+
+                                            img {
                                                 transition: opacity 0.15s ease-out;
-                                                &:first-child{
+
+                                                &:last-child {
                                                     position: absolute;
                                                     left: 0;
                                                     top: 0;
@@ -637,28 +734,40 @@
                                                 }
                                             }
                                         }
-    
-                                        span{
+
+                                        span {
                                             font-weight: 600;
                                             font-size: 16px;
                                             line-height: 130%;
-                                            color: #EB5A00;
+                                            color: #002800;
                                             transition: color 0.15s ease-out;
-                                        }    
+                                        }
                                     }
+                                }
+
+                                .quiz-item-dimmed {
+                                    position: absolute;
+                                    background-color: rgba(#281F1280, 0.5);
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 9;
+                                    opacity: 0;
                                 }
                             }
                         }
                     }
 
-                    .quiz-btn-bx{
+                    .quiz-btn-bx {
                         padding: 0 16px;
                         box-sizing: border-box;
                         width: 100%;
                         position: absolute;
                         left: 0;
                         bottom: 28px;
-                        a{
+
+                        a {
                             font-weight: 700;
                             font-size: 18px;
                             line-height: 140%;
@@ -671,7 +780,7 @@
                             padding: 9px 0;
                             text-decoration: none;
 
-                            .quiz-btn__logo{
+                            .quiz-btn__logo {
                                 border-radius: 100%;
                                 background-color: #ffffff;
                                 width: 40px;
@@ -683,12 +792,12 @@
                                 padding: 0 3px;
                                 margin-right: 10px;
 
-                                img{
+                                img {
                                     width: 100%;
                                 }
                             }
 
-                            > span{
+                            >span {
                                 display: inline-flex;
                                 justify-content: center;
                                 align-items: center;
@@ -700,23 +809,25 @@
         }
     }
 
-    .popup{
+    .popup {
         z-index: 1000;
-        .popup-dimmed{
+
+        .popup-dimmed {
             background: #00000099;
-            backdrop-filter: blur(40px);        
+            backdrop-filter: blur(40px);
         }
     }
 }
 
-.swiper{
-    padding-bottom: 50px !important;
+.swiper {
+    padding-bottom: 30px !important;
 }
-.swiper-pagination{
+
+.swiper-pagination {
     // top: 435px !important;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     width: 30px !important;
     height: 2px !important;
     background-color: #ECE5C1 !important;
@@ -724,6 +835,6 @@
     border-radius: 0 !important;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     opacity: 1;
 }
