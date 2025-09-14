@@ -6,6 +6,17 @@
     const sub = function () {
 
         function Init() {
+            function resetScroll() {
+                setTimeout(function () {
+                    window.scrollTo(0, 0);
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }, 10);
+            }
+
+            window.addEventListener("DOMContentLoaded", resetScroll);
+            window.addEventListener("load", resetScroll);
+
             createVisual();
             createTutorial();
             createTutorialStep0();
@@ -45,16 +56,10 @@
             contents.each(function (i, el) {
                 ScrollTrigger.create({
                     trigger: el,
-                    start: "top bottom",
+                    start: "top center",
                     end: "bottom top",
                     onEnter: function () {
                         showGage(i);
-                    },
-                    onEnterBack: function () {
-                        showGage(i);
-                    },
-                    onLeave: function () {
-                        console.log("Leave", i);
                     },
                     onLeaveBack: function () {
                         const bIdx = i - 1;
@@ -381,20 +386,6 @@
         }
 
         function createVisual() {
-            // 윈도우 로드 이벤트에서 스크롤을 0으로 초기화
-            // 스크롤 0으로 초기화가 안될 때는 아래와 같이 여러 이벤트에서 시도해볼 수 있습니다.
-            function resetScroll() {
-                setTimeout(function() {
-                    window.scrollTo(0, 0);
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
-                }, 10);
-            }
-            
-            window.addEventListener("DOMContentLoaded", resetScroll);
-            window.addEventListener("load", resetScroll);
-
-            
             const visual = $(".visual");
             const visualKey = visual.find(".visual-key");
             const visualKeyBx = visual.find(".visual-key-bx");
@@ -404,7 +395,6 @@
 
             const visualKeyContent = visual.find(".visual-key-content");
 
-            const visualLogoBx = visual.find(".visual-logo-bx");
             const visualLogo = visual.find(".visual-logo-bx").find("img");
             const visualLogoText = visual.find(".visual-logo-bx").find("span");
 
@@ -417,38 +407,38 @@
                     { opacity: 0, y: -15 },
                     { opacity: 1, y: 0, duration: 1.5, ease: Cubic.easeInOut }
                 )
-    
+
                 gsap.fromTo(visualLogoText,
                     { opacity: 0, y: 15 },
                     { opacity: 1, y: 0, duration: 1.5, ease: Cubic.easeInOut }
                 )
-    
+
                 gsap.fromTo(visualKeyContent,
-                    { opacity: 0, scale: 0.8},
+                    { opacity: 0, scale: 0.8 },
                     { opacity: 1, scale: 1, duration: 1.5, ease: Cubic.easeInOut }
                 )
 
                 gsap.fromTo(visualKeyImg,
                     { opacity: 0, rotationY: 1 },
                     {
-                        opacity: 1, rotationY:360, duration: 2.5, ease: Cubic.easeInOut, delay: 1,
+                        opacity: 1, rotationY: 360, duration: 2.5, ease: Cubic.easeInOut, delay: 1,
                         onComplete: () => {
                             function showVisualStart() {
                                 isShow = true;
                                 if (isShow) {
-                                    window.removeEventListener( "touchstart", showVisualStart);
-                                    window.removeEventListener( "mousedown", showVisualStart);
-        
+                                    window.removeEventListener("touchstart", showVisualStart);
+                                    window.removeEventListener("mousedown", showVisualStart);
+
                                     showVisual();
 
                                     setTimeout(() => {
-                                        $( "body" ).removeClass( "hidden" );
-                                    }, 2000 );
+                                        $("body").removeClass("hidden");
+                                    }, 2000);
                                 }
                             }
-                
-                            window.addEventListener( "touchstart", showVisualStart);
-                            window.addEventListener( "mousedown", showVisualStart);
+
+                            window.addEventListener("touchstart", showVisualStart);
+                            window.addEventListener("mousedown", showVisualStart);
                         }
                     }
                 )
