@@ -19,6 +19,7 @@
 
             createVisual();
             createTutorial();
+            createTutorialStep();
             createTutorialStep0();
             createTutorialStep1();
             createTutorialStep2();
@@ -26,6 +27,35 @@
             createTutorialStep4();
             createProgress();
             createQuiz();
+        }
+
+        function createTutorialStep(){
+
+            const tutorialContents = $(".tutorial-content");
+
+
+            tutorialContents.each(function (i) {
+                const tutorialContent = $(this);
+                const tutorialStep = tutorialContent.find(".tutorial-step-bx");
+                const stepDt = tutorialStep.find("dl dt");
+                const stepDd = tutorialStep.find("dl dd");
+
+                ScrollTrigger.create({
+                    trigger: tutorialContent,
+                    start: "top 60%",
+                    onEnter: function () {
+                        gsap.fromTo(stepDt, 
+                            { opacity: 0, y: 20 }, 
+                            { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" }
+                        );
+                        gsap.fromTo(stepDd, 
+                            { opacity: 0, y: 20 }, 
+                            { opacity: 1, y: 0, duration: 0.7, ease: "power2.out", delay: 0.15 }
+                        );
+                    },
+                    once: true
+                });
+            });
         }
 
         function createProgress() {
@@ -73,9 +103,9 @@
             const content02 = $(".tutorial-02");
             const content03 = $(".tutorial-03");
             const content04 = $(".tutorial-04");
-            
-            gsap.fromTo(circleBx, 
-                { width: "25%" }, 
+
+            gsap.fromTo(circleBx,
+                { width: "25%" },
                 {
                     width: "50%",
                     scrollTrigger: {
@@ -87,8 +117,8 @@
                 }
             );
 
-            gsap.fromTo(circleBx, 
-                { width: "50%" }, 
+            gsap.fromTo(circleBx,
+                { width: "50%" },
                 {
                     width: "75%",
                     scrollTrigger: {
@@ -100,8 +130,8 @@
                 }
             );
 
-            gsap.fromTo(circleBx, 
-                { width: "75%" }, 
+            gsap.fromTo(circleBx,
+                { width: "75%" },
                 {
                     width: "100%",
                     scrollTrigger: {
@@ -113,8 +143,8 @@
                 }
             );
 
-            gsap.fromTo(circleBx, 
-                { width: "0%" }, 
+            gsap.fromTo(circleBx,
+                { width: "0%" },
                 {
                     width: "25%",
                     scrollTrigger: {
@@ -325,8 +355,8 @@
 
             tl.fromTo(
                 object01[0],
-                { y: 5, opacity: 0 },
-                { y: 0, opacity: 1, ease: "none" },
+                { x: 100, opacity: 0 },
+                { x: 0, opacity: 1, ease: "none" },
             );
         }
 
@@ -401,6 +431,7 @@
                 });
 
                 descTl.to(stepBx, { opacity: 0, y: -30, ease: Linear.easeInOut });
+                descTl.to(tutorialItem.find( ".tutorial-dimmed" ), { opacity: 1, ease: Linear.easeInOut });
 
                 // let tl = gsap.timeline({
                 //     scrollTrigger: {
@@ -419,6 +450,9 @@
             tutorialSwiper.each((idx, el) => {
                 const item = $(el);
                 new Swiper(item[0], {
+                    nested: true,
+                    touchStartPreventDefault: false,
+                    touchReleaseOnEdges: true,
                     slidesPerView: "auto",
                     centeredSlides: true,
                     spaceBetween: 15,
@@ -523,6 +557,7 @@
             });
 
             function showVisual() {
+
                 function showHidden() {
                     gsap.to(visualLogo, { opacity: 0, y: -20, duration: 0.6, ease: Cubic.easeInOut });
                     gsap.to(visualLogoText, { opacity: 0, y: 20, duration: 0.6, ease: Cubic.easeInOut });
@@ -532,9 +567,20 @@
                     gsap.to(visualKeyBx, { opacity: 0, duration: 1, ease: Cubic.easeInOut, delay: 1.5 });
                     gsap.to(visualKeyBgColor, { opacity: 0, duration: 1, ease: Cubic.easeInOut, delay: 1.5 });
                     gsap.to(visualKeyBg, { opacity: 0, duration: 2.5, ease: Cubic.easeInOut });
+
+
+                    gsap.fromTo( $ (".visual-introduce__content" ), 
+                        { opacity: 0, y: 30, },
+                        { opacity: 1, y: 0, duration: 1, ease: Cubic.easeInOut, delay: 1.25 }
+                    )
                 }
 
-                showHidden();
+                gsap.to( visualKeyImg.find( "img" ), { y: '150%', duration: 1, ease: Cubic.easeInOut });
+                setTimeout(() => {
+                    showHidden();
+                }, 550 );
+
+                
             }
         }
 
