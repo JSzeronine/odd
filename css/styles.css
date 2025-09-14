@@ -8,54 +8,16 @@ body {
   width: 100%;
   overflow: hidden;
 }
-.wrap.why-odd-grocer .top-menus {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: #F5F5F5;
-  transform: translateY(0);
-  transition: transform 0.3s ease-in-out;
-  background-color: #F5F5F5;
-  display: none;
-}
-.wrap.why-odd-grocer .top-menus.on {
-  transform: translateY(-48px);
-}
-.wrap.why-odd-grocer .top-menus a {
-  display: inline-block;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 400;
-  color: #808080;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 48px;
-  border-bottom: none;
-  text-decoration: none;
-}
-.wrap.why-odd-grocer .top-menus a.on {
-  color: #F25100;
-  font-weight: 700;
-}
-.wrap.why-odd-grocer .top-menus span {
-  display: inline-block;
-  width: 1px;
-  height: 14px;
-  background-color: #CCCCCC;
-}
 .wrap.why-odd-grocer .visual {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  box-shadow: border-box;
+  padding-top: 48px;
 }
 .wrap.why-odd-grocer .visual .visual-bx {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 48px);
   position: relative;
   z-index: 5;
   box-sizing: border-box;
@@ -950,6 +912,46 @@ body {
   height: 100%;
 }
 
+.top-menus {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #F5F5F5;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  background-color: #F5F5F5;
+}
+.top-menus.on {
+  transform: translateY(-48px);
+}
+.top-menus a {
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  border-bottom: none;
+  text-decoration: none;
+}
+.top-menus a.on {
+  color: #F25100;
+  font-weight: 700;
+}
+.top-menus span {
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background-color: #CCCCCC;
+}
+
 body.hidden {
   position: fixed;
   width: 100%;
@@ -974,7 +976,7 @@ body.hidden {
   width: 100%;
   height: 100%;
   text-align: center;
-  padding: 66px 0;
+  padding: 108px 0 66px;
   box-sizing: border-box;
 }
 .hands-on-tour .inner .visual .visual-logo-bx span {

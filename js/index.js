@@ -3,9 +3,6 @@
     const index = function () {
 
         const Init = () => {
-            console.log( "Index.js" );
-            createTopMenus();
-            // createBestEat();
             createHarim();
             createPeakTime();
             createBehavior();
@@ -261,22 +258,6 @@
                         );
                     }
                 }
-            });
-        }
-
-        function createTopMenus() {
-            let oldY = 0;
-            window.addEventListener("scroll", () => {
-                const sT = window.scrollY;
-                if (sT > oldY) {
-                    if (sT > 48) {
-                        $(".top-menus").addClass("on");
-                    }
-                } else {
-                    $(".top-menus").removeClass("on");
-                }
-
-                oldY = sT;
             });
         }
 
@@ -668,7 +649,7 @@
         if( $( ".why-odd-grocer")[0]){
             App.index = index();
             App.index.Init();
+    
         }
-
     });
 })();

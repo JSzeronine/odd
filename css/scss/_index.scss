@@ -9,58 +9,15 @@ body {
     overflow: hidden;
 
     &.why-odd-grocer {
-        .top-menus {
-            position: fixed;
-            z-index: 100;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            background-color: #F5F5F5;
-            transform: translateY(0);
-            transition: transform 0.3s ease-in-out;
-            background-color: #F5F5F5;
-            display: none;
-
-            &.on {
-                transform: translateY(-48px);
-            }
-
-            a {
-                display: inline-block;
-                width: 100%;
-                font-size: 16px;
-                font-weight: 400;
-                color: #808080;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 48px;
-                border-bottom: none;
-                text-decoration: none;
-
-                &.on {
-                    color: #F25100;
-                    font-weight: 700;
-                }
-            }
-
-            span {
-                display: inline-block;
-                width: 1px;
-                height: 14px;
-                background-color: #CCCCCC;
-            }
-        }
-
         .visual {
             width: 100%;
             height: 100vh;
             overflow: hidden;
+            box-shadow: border-box;
+            padding-top: 48px;
             .visual-bx {
                 width: 100%;
-                height: 100vh;
+                height: calc(100vh - 48px );
                 position: relative;
                 z-index: 5;
                 box-sizing: border-box;
@@ -1157,5 +1114,50 @@ body {
         top: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+.top-menus {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #F5F5F5;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    background-color: #F5F5F5;
+    // display: none;
+
+    &.on {
+        transform: translateY(-48px);
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        color: #808080;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        border-bottom: none;
+        text-decoration: none;
+
+        &.on {
+            color: #F25100;
+            font-weight: 700;
+        }
+    }
+
+    span {
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background-color: #CCCCCC;
     }
 }
