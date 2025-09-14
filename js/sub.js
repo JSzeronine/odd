@@ -68,8 +68,65 @@
                 });
             });
 
+            const content00 = $(".tutorial-00");
+            const content01 = $(".tutorial-01");
+            const content02 = $(".tutorial-02");
+            const content03 = $(".tutorial-03");
+            const content04 = $(".tutorial-04");
+            
+            gsap.fromTo(circleBx, 
+                { width: "25%" }, 
+                {
+                    width: "50%",
+                    scrollTrigger: {
+                        trigger: content01,
+                        start: "top center",
+                        end: "bottom top",
+                        scrub: true,
+                    },
+                }
+            );
+
+            gsap.fromTo(circleBx, 
+                { width: "50%" }, 
+                {
+                    width: "75%",
+                    scrollTrigger: {
+                        trigger: content02,
+                        start: "top center",
+                        end: "bottom top",
+                        scrub: true,
+                    },
+                }
+            );
+
+            gsap.fromTo(circleBx, 
+                { width: "75%" }, 
+                {
+                    width: "100%",
+                    scrollTrigger: {
+                        trigger: content03,
+                        start: "top center",
+                        end: "bottom top",
+                        scrub: true,
+                    },
+                }
+            );
+
+            gsap.fromTo(circleBx, 
+                { width: "0%" }, 
+                {
+                    width: "25%",
+                    scrollTrigger: {
+                        trigger: content00,
+                        start: "top center",
+                        end: "bottom top",
+                        scrub: true,
+                    },
+                }
+            );
+
             function showGage(idx) {
-                gsap.to(circleBx, { duration: 0.35, ease: Cubic.easeInOut, width: w[idx] + "%" });
                 character.removeClass("on");
                 $(character[idx]).addClass("on");
 
@@ -345,16 +402,16 @@
 
                 descTl.to(stepBx, { opacity: 0, y: -30, ease: Linear.easeInOut });
 
-                let tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: tutorialItem,
-                        start: "bottom bottom",
-                        end: "bottom top",
-                        scrub: true,
-                    }
-                });
+                // let tl = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: tutorialItem,
+                //         start: "bottom bottom",
+                //         end: "bottom top",
+                //         scrub: true,
+                //     }
+                // });
 
-                tl.to(tutorialItem, { y: 400, ease: Linear.easeInOut });
+                // tl.to(tutorialItem, { y: 400, ease: Linear.easeInOut });
             });
 
 
