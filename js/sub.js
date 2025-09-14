@@ -1,25 +1,87 @@
 
 
-( function(){
+(function () {
 
 
-    const sub = function(){
+    const sub = function () {
 
-        function Init(){
+        function Init() {
             createVisual();
             createTutorial();
+            createTutorialStep0();
             createTutorialStep1();
+            createTutorialStep2();
+            createTutorialStep3();
+            createTutorialStep4();
+            createProgress();
             createQuiz();
         }
 
-        function createTutorialStep1(){
-            const tutorialStep1 = $( ".tutorial-00" );
-            const tutorialBg = tutorialStep1.find( ".tutorial-bg" );
-            const tutorialStep1Animation = tutorialStep1.find( ".tutorial-animation--items--00" );
-            const tutorialStep1Bg = tutorialStep1.find( "img" );
+        function createProgress() {
+            const tutorialContents = $(".tutorial-contents");
 
-            const object00 = tutorialStep1Animation.find( ".tutorial-animation--object-00" );
-            const object01 = tutorialStep1Animation.find( ".tutorial-animation--object-01" );
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: tutorialContents,
+                    start: "bottom bottom",
+                    end: "bottom 80%",
+                    scrub: true,
+                }
+            });
+
+            tl.fromTo($(".tutorial-progress"),
+                { opacity: 1, },
+                { opacity: 0, ease: "none" },
+            );
+
+            const contents = tutorialContents.find(".tutorial-content");
+            const progressBx = $(".tutorial-progress");
+            const character = progressBx.find(".circle-character").find("li");
+            const circleBx = progressBx.find(".circle-line-bx").find(".circle-line");
+            const checkBx = progressBx.find(".circle-list-bx").find(".circle-list-item");
+
+            const w = [0, 25, 50, 75, 100];
+
+            contents.each(function (i, el) {
+                ScrollTrigger.create({
+                    trigger: el,
+                    start: "top bottom",
+                    end: "bottom top",
+                    onEnter: function () {
+                        showGage(i);
+                    },
+                    onEnterBack: function () {
+                        showGage(i);
+                    },
+                    onLeave: function () {
+                        console.log("Leave", i);
+                    },
+                    onLeaveBack: function () {
+                        const bIdx = i - 1;
+                        showGage(bIdx);
+                    }
+                });
+            });
+
+            function showGage(idx) {
+                gsap.to(circleBx, { duration: 0.35, ease: Cubic.easeInOut, width: w[idx] + "%" });
+                character.removeClass("on");
+                $(character[idx]).addClass("on");
+
+                checkBx.removeClass("on");
+                $(checkBx[idx]).addClass("on");
+            }
+
+        }
+
+        function createTutorialStep0() {
+            const tutorialStep1 = $(".tutorial-00");
+            const tutorialBg = tutorialStep1.find(".tutorial-bg");
+            const tutorialStep1Animation = tutorialStep1.find(".tutorial-animation--items--00");
+            const tutorialStep1Bg = tutorialStep1.find("img");
+
+            const object00 = tutorialStep1Animation.find(".tutorial-animation--object-00");
+            const object01 = tutorialStep1Animation.find(".tutorial-animation--object-01");
 
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -37,9 +99,9 @@
                 object00[0],
                 object01[0],
             ]
-            
-            let arrY = [ 30, 80, 50, 50, 50 ];
-            imgs.forEach(function(el, i) {
+
+            let arrY = [30, 80, 50, 50, 50];
+            imgs.forEach(function (el, i) {
                 tl.fromTo(
                     el,
                     { y: arrY[i] },
@@ -49,8 +111,166 @@
             });
         }
 
-        function createQuiz(){
-            const quiz = $( ".quiz" );
+        function createTutorialStep1() {
+            const tutorialStep1 = $(".tutorial-01");
+            const tutorialBg = tutorialStep1.find(".tutorial-bg");
+            const tutorialStep1Animation = tutorialStep1.find(".tutorial-animation--items--01");
+            const tutorialStep1Bg = tutorialStep1.find("img");
+
+            const object00 = tutorialStep1Animation.find(".tutorial-animation--object-10");
+            const object01 = tutorialStep1Animation.find(".tutorial-animation--object-11");
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: tutorialBg[0],
+                    start: "50% bottom",
+                    end: "bottom bottom",
+                    scrub: true,
+                }
+            });
+
+            const imgs = [
+                tutorialStep1Bg[0],
+                tutorialStep1Bg[1],
+                tutorialStep1Bg[2],
+                object00[0],
+                object01[0],
+            ]
+
+            let arrY = [30, 80, 50, 50, 50];
+            imgs.forEach(function (el, i) {
+                tl.fromTo(
+                    el,
+                    { y: arrY[i] },
+                    { y: 0, ease: "none" },
+                    "<",
+                );
+            });
+        }
+
+        function createTutorialStep2() {
+            const tutorialStep1 = $(".tutorial-02");
+            const tutorialBg = tutorialStep1.find(".tutorial-bg");
+            const tutorialStep1Animation = tutorialStep1.find(".tutorial-animation--items--02");
+            const tutorialStep1Bg = tutorialStep1.find("img");
+
+            const object00 = tutorialStep1Animation.find(".tutorial-animation--object-20");
+            const object01 = tutorialStep1Animation.find(".tutorial-animation--object-21");
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: tutorialBg[0],
+                    start: "50% bottom",
+                    end: "bottom bottom",
+                    scrub: true,
+                }
+            });
+
+            const imgs = [
+                tutorialStep1Bg[0],
+                tutorialStep1Bg[1],
+                tutorialStep1Bg[2],
+                object00[0],
+                object01[0],
+            ]
+
+            let arrY = [30, 80, 50, 50, 50];
+            imgs.forEach(function (el, i) {
+                tl.fromTo(
+                    el,
+                    { y: arrY[i] },
+                    { y: 0, ease: "none" },
+                    "<",
+                );
+            });
+        }
+
+        function createTutorialStep3() {
+            const tutorialStep1 = $(".tutorial-03");
+            const tutorialBg = tutorialStep1.find(".tutorial-bg");
+            const tutorialStep1Animation = tutorialStep1.find(".tutorial-animation--items--03");
+            const tutorialStep1Bg = tutorialStep1.find("img");
+
+            const object00 = tutorialStep1Animation.find(".tutorial-animation--object-30");
+            const object01 = tutorialStep1Animation.find(".tutorial-animation--object-31");
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: tutorialBg[0],
+                    start: "50% bottom",
+                    end: "bottom bottom",
+                    scrub: true,
+                }
+            });
+
+            const imgs = [
+                tutorialStep1Bg[0],
+                tutorialStep1Bg[1],
+                tutorialStep1Bg[2],
+                object00[0],
+                object01[0],
+            ]
+
+            let arrY = [30, 80, 50, 50, 50];
+            let arrX = [0, 0, 0, -246, 0];
+            let opacitys = [1, 1, 1, 1, 0];
+            imgs.forEach(function (el, i) {
+                tl.fromTo(
+                    el,
+                    { y: arrY[i], x: arrX[i], opacity: opacitys[i] },
+                    { y: 0, x: 0, opacity: 1, ease: "none" },
+                    "<",
+                );
+            });
+        }
+
+        function createTutorialStep4() {
+            const tutorialStep1 = $(".tutorial-04");
+            const tutorialBg = tutorialStep1.find(".tutorial-bg");
+            const tutorialStep1Animation = tutorialStep1.find(".tutorial-animation--items--04");
+            const tutorialStep1Bg = tutorialStep1.find("img");
+
+            const object00 = tutorialStep1Animation.find(".tutorial-animation--object-40");
+            const object01 = tutorialStep1Animation.find(".tutorial-animation--object-41");
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: tutorialBg[0],
+                    start: "50% bottom",
+                    end: "bottom bottom",
+                    scrub: true,
+                    onLeave: () => {
+                    },
+                }
+            });
+
+            const imgs = [
+                tutorialStep1Bg[0],
+                object00[0],
+            ]
+
+            let arrY = [30, 0];
+            let arrX = [0, 197];
+            let opacitys = [1, 1];
+            imgs.forEach(function (el, i) {
+                tl.fromTo(
+                    el,
+                    { y: arrY[i], x: arrX[i], opacity: opacitys[i] },
+                    { y: 0, x: 0, opacity: 1, ease: "none" },
+                    "<",
+                );
+            });
+
+            tl.fromTo(
+                object01[0],
+                { y: 5, opacity: 0 },
+                { y: 0, opacity: 1, ease: "none" },
+            );
+        }
+
+
+        function createQuiz() {
+            const quiz = $(".quiz");
             const quizBtn = quiz.find(".quiz-item-list input");
 
             const popup = $(".popup");
@@ -69,11 +289,11 @@
             dimmed.on("click", closePopup);
             $(".popup-close-btn").on("click", closePopup);
 
-            quizBtn.on( "change", (e) => {
-                const parents = $( ".quiz-item" );
-                const parent = $( e.currentTarget ).parents(".quiz-item");
-                parents.addClass( "dimmed" );
-                parent.removeClass( "dimmed" );
+            quizBtn.on("change", (e) => {
+                const parents = $(".quiz-item");
+                const parent = $(e.currentTarget).parents(".quiz-item");
+                parents.addClass("dimmed");
+                parent.removeClass("dimmed");
 
                 const idx = $(parent).index();
                 popup.addClass("on");
@@ -94,16 +314,20 @@
             });
         }
 
-        function createTutorial(){
+        function createTutorial() {
             const tutorial = $(".tutorial-list");
             const tutorialContents = tutorial.find(".tutorial-contents");
             const tutorialContent = tutorialContents.find(".tutorial-content");
 
-            tutorialContent.each(function(i){
+            tutorialContent.each(function (i) {
                 const tutorialItem = $(this);
 
-                const tutorialDescription = tutorialItem.find( ".swiper-bx" );
-                const stepBx = tutorialItem.find( ".tutorial-step-bx" );
+                const tutorialDescription = tutorialItem.find(".swiper-bx");
+                const stepBx = tutorialItem.find(".tutorial-step-bx");
+
+                if (i === tutorialContent.length - 1) {
+                    return;
+                }
 
                 let descTl = gsap.timeline({
                     scrollTrigger: {
@@ -116,10 +340,6 @@
 
                 descTl.to(stepBx, { opacity: 0, y: -30, ease: Linear.easeInOut });
 
-                if( i === tutorialContent.length - 1){
-                    return;
-                }
-                
                 let tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: tutorialItem,
@@ -129,14 +349,14 @@
                     }
                 });
 
-                tl.to( tutorialItem, { y: 400, ease: Linear.easeInOut });
+                tl.to(tutorialItem, { y: 400, ease: Linear.easeInOut });
             });
 
 
-            const tutorialSwiper = $( ".tutorial-desc-swiper" );
+            const tutorialSwiper = $(".tutorial-desc-swiper");
             tutorialSwiper.each((idx, el) => {
-                const item = $( el );
-                new Swiper( item[0], {
+                const item = $(el);
+                new Swiper(item[0], {
                     slidesPerView: "auto",
                     centeredSlides: true,
                     spaceBetween: 15,
@@ -147,66 +367,109 @@
                     on: {
                         slideChange: (e) => {
                             const index = e.activeIndex;
-                            const swiperDiv = $( e.el );
+                            const swiperDiv = $(e.el);
 
-                            const activeSwiper = swiperDiv.find( ".swiper-slide" );
-                            activeSwiper.removeClass( "on" );
-                            $( activeSwiper[index]).addClass( "on" );
+                            const activeSwiper = swiperDiv.find(".swiper-slide");
+                            activeSwiper.removeClass("on");
+                            $(activeSwiper[index]).addClass("on");
 
-                            console.log( $( activeSwiper[index] )[0]);
+                            console.log($(activeSwiper[index])[0]);
                         }
                     }
                 });
             });
         }
 
-        function createVisual(){
+        function createVisual() {
             const visual = $(".visual");
-            const visualKeyBx = visual.find(".visual-key-bx");  
+            const visualKeyBx = visual.find(".visual-key-bx");
             const visualKeyImg = visual.find(".visual-key-img");
             const visualKeyBgColor = visual.find(".visual-key-bg-color");
             const visualKeyBg = visual.find(".visual-key-bg");
 
-            const visualLogo = visual.find( ".visual-logo-bx" ).find( "img" );
-            const visualLogoText = visual.find( ".visual-logo-bx" ).find( "span" );
+            const visualLogo = visual.find(".visual-logo-bx").find("img");
+            const visualLogoText = visual.find(".visual-logo-bx").find("span");
 
-            gsap.fromTo( visualLogo, 
-                { opacity: 0, y: -15 },
-                { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut }
-            )
-            gsap.fromTo( visualLogoText, 
-                { opacity: 0, y: 15 },
-                { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut }
-            )
 
-            gsap.fromTo( visualKeyImg, 
-                { opacity: 0, y: 25 },
-                { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut, onComplete: () => {
-                    setTimeout(() => {
-                        showHidden();
-                    }, 1000 );
-                }}
-            )
+            // 이미지 로드 완료 시 콜백 실행
+            const visualImgs = $(".visual").find("img");
+            let loadedCount = 0;
+            const totalImgs = visualImgs.length;
 
-            function showHidden(){
-                gsap.to( visualLogo, { opacity: 0, y: -20, duration: 0.6, ease: Cubic.easeInOut });
-                gsap.to( visualLogoText, { opacity: 0, y: 20, duration: 0.6, ease: Cubic.easeInOut });
-
-                gsap.to( visualKeyBx, { scale: 15, duration: 2.5, ease: Cubic.easeInOut });
-                gsap.to( visualKeyImg, { opacity: 0, duration: 1, ease: Cubic.easeOut });
-                gsap.to( visualKeyBx, { opacity: 0, duration: 1, ease: Cubic.easeInOut, delay: 1.5});
-                gsap.to( visualKeyBgColor, { opacity: 0, duration: 1, ease: Cubic.easeInOut, delay: 1.5 });
-                gsap.to( visualKeyBg, { opacity: 0, duration: 2.5, ease: Cubic.easeInOut });
+            function onAllImagesLoaded() {
+                gsap.fromTo(visualLogo,
+                    { opacity: 0, y: -15 },
+                    { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut }
+                )
+    
+                gsap.fromTo(visualLogoText,
+                    { opacity: 0, y: 15 },
+                    { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut }
+                )
+    
+                gsap.fromTo(visualKeyImg,
+                    { opacity: 0, y: 25 },
+                    {
+                        opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut
+                    }
+                )
             }
+
+            visualImgs.each(function (idx, el) {
+                if (el.complete && el.naturalWidth !== 0) {
+                    loadedCount++;
+                    if (loadedCount === totalImgs) {
+                        onAllImagesLoaded();
+                    }
+                } else {
+                    $(el).one("load", function () {
+                        loadedCount++;
+                        if (loadedCount === totalImgs) {
+                            onAllImagesLoaded();
+                        }
+                    }).one("error", function () {
+                        loadedCount++;
+                        if (loadedCount === totalImgs) {
+                            onAllImagesLoaded();
+                        }
+                    });
+                }
+            });
+
+            function showVisual() {
+                function showHidden() {
+                    gsap.to(visualLogo, { opacity: 0, y: -20, duration: 0.6, ease: Cubic.easeInOut });
+                    gsap.to(visualLogoText, { opacity: 0, y: 20, duration: 0.6, ease: Cubic.easeInOut });
+
+                    gsap.to(visualKeyBx, { scale: 15, duration: 2.5, ease: Cubic.easeInOut });
+                    gsap.to(visualKeyImg, { opacity: 0, duration: 1, ease: Cubic.easeOut });
+                    gsap.to(visualKeyBx, { opacity: 0, duration: 1, ease: Cubic.easeInOut, delay: 1.5 });
+                    gsap.to(visualKeyBgColor, { opacity: 0, duration: 1, ease: Cubic.easeInOut, delay: 1.5 });
+                    gsap.to(visualKeyBg, { opacity: 0, duration: 2.5, ease: Cubic.easeInOut });
+                }
+
+                showHidden();
+            }
+
+            let isShow = false;
+            function scrollListener() {
+                isShow = true;
+                if (isShow) {
+                    window.removeEventListener("scroll", scrollListener);
+                    showVisual();
+                }
+            }
+
+            window.addEventListener("scroll", scrollListener);
         }
 
-        return{
+        return {
             Init
         }
     }
 
-    $( document ).ready( function(){
-        if( $( ".hands-on-tour")[0]){
+    $(document).ready(function () {
+        if ($(".hands-on-tour")[0]) {
             App.sub = sub();
             App.sub.Init();
         }
