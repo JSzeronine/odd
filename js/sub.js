@@ -382,35 +382,60 @@
 
         function createVisual() {
             const visual = $(".visual");
+            const visualKey = visual.find(".visual-key");
             const visualKeyBx = visual.find(".visual-key-bx");
             const visualKeyImg = visual.find(".visual-key-img");
             const visualKeyBgColor = visual.find(".visual-key-bg-color");
             const visualKeyBg = visual.find(".visual-key-bg");
 
+            const visualKeyContent = visual.find(".visual-key-content");
+
+            const visualLogoBx = visual.find(".visual-logo-bx");
             const visualLogo = visual.find(".visual-logo-bx").find("img");
             const visualLogoText = visual.find(".visual-logo-bx").find("span");
 
-
-            // 이미지 로드 완료 시 콜백 실행
             const visualImgs = $(".visual").find("img");
             let loadedCount = 0;
             const totalImgs = visualImgs.length;
-
+            let isShow = false;
             function onAllImagesLoaded() {
                 gsap.fromTo(visualLogo,
                     { opacity: 0, y: -15 },
-                    { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut }
+                    { opacity: 1, y: 0, duration: 1.5, ease: Cubic.easeInOut }
                 )
     
                 gsap.fromTo(visualLogoText,
                     { opacity: 0, y: 15 },
-                    { opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut }
+                    { opacity: 1, y: 0, duration: 1.5, ease: Cubic.easeInOut }
                 )
     
+                gsap.fromTo(visualKeyContent,
+                    { opacity: 0, scale: 0.8},
+                    { opacity: 1, scale: 1, duration: 1.5, ease: Cubic.easeInOut }
+                )
+
                 gsap.fromTo(visualKeyImg,
-                    { opacity: 0, y: 25 },
+                    { opacity: 0, rotationY: 1 },
                     {
-                        opacity: 1, y: 0, duration: 0.6, ease: Cubic.easeInOut
+                        opacity: 1, rotationY:360, duration: 2.5, ease: Cubic.easeInOut, delay: 1,
+                        onComplete: () => {
+                            function showVisualStart() {
+                                isShow = true;
+                                if (isShow) {
+                                    window.removeEventListener( "touchstart", showVisualStart);
+                                    window.removeEventListener( "mousedown", showVisualStart);
+        
+                                    showVisual();
+
+                                    setTimeout(() => {
+                                        $( "body" ).removeClass( "hidden" );
+                                    }, 2000 );
+                                }
+                            }
+                
+                            window.addEventListener( "touchstart", showVisualStart);
+                            window.addEventListener( "mousedown", showVisualStart);
+                        }
                     }
                 )
             }
@@ -450,17 +475,6 @@
 
                 showHidden();
             }
-
-            let isShow = false;
-            function scrollListener() {
-                isShow = true;
-                if (isShow) {
-                    window.removeEventListener("scroll", scrollListener);
-                    showVisual();
-                }
-            }
-
-            window.addEventListener("scroll", scrollListener);
         }
 
         return {
