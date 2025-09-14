@@ -1546,6 +1546,8 @@ body.hidden {
   object-position: center;
   transform: scale(1.5);
   transition: transform 0.25s ease-out;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-description .tutorial-desc-swiper .swiper-wrapper .swiper-slide .tutorial-desc-bx .tutorial-desc-item .tutorial-desc-item__text {
   padding: 20px 20px 40px 20px;

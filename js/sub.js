@@ -1,5 +1,3 @@
-
-
 (function () {
 
 
@@ -509,6 +507,9 @@
                     slidesPerView: "auto",
                     centeredSlides: true,
                     spaceBetween: 15,
+                    lazy: false,
+                    preloadImages: true,
+                    updateOnImagesReady: true,
                     pagination: {
                         el: '.tutorial-desc-swiper .swiper-pagination',
                         clickable: true,
