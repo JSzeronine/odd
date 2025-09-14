@@ -1016,6 +1016,10 @@ body.hidden {
   top: 205px;
   transform: translateX(-50%);
   opacity: 0;
+  width: 18px;
+}
+.hands-on-tour .inner .visual .visual-key .visual-key-content .visual-key-bx .visual-key-img img {
+  width: 100%;
 }
 .hands-on-tour .inner .visual .visual-key .visual-key-content .visual-key-bx .visual-key-bg-img {
   position: relative;

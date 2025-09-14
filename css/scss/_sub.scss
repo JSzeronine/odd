@@ -71,6 +71,10 @@ body{
                             top: 205px;
                             transform: translateX(-50%);
                             opacity: 0;
+                            width: 18px;
+                            img{
+                                width: 100%;
+                            }
                         }
 
                         .visual-key-bg-img {
