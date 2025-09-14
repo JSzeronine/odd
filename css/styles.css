@@ -1000,6 +1000,7 @@ body.hidden {
 }
 .hands-on-tour .inner .visual .visual-key .visual-key-content {
   position: relative;
+  opacity: 0;
   z-index: 10;
 }
 .hands-on-tour .inner .visual .visual-key .visual-key-content .visual-key-bx {
@@ -1019,7 +1020,6 @@ body.hidden {
   position: relative;
   z-index: 2;
   font-size: 0;
-  opacity: 0;
 }
 .hands-on-tour .inner .visual .visual-key .visual-key-content .visual-key-bx .visual-key-bg-img img {
   width: 100%;

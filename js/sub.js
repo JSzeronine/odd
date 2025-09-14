@@ -381,6 +381,20 @@
         }
 
         function createVisual() {
+            // 윈도우 로드 이벤트에서 스크롤을 0으로 초기화
+            // 스크롤 0으로 초기화가 안될 때는 아래와 같이 여러 이벤트에서 시도해볼 수 있습니다.
+            function resetScroll() {
+                setTimeout(function() {
+                    window.scrollTo(0, 0);
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }, 10);
+            }
+            
+            window.addEventListener("DOMContentLoaded", resetScroll);
+            window.addEventListener("load", resetScroll);
+
+            
             const visual = $(".visual");
             const visualKey = visual.find(".visual-key");
             const visualKeyBx = visual.find(".visual-key-bx");
