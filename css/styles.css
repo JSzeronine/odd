@@ -1500,7 +1500,7 @@ body.hidden {
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-description {
   position: relative;
   z-index: 10;
-  height: 200vh;
+  height: 100vh;
   display: flex;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-description.no-sticky {
