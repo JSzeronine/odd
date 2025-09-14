@@ -12,7 +12,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  box-shadow: border-box;
+  box-sizing: border-box;
   padding-top: 48px;
 }
 .wrap.why-odd-grocer .visual .visual-bx {
@@ -990,6 +990,7 @@ body.hidden {
   opacity: 0;
 }
 .hands-on-tour .inner .visual .visual-logo-bx img {
+  width: 160px;
   opacity: 0;
 }
 .hands-on-tour .inner .visual .visual-key {
@@ -1066,7 +1067,6 @@ body.hidden {
   position: realtive;
   z-index: 10;
   text-align: center;
-  opacity: 0;
 }
 .hands-on-tour .inner .visual .visual-introduce .visual-introduce__content img {
   width: 22px;
@@ -1120,7 +1120,7 @@ body.hidden {
   align-items: center;
 }
 .hands-on-tour .inner .visual .visual-introduce .visual-introduce__content .visual-introduce__journey img {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .hands-on-tour .inner .visual .visual-introduce .visual-introduce__video {
   position: absolute;
@@ -1204,6 +1204,11 @@ body.hidden {
   top: 0px;
   width: 100%;
   height: 0;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+.hands-on-tour .inner .tutorial-list .tutorial-progress.on {
+  transform: translateY(48px);
 }
 .hands-on-tour .inner .tutorial-list .tutorial-progress .circle-character {
   position: absolute;
@@ -1244,7 +1249,7 @@ body.hidden {
   width: 47px;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-progress .circle-character ul li:nth-child(3) img {
-  width: 12px;
+  width: 16px;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-progress .circle-character ul li:nth-child(4) img {
   width: 24px;
@@ -1304,6 +1309,13 @@ body.hidden {
   bottom: -24px;
   word-break: keep-all;
   transform: translateX(-50%);
+  opacity: 0.6;
+}
+.hands-on-tour .inner .tutorial-list .tutorial-progress .circle-list-bx ul li .circle-list-item__text.on {
+  opacity: 1;
+}
+.hands-on-tour .inner .tutorial-list .tutorial-progress .circle-list-bx ul li .circle-list-item__text.bold {
+  font-weight: 700;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-progress .circle-list-bx .circle-line-bx {
   position: relative;
@@ -1417,6 +1429,7 @@ body.hidden {
   bottom: 48px;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-animation-bx .tutorial-animation--items .tutorial-animation--object-bx .tutorial-animation--object-31 {
+  opacity: 0;
   width: 60px;
   left: 44.3243243243%;
   bottom: 187px;
@@ -1448,6 +1461,10 @@ body.hidden {
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl {
   text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl.on {
+  transform: translateY(50px);
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl.show-sticky {
   position: sticky;
@@ -1455,9 +1472,9 @@ body.hidden {
   top: 109px;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl dt {
-  margin-bottom: 16px;
   text-align: center;
   opacity: 0;
+  margin-bottom: 16px;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl dt span {
   padding: 6px 14px;
@@ -1468,6 +1485,7 @@ body.hidden {
   font-size: 14px;
   line-height: 100%;
   color: #ffffff;
+  display: inline-block;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl dd {
   font-weight: 500;

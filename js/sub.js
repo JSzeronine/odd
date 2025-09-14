@@ -6,18 +6,19 @@
     const sub = function () {
 
         function Init() {
-            function resetScroll() {
-                setTimeout(function () {
-                    window.scrollTo(0, 0);
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
-                }, 10);
-            }
+            // function resetScroll() {
+            //     setTimeout(function () {
+            //         window.scrollTo(0, 0);
+            //         document.body.scrollTop = 0;
+            //         document.documentElement.scrollTop = 0;
+            //     }, 10);
+            // }
 
-            window.addEventListener("DOMContentLoaded", resetScroll);
-            window.addEventListener("load", resetScroll);
+            // window.addEventListener("DOMContentLoaded", resetScroll);
+            // window.addEventListener("load", resetScroll);
 
             createVisual();
+            createSecret();
             createTutorial();
             createTutorialStep();
             createTutorialStep0();
@@ -27,6 +28,26 @@
             createTutorialStep4();
             createProgress();
             createQuiz();
+        }
+
+        function createSecret() {
+            const secret = $(".secret");
+            const secretTitle = secret.find(".secret-title");
+
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: secret,
+                    start: "top bottom",
+                    end: "bottom bottom",
+                    scrub: true,
+                }
+            }); 
+
+            tl.fromTo(secretTitle,
+                { y: 150, opacity: 0.5 },
+                { y: 0, opacity: 1, ease: "none" }
+            );
         }
 
         function createTutorialStep(){
@@ -80,6 +101,7 @@
             const character = progressBx.find(".circle-character").find("li");
             const circleBx = progressBx.find(".circle-line-bx").find(".circle-line");
             const checkBx = progressBx.find(".circle-list-bx").find(".circle-list-item");
+            const checkBxText = progressBx.find(".circle-list-bx").find(".circle-list-item__text");
 
             const w = [0, 25, 50, 75, 100];
 
@@ -162,6 +184,10 @@
 
                 checkBx.removeClass("on");
                 $(checkBx[idx]).addClass("on");
+
+                checkBxText.removeClass("bold");
+                $(checkBxText[idx]).addClass("bold");
+                $(checkBxText[idx]).addClass("on");
             }
 
         }
@@ -307,6 +333,9 @@
             let arrX = [0, 0, 0, -246, 0];
             let opacitys = [1, 1, 1, 1, 0];
             imgs.forEach(function (el, i) {
+                if( i === 4 ){
+                    return;
+                }
                 tl.fromTo(
                     el,
                     { y: arrY[i], x: arrX[i], opacity: opacitys[i] },
@@ -314,6 +343,30 @@
                     "<",
                 );
             });
+
+            gsap.to(object01[0], {
+                scrollTrigger: {
+                    trigger: tutorialBg[0],
+                    start: "80% bottom",
+                    end: "80% bottom",
+                    onEnter: function () {
+                        gsap.to(object01[0], {
+                            opacity: 1,
+                            rotationY: 360,
+                            ease: "none"
+                        });
+                    },
+
+                    onEnterBack: function () {
+                        gsap.to(object01[0], {
+                            opacity: 0,
+                            rotationY: 0,
+                            ease: "none"
+                        });
+                    }
+                },
+            });
+
         }
 
         function createTutorialStep4() {
@@ -569,9 +622,19 @@
                     gsap.to(visualKeyBg, { opacity: 0, duration: 2.5, ease: Cubic.easeInOut });
 
 
-                    gsap.fromTo( $ (".visual-introduce__content" ), 
-                        { opacity: 0, y: 30, },
-                        { opacity: 1, y: 0, duration: 1, ease: Cubic.easeInOut, delay: 1.25 }
+                    gsap.fromTo( $(".visual-introduce__content" ).find( "dl" ), 
+                        { opacity: 0, y: 20, },
+                        { opacity: 1, y: 0, duration: 0.75, ease: Cubic.easeInOut, delay: 1.25 }
+                    )
+
+                    gsap.fromTo( $( ".visual-introduce__content-key" ),
+                        { opacity: 0, y: -20 },
+                        { opacity: 1, y: 0, duration: 0.75, ease: Cubic.easeInOut, delay: 1.5 }
+                    )
+
+                    gsap.fromTo( $( ".visual-introduce__journey" ),
+                        { opacity: 0, y: 20},
+                        { opacity: 1, y: 0, duration: 0.75, ease: Cubic.easeInOut, delay: 1.25 }
                     )
                 }
 
