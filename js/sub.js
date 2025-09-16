@@ -139,10 +139,11 @@
                     gsap.to(animationBx, { 
                         opacity: 1,  
                         filter: "blur(0px)",
-                        ease: Cubic.easeOut 
+                        ease: Cubic.easeOut,
+                        duration: 0.75,
                     });
                 }else{
-                    gsap.to( animationBx, { opacity: 0, filter: "blur(10px)", ease: Cubic.easeOut } );
+                    gsap.to( animationBx, { opacity: 0, filter: "blur(10px)", ease: Cubic.easeOut, duration: 0.75 } );
                 }
             }
 
