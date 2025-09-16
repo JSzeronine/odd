@@ -1217,7 +1217,7 @@ body.hidden {
   top: 0px;
   width: 100%;
   height: 0;
-  transform: translateY(0);
+  transform: translateY(48px);
   transition: transform 0.3s ease-in-out;
 }
 .hands-on-tour .inner .tutorial-list .tutorial-progress.on {
@@ -1477,6 +1477,7 @@ body.hidden {
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl {
   text-align: center;
   transition: transform 0.3s ease-in-out;
+  transform: translateY(50px);
 }
 .hands-on-tour .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl.on {
   transform: translateY(50px);
@@ -2087,7 +2088,7 @@ body.hidden {
   top: 0px;
   width: 100%;
   height: 0;
-  transform: translateY(0);
+  transform: translateY(48px);
   transition: transform 0.3s ease-in-out;
 }
 .hands-on-tour2 .inner .tutorial-list .tutorial-progress.on {
@@ -2347,8 +2348,6 @@ body.hidden {
 .hands-on-tour2 .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl {
   text-align: center;
   transition: transform 0.3s ease-in-out;
-}
-.hands-on-tour2 .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl.on {
   transform: translateY(50px);
 }
 .hands-on-tour2 .inner .tutorial-list .tutorial-contents .tutorial-content .tutorial-bg .tutorial-step-bx dl.show-sticky {

@@ -308,7 +308,7 @@ body {
                 top: 0px;
                 width: 100%;
                 height: 0;
-                transform: translateY(0);
+                transform: translateY(48px);
                 transition: transform 0.3s ease-in-out;
             
                 &.on {
@@ -625,7 +625,7 @@ body {
                             dl {
                                 text-align: center;
                                 transition: transform 0.3s ease-in-out;
-
+                                transform: translateY(50px);
                                 &.on {
                                     transform: translateY(50px);
                                 }
