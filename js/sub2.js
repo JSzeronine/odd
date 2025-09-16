@@ -1,7 +1,7 @@
 (function () {
 
 
-    const sub = function () {
+    const sub2 = function () {
 
         function Init() {
             function resetScroll() {
@@ -681,9 +681,9 @@
     }
 
     $(document).ready(function () {
-        if ($(".hands-on-tour")[0]) {
-            App.sub = sub();
-            App.sub.Init();
+        if ($(".hands-on-tour2")[0]) {
+            App.sub2 = sub2();
+            App.sub2.Init();
         }
     });
 

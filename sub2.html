@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Optima:400,700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Document</title>
+</head>
+
+<body class="hidden">
+    <div class="hands-on-tour2">
+        <div class="top-menus">
+            <a href="javascript:;">
+                Why ODD
+            </a>
+            <span></span>
+            <a href="javascript:;" class="on">
+                Hands on Tour
+            </a>
+        </div>
+
+        <div class="inner">
+            <div class="visual">
+                <div class="visual-logo-bx">
+                    <img src="./image/hands-on-tour/visual-logo.png" alt="">
+                    <span>신선함의 비밀을 엿보다</span>
+                </div>
+                <div class="visual-key">
+                    <div class="visual-key-content">
+                        <div class="visual-key-bx">
+                            <div class="visual-key-img">
+                                <img src="./image/hands-on-tour/visual-key-small.png" alt="">
+                            </div>
+
+                            <div class="visual-key-bg-img">
+                                <img src="./image/hands-on-tour/visual-key-bg.png" alt="">
+                            </div>
+
+                            <div class="visual-key-bg-color"></div>
+                        </div>
+                    </div>
+                    <div class="visual-key-bg"></div>
+                </div>
+
+                <div class="visual-introduce">
+                    <div class="visual-introduce__content">
+                        <img class="visual-introduce__content-key" src="./image/hands-on-tour/visual-key-big.png" alt="">
+                        <dl>
+                            <dt>
+                                진짜 맛있는 닭고기의 비밀이<br />
+                                무엇인지 알고 계신가요?
+                            </dt>
+                            <dd>
+                                <div class="strong-text">
+                                    정답은 바로 <br />
+                                    <span><strong>신선함</strong> 입니다.</span>
+                                </div>
+                                <br />
+                                하지만 진짜 신선함은 무엇일까요?<br />
+                                <br />
+                                1978년부터 45년 간 오직 ‘신선함'<br />
+                                하나만을 위해 지켜온 하림만의<br />
+                                놀라운 비밀을 발견해 보세요!
+                            </dd>
+                        </dl>
+                        <div class="visual-introduce__journey">
+                            Let's Begin the Journey
+                            <img src="./image/hands-on-tour/visual-arrow.svg" alt="">
+                        </div>
+
+                    </div>
+                    <div class="visual-introduce__video">
+                        <video src="./image/hands-on-tour/visual-video.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sections">
+                <div class="secret">
+                    <div class="secret-title">
+                        <dl>
+                            <dt>
+                                HANDS<br />
+                                ON TOUR
+                            </dt>
+                            <dd>
+                                손 끝으로 발견하는<br />
+                                진짜 신선함의 비밀
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="secret-img">
+                        <img src="./image/hands-on-tour/secret-chicken.png" alt="">
+                        <span>Unlock the Secret</span>
+                    </div>
+                    
+                    <div class="secret-bg">
+                        <img class="secret-bg-item" src="./image/hands-on-tour/secret-items-00.png" alt="">
+                        <!-- <img class="secret-bg-img" src="./image/hands-on-tour/secret-new-bg.png" alt=""> -->
+                    </div>
+                </div>
+
+                <div class="tutorial-list">
+                    <div class="tutorial-progress">
+                        <div class="circle-character">
+                            <ul>
+                                <li>
+                                    <img src="./image/hands-on-tour/progress-img-00.gif" alt="">
+                                </li>
+                                <li>
+                                    <img src="./image/hands-on-tour/progress-img-01.gif" alt="">
+                                </li>
+                                <li>
+                                    <img src="./image/hands-on-tour/progress-img-02.gif" alt="">
+                                </li>
+                                <li>
+                                    <img src="./image/hands-on-tour/progress-img-03.gif" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="circle-list-bx">
+                            <ul>
+                                <li>
+                                    <div class="circle-list-item on">
+                                        <img src="./image/hands-on-tour/ic-check.svg" alt="">
+                                        <span class="circle-bg"></span>
+                                    </div>
+                                    <div class="circle-list-item__text">
+                                        농장
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="circle-list-item">
+                                        <img src="./image/hands-on-tour/ic-check.svg" alt="">
+                                        <span class="circle-bg"></span>
+                                    </div>
+                                    <div class="circle-list-item__text">
+                                        공장1
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="circle-list-item">
+                                        <img src="./image/hands-on-tour/ic-check.svg" alt="">
+                                        <span class="circle-bg"></span>
+                                    </div>
+                                    <div class="circle-list-item__text">
+                                        공장2
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="circle-list-item">
+                                        <img src="./image/hands-on-tour/ic-check.svg" alt="">
+                                        <span class="circle-bg"></span>
+                                    </div>
+                                    <div class="circle-list-item__text">
+                                        콜드체인
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="circle-list-item">
+                                        <img src="./image/hands-on-tour/ic-check.svg" alt="">
+                                        <span class="circle-bg"></span>
+                                    </div>
+                                    <div class="circle-list-item__text">
+                                        집
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="circle-line-bx">
+                                <div class="circle-line"></div>
+                                <div class="circle-line-bg"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-contents">
+                        <div class="tutorial-content tutorial-00">
+                            <div class="tutorial-bg">
+                                <div class="tutorial-animation-bx">
+                                    <div class="tutorial-animation--items tutorial-animation--items--00">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-00.png" alt="">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-01.png" alt="">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-02.png" alt="">
+
+                                        <div class="tutorial-animation--object-bx">
+                                            <img class="tutorial-animation--object-00" src="./image/hands-on-tour/tutorial-animation-obj-00.gif" alt="">
+                                            <img class="tutorial-animation--object-01" src="./image/hands-on-tour/tutorial-animation-obj-01.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <!-- <img class="" src="./image/hands-on-tour/tutorial-new-bg-00.png" alt=""> -->
+                                </div>
+
+                                <div class="tutorial-step-bx">
+                                    <dl>
+                                        <dt><span>STEP 1</span></dt>
+                                        <dd>
+                                            <span>좋은 닭고기</span>는<br />
+                                            건강한 사육에서<br />
+                                            시작됩니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="tutorial-dimmed"></div>
+                            </div>
+
+                            <div class="tutorial-description">
+                                <div class="swiper-bx">
+                                    <div class="swiper tutorial-desc-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide on">
+                                                <div class="tutorial-desc-bx">
+                                                    <div class="tutorial-desc-item">
+                                                        <div class="tutorial-desc-img">
+                                                            <img src="./image/hands-on-tour/tutorial-00.png" alt="">
+                                                        </div>
+
+                                                        <div class="tutorial-desc-item__text">
+                                                            <dl>
+                                                                <dt>사육 시스템</dt>
+                                                                <dd>
+                                                                    <span>
+                                                                        우리가 먹는 닭고기인 육계부터 
+                                                                        그 부모인 종계, 조부모인 원종계, 그리고 
+                                                                        종란에서 병아리가 태어나는 부화단계 
+                                                                        까지 하림은 사육 전 과정을 하나하나 
+                                                                        꼼꼼히 관리하며 건강한 닭을 키웁니다.
+                                                                    </span>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="tutorial-desc-item__text--shadow"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="tutorial-desc-bx">
+                                                    <div class="tutorial-desc-item">
+                                                        <div class="tutorial-desc-img">
+                                                            <img src="./image/hands-on-tour/tutorial-01.png" alt="">
+                                                        </div>
+
+                                                        <div class="tutorial-desc-item__text">
+                                                            <dl>
+                                                                <dt>사육환경</dt>
+                                                                <dd>
+                                                                    <span>
+                                                                        닭에게도 맞춤 케어가 필요해요.<br />
+                                                                        온도, 습도는 기본!<br />
+                                                                        영양 밸런스까지 고려해 사료도 직접 제조해요.<br />
+                                                                        잘 먹고, 잘 자란 닭만을 키우니까요.
+                                                                    </span>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="tutorial-desc-item__text--shadow"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tutorial-content tutorial-01">
+                            <div class="tutorial-bg">
+                                <div class="tutorial-animation-bx">
+                                    <div class="tutorial-animation--items tutorial-animation--items--01">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-10.png" alt="">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-11.png" alt="">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-12.png" alt="">
+
+                                        <div class="tutorial-animation--object-bx">
+                                            <img class="tutorial-animation--object-10" src="./image/hands-on-tour/tutorial-animation-obj-10.png" alt="">
+                                            <img class="tutorial-animation--object-11" src="./image/hands-on-tour/tutorial-animation-obj-11.gif" alt="">
+                                        </div>
+                                    </div>
+
+                                    <!-- <img src="./image/hands-on-tour/tutorial-new-bg-01.png" alt=""> -->
+                                </div>
+
+                                <div class="tutorial-step-bx">
+                                    <dl>
+                                        <dt><span>STEP 2</span></dt>
+                                        <dd>
+                                            <span>하림의 기술</span>은 신선함을<br />
+                                            위한 여정입니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="tutorial-dimmed"></div>
+                            </div>
+
+                            <div class="tutorial-description">
+                                <div class="swiper-bx">
+                                    <div class="swiper tutorial-desc-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide on">
+                                                <div class="tutorial-desc-bx">
+                                                    <div class="tutorial-desc-item">
+                                                        <div class="tutorial-desc-img">
+                                                            <img src="./image/hands-on-tour/tutorial-10.png" alt="">
+                                                        </div>
+
+                                                        <div class="tutorial-desc-item__text">
+                                                            <dl>
+                                                                <dt>
+                                                                    가스스터닝
+                                                                    <div>
+                                                                        <span>잡내 방지</span>
+                                                                    </div>
+                                                                </dt>
+                                                                <dd>
+                                                                    <span>
+                                                                        가스스터닝은 도계 전 닭을 편안히 실신시키는 공정입니다. 일반적으로 사용하는 전기 충격 방식과
+                                                                        달리,
+                                                                        하림은 전기 대신 가스를 사용해 닭의 스트레스를 줄이고, 모세혈관 손상도 최소화해요. 그
+                                                                        결과, 잡내
+                                                                        없이 깔끔하고 신선한 고기가 만들어집니다.
+                                                                    </span>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="tutorial-desc-item__text--shadow"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="tutorial-desc-bx">
+                                                    <div class="tutorial-desc-item">
+                                                        <div class="tutorial-desc-img">
+                                                            <img src="./image/hands-on-tour/tutorial-11.png" alt="">
+                                                        </div>
+
+                                                        <div class="tutorial-desc-item__text">
+                                                            <dl>
+                                                                <dt>
+                                                                    도계
+                                                                    <div>
+                                                                        <span>위생적인 과정</span>    
+                                                                    </div>
+                                                                </dt>
+                                                                <dd>
+                                                                    <span>
+                                                                        이후 깃털을 쉽게 제거하기 위해 뜨거운 물에
+                                                                        담가(탕적) 탈모 과정을 거쳐 위생 검사를 받습니다. 이후 내장을 제거하고 세척까지 마치면,
+                                                                        우리가 아는 통닭의 형태로 완성 돼요.
+                                                                    </span>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="tutorial-desc-item__text--shadow"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <div class="tutorial-desc-bx">
+                                                    <div class="tutorial-desc-item">
+                                                        <div class="tutorial-desc-img">
+                                                            <img preload src="./image/hands-on-tour/tutorial-12.png" alt="">
+                                                        </div>
+
+                                                        <div class="tutorial-desc-item__text">
+                                                            <dl>
+                                                                <dt>
+                                                                    에어칠링
+                                                                    <div>
+                                                                        <span>풍미를 지키는 냉풍 기술</span>
+                                                                    </div>
+                                                                </dt>
+                                                                <dd>
+                                                                    <span>
+                                                                        도계 직후 41℃의 닭고기 육심 온도를<br />
+                                                                        빠르게 2℃ 이하로 낮추는 공정입니다.<br />
+                                                                        일반적인 워터칠링은 닭을 찬물에 담가 식히는 방식이라 수분 흡수로 맛이 떨어지고,<br />
+                                                                        닭들 사이에 교차 오염 위험도 있어요.<br />
+                                                                        하림은 한 마리씩 냉풍 라인을 따라 약 200분간식히는 에어칠링 방식을 사용해 세균 증식은
+                                                                        줄이고,
+                                                                        고유의 맛과 식감은 그대로 지킵니다.
+                                                                    </span>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="tutorial-desc-item__text--shadow"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tutorial-content tutorial-02">
+                            <div class="tutorial-bg">
+                                <div class="tutorial-animation-bx">
+                                    <div class="tutorial-animation--items tutorial-animation--items--02">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-10.png" alt="">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-11.png" alt="">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-12.png" alt="">
+
+                                        <div class="tutorial-animation--object-bx">
+                                            <img class="tutorial-animation--object-20" src="./image/hands-on-tour/tutorial-animation-obj-10.png" alt="">
+                                            <img class="tutorial-animation--object-21" src="./image/hands-on-tour/tutorial-animation-obj-11.gif" alt="">
+                                        </div>
+                                    </div>
+
+                                    <!-- <img src="./image/hands-on-tour/tutorial-new-bg-02.png" alt=""> -->
+                                </div>
+
+                                <div class="tutorial-step-bx">
+                                    <dl>
+                                        <dt><span>STEP 3</span></dt>
+                                        <dd>
+                                            <span>8℃ 가공, 살얼음 포장</span>으로<br />
+                                            끝까지 신선하게!
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="tutorial-dimmed"></div>
+                            </div>
+
+                            <div class="tutorial-description">
+                                <div class="swiper-bx">
+                                    <div class="swiper tutorial-desc-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide on">
+                                                <div class="tutorial-desc-bx">
+                                                    <div class="tutorial-desc-item">
+                                                        <div class="tutorial-desc-img">
+                                                            <img src="./image/hands-on-tour/tutorial-20.png" alt="">
+                                                        </div>
+
+                                                        <div class="tutorial-desc-item__text">
+                                                            <dl>
+                                                                <dt>
+                                                                    8℃ 작업장
+                                                                    <div>
+                                                                        <span>세균증식 억제</span>
+                                                                    </div>
+                                                                </dt>
+                                                                <dd>
+                                                                    <span>
+                                                                        에어칠링을 마친 닭고기는 가슴살, 다리, 날개 등 다양한 형태로 가공됩니다. HACCP이
+                                                                        권고하는
+                                                                        작업장 온도는 15℃지만, 하림은 철저한 신선도를 지키기 위해 전 공정을 8℃에서 진행하죠.
+                                                                        세균
+                                                                        증식을 억제하고, 더 안전한 닭고기를 만듭니다.
+                                                                    </span>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="tutorial-desc-item__text--shadow"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="tutorial-desc-bx">
+                                                    <div class="tutorial-desc-item">
+                                                        <div class="tutorial-desc-img">
+                                                            <img src="./image/hands-on-tour/tutorial-21.png" alt="">
+                                                        </div>
+
+                                                        <div class="tutorial-desc-item__text">
+                                                            <dl>
+                                                                <dt>
+                                                                    냉각터널
+                                                                    <div>
+                                                                        <span>신선도 유지 & 수분 유지</span>
+                                                                    </div>
+                                                                </dt>
+                                                                <dd>
+                                                                    <span>
+                                                                        포장된 닭고기는 -25℃ 냉각터널을 40분간 통과해 겉면에 얇은 살얼음 코팅이 입혀져요. 이
+                                                                        코팅은
+                                                                        유통 과정에서 닭고기의 신선함을 지켜주는 보호막 역할을 합니다.
+                                                                    </span>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="tutorial-desc-item__text--shadow"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tutorial-content tutorial-03">
+                            <div class="tutorial-bg">
+                                <div class="tutorial-animation-bx">
+                                    <div class="tutorial-animation--items tutorial-animation--items--03">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-30.png" alt="">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-31.png" alt="">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-32.png" alt="">
+
+                                        <div class="tutorial-animation--object-bx">
+                                            <img class="tutorial-animation--object-30" src="./image/hands-on-tour/tutorial-animation-obj-30.png" alt="">
+                                            <img class="tutorial-animation--object-31" src="./image/hands-on-tour/tutorial-animation-obj-31.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <!-- <img src="./image/hands-on-tour/tutorial-new-bg-03.png" alt=""> -->
+                                </div>
+
+                                <!-- <img src="./image/hands-on-tour/tutorial-bg-03.png" alt=""> -->
+                                <div class="tutorial-step-bx">
+                                    <dl>
+                                        <dt><span>STEP 4</span></dt>
+                                        <dd>
+                                            <span>가장 신선할 때</span>에<br />
+                                            배송이 시작돼요!
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="tutorial-dimmed"></div>
+
+                            </div>
+
+                            <div class="tutorial-description">
+                                <div class="swiper-bx">
+                                    <div class="swiper tutorial-desc-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide on">
+                                                <div class="tutorial-desc-bx">
+                                                    <div class="tutorial-desc-item">
+                                                        <div class="tutorial-desc-img">
+                                                            <img src="./image/hands-on-tour/tutorial-31.png" alt="">
+                                                        </div>
+
+                                                        <div class="tutorial-desc-item__text">
+                                                            <dl>
+                                                                <dt>
+                                                                    콜드체인
+                                                                </dt>
+                                                                <dd>
+                                                                    <span>
+                                                                        하림은 닭고기의 신선 온도 2℃를 지키기 위해,
+                                                                        출고장에서 배송 차량까지
+                                                                        모두 0~1℃의 저온 상태로 유지합니다.
+                                                                    </span>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="tutorial-desc-item__text--shadow"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tutorial-content tutorial-04">
+                            <div class="tutorial-bg">
+                                <div class="tutorial-animation-bx">
+                                    <div class="tutorial-animation--items tutorial-animation--items--04">
+                                        <img src="./image/hands-on-tour/tutorial-animation-items-40.png" alt="">
+                                        <div class="tutorial-animation--object-bx">
+                                            <img class="tutorial-animation--object-40" src="./image/hands-on-tour/tutorial-animation-obj-40.png" alt="">
+                                            <img class="tutorial-animation--object-41" src="./image/hands-on-tour/tutorial-animation-obj-41.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <!-- <img src="./image/hands-on-tour/tutorial-new-bg-04.png" alt=""> -->
+                                </div>
+
+                                <div class="tutorial-step-bx show-sticky">
+                                    <dl class="show-sticky">
+                                        <dt><span>STEP 5</span></dt>
+                                        <dd>
+                                            <span>최고의 맛</span>은<br />
+                                            신선함에서 시작됩니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz">
+                    <div class="quiz-bx">
+                        <div class="quiz-title">
+                            <p>QUIZ</p>
+                            <dl>
+                                <dt>
+                                    <span>더 신선한 닭고기</span>는<br />
+                                    어느 쪽 일까요?
+                                </dt>
+                                <dd>
+                                    닭고기의 표면을 비교해서<br />
+                                    정답을 맞춰보세요.
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="quiz-item-list">
+                            <div class="quiz-item">
+                                <input id="quiz-item-00" type="radio" name="quiz-question">
+                                <label for="quiz-item-00">
+                                    <img src="./image/hands-on-tour/quiz-img-00.png" alt="">
+
+                                    <div class="quiz-text-bx">
+                                        <div class="quiz-text-bx__content">
+                                            <div class="quiz-icon-bx">
+                                                <img src="./image/hands-on-tour/quiz-icon-off.svg" alt="">
+                                                <img src="./image/hands-on-tour/quiz-icon-on.svg" alt="">
+                                            </div>
+                                            <span>탱탱한 표면</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="quiz-item-dimmed"></div>
+                                </label>
+                            </div>
+
+                            <div class="quiz-item">
+                                <input id="quiz-item-01" type="radio" name="quiz-question">
+                                <label for="quiz-item-01">
+                                    <img src="./image/hands-on-tour/quiz-img-01.png" alt="">
+
+                                    <div class="quiz-text-bx">
+                                        <div class="quiz-text-bx__content">
+                                            <div class="quiz-icon-bx">
+                                                <img src="./image/hands-on-tour/quiz-icon-off.svg" alt="">
+                                                <img src="./image/hands-on-tour/quiz-icon-on.svg" alt="">
+                                            </div>
+                                            <span>쭈굴한 표면</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="quiz-item-dimmed"></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-btn-bx">
+                            <a href="https://harimfoodtour.harim.com/app/HCR/s1.do">
+                                <div class="quiz-btn__logo">
+                                    <img src="./image/hands-on-tour/quiz-logo.png" alt="">
+                                </div>
+
+                                <span>
+                                    하림 치킨로드 신청하기
+                                    <img src="./image/hands-on-tour/quiz-ic-arrow-left.svg" alt="">
+                                </span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+
+        <div class="popup">
+            <div class="popup-content-bx">
+                <div class="popup-inner">
+                    <div class="popup-close">
+                        <button>
+                            <img src="./image/odd-grocer/ic-close.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="popup-content-list">
+                        <div class="popup-content">
+                            <img src="./image/hands-on-tour/popup-00.png" alt="">
+                            <dl>
+                                <dt>오답이에요...</dt>
+                                <dd>
+                                    워터칠링 방식은 닭고기를 물에 담가 식히는 과정에서 수분을 많이 흡수하게 됩니다.<br />
+                                    표면은 탱탱하고 매끄러워 보일 수 있지만, 닭 본연의 풍미가 떨어지고, 여러 닭이 함께 담기기 때문에 교차 오염의 위험도 높아질 수 있어요.
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="popup-content">
+                            <img src="./image/hands-on-tour/popup-01.png" alt="">
+                            <dl>
+                                <dt style="color: #EB5A00">와!! 정답이에요!</dt>
+                                <dd>
+                                    하림은 한 마리씩 냉풍 라인을 따라 약 200분간 식히는 에어칠링 방식으로, 세균 증식은 줄이고 닭고기 본연의 맛과 식감을 지켜냅니다.
+                                    표면은 살짝 쭈글해 보여도, 한 입 베어 물면 쫀득하고 촉촉한 식감이 살아있어요.<br />
+                                    신선함이 만든 진짜 닭고기, 지금 경험해보세요.<br />
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="popup-close-btn">
+                            <button>닫기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-dimmed"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/sub.js"></script>
+    <script src="./js/sub2.js"></script>
+    <script src="./js/common.js"></script>
+</body>
+
+</html>
