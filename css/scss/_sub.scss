@@ -214,6 +214,14 @@ body {
             }
         }
 
+        .section-bx{
+            background-image: url(../image/hands-on-tour/section-bg.png);
+            background-size: cover;
+            background-position-y: top;
+            background-position-x: center;
+            background-repeat: no-repeat;
+        }
+
         .secret {
             position: relative;
             width: 100%;
@@ -465,7 +473,7 @@ body {
                         top: 0;
                         width: 100%;
                         height: 200vh;
-                        background-color: rgba(0, 0, 0, 1);
+                        // background-color: rgba(0, 0, 0, 1);
 
                         img {
                             width: 100%;

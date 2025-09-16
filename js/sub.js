@@ -4,16 +4,16 @@
     const sub = function () {
 
         function Init() {
-            function resetScroll() {
-                setTimeout(function () {
-                    window.scrollTo(0, 0);
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
-                }, 10);
-            }
+            // function resetScroll() {
+            //     setTimeout(function () {
+            //         window.scrollTo(0, 0);
+            //         document.body.scrollTop = 0;
+            //         document.documentElement.scrollTop = 0;
+            //     }, 10);
+            // }
 
-            window.addEventListener("DOMContentLoaded", resetScroll);
-            window.addEventListener("load", resetScroll);
+            // window.addEventListener("DOMContentLoaded", resetScroll);
+            // window.addEventListener("load", resetScroll);
 
             createVisual();
             createSecret();
@@ -110,19 +110,68 @@
                     end: "bottom top",
                     onEnter: function () {
                         showGage(i);
+                        showAnimation(i, true );
                     },
                     onLeaveBack: function () {
                         const bIdx = i - 1;
                         showGage(bIdx);
-                    }
+                    },
                 });
+
+                ScrollTrigger.create({
+                    trigger: el,
+                    start: "top bottom",
+                    end: "bottom top",
+                    onEnter: function () {
+                        console.log( "enter", i );
+                    },
+                    onLeaveBack: function () {
+                        console.log( "onLeaveBack", i );
+                    },
+                    onEnterBack: function () {
+                        console.log( "onEnterBack", i );
+                    },  
+                    onLeave: function () {
+                        console.log( "onLeave", i );
+                    },
+                });
+
             });
+
+            const tutorialAnimationBx = $(".tutorial-animation-bx");
+            function showAnimation(i, isBoo ){
+                console.log( i, isBoo );
+
+                const animationBx = $( tutorialAnimationBx[i] );
+
+
+                if( isBoo ){
+                    animationBx.css( "opacity", 1 );
+                }else{
+                    animationBx.css( "opacity", 0 );
+                }
+                
+            }
+
+
+            function showGage(idx) {
+                character.removeClass("on");
+                $(character[idx]).addClass("on");
+
+                checkBx.removeClass("on");
+                $(checkBx[idx]).addClass("on");
+
+                checkBxText.removeClass("bold");
+                $(checkBxText[idx]).addClass("bold");
+                $(checkBxText[idx]).addClass("on");
+
+            }
 
             const content00 = $(".tutorial-00");
             const content01 = $(".tutorial-01");
             const content02 = $(".tutorial-02");
             const content03 = $(".tutorial-03");
-            const content04 = $(".tutorial-04");
+
 
             gsap.fromTo(circleBx,
                 { width: "25%" },
@@ -175,19 +224,6 @@
                     },
                 }
             );
-
-            function showGage(idx) {
-                character.removeClass("on");
-                $(character[idx]).addClass("on");
-
-                checkBx.removeClass("on");
-                $(checkBx[idx]).addClass("on");
-
-                checkBxText.removeClass("bold");
-                $(checkBxText[idx]).addClass("bold");
-                $(checkBxText[idx]).addClass("on");
-            }
-
         }
 
         function createTutorialStep0() {
