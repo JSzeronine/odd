@@ -37,10 +37,23 @@
                 start: "140% bottom",
                 end: "bottom bottom",
                 onLeave: function () {
-                    gsap.to($( ".secret-img" ), { duration: 0.5, filter: "blur(10px)", opacity: 0, ease: Cubic.easeOut });
-                    gsap.to($( ".secret-bg-item" ), { duration: 0.5, filter: "blur(10px)", opacity: 0, ease: Cubic.easeOut });
+                    gsap.killTweensOf($( ".secret-img" ));
+                    gsap.killTweensOf($( ".secret-bg-item" ));
+
+                    gsap.to($( ".secret-img" ), { duration: 0.5, filter: "blur(10px)", opacity: 0, ease: Cubic.easeOut, onComplete:() => {
+                        $( ".secret-img" ).css( "display", "none" );
+                    } });
+                    gsap.to($( ".secret-bg-item" ), { duration: 0.5, filter: "blur(10px)", opacity: 0, ease: Cubic.easeOut, onComplete:() => {
+                        $( ".secret-bg-item" ).css( "display", "none" );
+                    } });
                 },
                 onEnterBack: function () {
+                    gsap.killTweensOf($( ".secret-img" ));
+                    gsap.killTweensOf($( ".secret-bg-item" ));
+
+                    $( ".secret-img" ).css( "display", "block" );
+                    $( ".secret-bg-item" ).css( "display", "block" );
+                    
                     gsap.to($( ".secret-img" ), { duration: 0.5, filter: "blur(0px)", opacity: 1, ease: Cubic.easeOut });
                     gsap.to($( ".secret-bg-item" ), { duration: 0.5, filter: "blur(0px)", opacity: 1, ease: Cubic.easeOut });
                 },
