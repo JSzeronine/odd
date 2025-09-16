@@ -133,15 +133,16 @@
             const tutorialAnimationBx = $(".tutorial-animation--items");
             function showAnimation(i, isBoo ){
                 if( i === 4 ) return;
-
                 const animationBx = $( tutorialAnimationBx[i] );
-
                 gsap.killTweensOf( animationBx );
-
                 if( isBoo ){
-                    gsap.to( animationBx, { opacity: 1, ease: Cubic.easeOut } );
+                    gsap.to(animationBx, { 
+                        opacity: 1,  
+                        filter: "blur(0px)",
+                        ease: Cubic.easeOut 
+                    });
                 }else{
-                    gsap.to( animationBx, { opacity: 0, ease: Cubic.easeOut } );
+                    gsap.to( animationBx, { opacity: 0, filter: "blur(10px)", ease: Cubic.easeOut } );
                 }
             }
 
