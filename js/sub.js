@@ -49,9 +49,7 @@
         }
 
         function createTutorialStep(){
-
             const tutorialContents = $(".tutorial-content");
-
 
             tutorialContents.each(function (i) {
                 const tutorialContent = $(this);
@@ -110,7 +108,6 @@
                     end: "bottom top",
                     onEnter: function () {
                         showGage(i);
-                        showAnimation(i, true );
                     },
                     onLeaveBack: function () {
                         const bIdx = i - 1;
@@ -121,36 +118,29 @@
                 ScrollTrigger.create({
                     trigger: el,
                     start: "top bottom",
-                    end: "bottom top",
-                    onEnter: function () {
-                        console.log( "enter", i );
-                    },
-                    onLeaveBack: function () {
-                        console.log( "onLeaveBack", i );
-                    },
-                    onEnterBack: function () {
-                        console.log( "onEnterBack", i );
-                    },  
+                    end: "bottom bottom",
                     onLeave: function () {
-                        console.log( "onLeave", i );
+                        showAnimation(i, false);
+                    },
+
+                    onEnterBack: function () {
+                        console.log( i, "EnterBack" );
+                        showAnimation(i, true);
                     },
                 });
-
             });
 
-            const tutorialAnimationBx = $(".tutorial-animation-bx");
+            const tutorialAnimationBx = $(".tutorial-animation--items");
             function showAnimation(i, isBoo ){
-                console.log( i, isBoo );
-
                 const animationBx = $( tutorialAnimationBx[i] );
 
+                gsap.killTweensOf( animationBx );
 
                 if( isBoo ){
-                    animationBx.css( "opacity", 1 );
+                    gsap.to( animationBx, { opacity: 1, ease: "none" } );
                 }else{
-                    animationBx.css( "opacity", 0 );
+                    gsap.to( animationBx, { opacity: 0, ease: "none" } );
                 }
-                
             }
 
 
@@ -252,7 +242,7 @@
                 object01[0],
             ]
 
-            let arrY = [30, 80, 50, 50, 50];
+            let arrY = [30, 50, 50, 50, 50];
             imgs.forEach(function (el, i) {
                 tl.fromTo(
                     el,
@@ -289,7 +279,7 @@
                 object01[0],
             ]
 
-            let arrY = [30, 80, 50, 50, 50];
+            let arrY = [30, 50, 50, 50, 50];
             imgs.forEach(function (el, i) {
                 tl.fromTo(
                     el,
@@ -326,7 +316,7 @@
                 object01[0],
             ]
 
-            let arrY = [30, 80, 50, 50, 50];
+            let arrY = [30, 50, 50, 50, 50];
             imgs.forEach(function (el, i) {
                 tl.fromTo(
                     el,
@@ -363,7 +353,7 @@
                 object01[0],
             ]
 
-            let arrY = [30, 80, 50, 50, 50];
+            let arrY = [30, 50, 50, 50, 50];
             let arrX = [0, 0, 0, -246, 0];
             let opacitys = [1, 1, 1, 1, 0];
             imgs.forEach(function (el, i) {
@@ -518,20 +508,8 @@
                 });
 
                 descTl.to(stepBx, { opacity: 0, y: -30, ease: Linear.easeInOut });
-                descTl.to(tutorialItem.find( ".tutorial-dimmed" ), { opacity: 1, ease: Linear.easeInOut });
-
-                // let tl = gsap.timeline({
-                //     scrollTrigger: {
-                //         trigger: tutorialItem,
-                //         start: "bottom bottom",
-                //         end: "bottom top",
-                //         scrub: true,
-                //     }
-                // });
-
-                // tl.to(tutorialItem, { y: 400, ease: Linear.easeInOut });
+                // descTl.to(tutorialItem.find( ".tutorial-dimmed" ), { opacity: 1, ease: Linear.easeInOut });
             });
-
 
             const tutorialSwiper = $(".tutorial-desc-swiper");
             tutorialSwiper.each((idx, el) => {
