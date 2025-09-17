@@ -1825,9 +1825,7 @@ body.hidden {
 
 .hands-on-tour2 .sections {
   background-image: url(../image/hands-on-tour/section-bg.png);
-  background-size: cover;
-  background-position-y: top;
-  background-position-x: center;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .hands-on-tour2 .inner .visual {
